@@ -1,0 +1,60 @@
+:root {
+  font-family: 'Montserrat-Black';
+  line-height: 1.5;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #121212;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Thin.woff2') format('woff2-variation');
+  font-weight:100 900;
+}
+
+@font-face {
+  font-family: 'Montserrat-ThinItalic';
+  src: url('./assets/fonts/Montserrat-ThinItalic.woff2') format('woff2-variation');
+  font-weight:100 900;
+}
+
+@font-face {
+  font-family: 'Montserrat-Black';
+  src: url('./assets/fonts/Montserrat-Black.woff2') format('woff2');
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-family: Montserrat-Black;
+  font-weight: 800;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

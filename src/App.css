@@ -1,0 +1,44 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  color:#b2113bff;
+}
+
+.title-span {
+  color:#b2b2b2ff;
+  -webkit-text-stroke: 3px  #b2113bff;
+  paint-order: stroke fill;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+  background:none;
+  position: relative;
+  top: 27px;
+  right:20px;
+
+}
+@keyframes girar-logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo {
+  pointer-events: none; 
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: girar-logo infinite 10s linear;
+  }
+}
