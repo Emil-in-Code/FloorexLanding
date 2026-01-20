@@ -1,7 +1,7 @@
 // Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import styles from './navbar.module.css';
+import styles from './Navbar.module.css';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +30,18 @@ export default function Navbar() {
         <div className={styles.container}>
           {/* Logo */}
           <a href="/" className={styles.logo}>
-
+            <div className={styles.logoIcon}>
+              <svg viewBox="0 0 100 100" className={styles.logoSvg}>
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#9ca3af" strokeWidth="3"/>
+                <path 
+                  d="M 30 30 L 50 50 L 70 30 M 50 50 L 70 70 M 50 50 L 30 70" 
+                  stroke="#ec4899" 
+                  strokeWidth="8" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                  fill="none"
+                />
+              </svg>
             </div>
             <div className={styles.logoText}>
               <span className={styles.logoPink}>FLOOR</span>
