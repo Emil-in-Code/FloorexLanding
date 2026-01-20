@@ -3,42 +3,67 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  box-sizing:border-box;
 }
 
-.title {
-  color:#b2113bff;
+/* El contenedor de las imágenes siempre fijo arriba */
+.welcome-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: 100; /* Por encima de todo */
+  pointer-events: none; /* Permite clickear lo que hay detrás si están abiertas */
+  overflow: hidden;
 }
 
-.title-span {
-  color:#b2b2b2ff;
-  -webkit-text-stroke: 3px  #b2113bff;
-  paint-order: stroke fill;
+.door {
+  width: 100vw;
+  height: 100vh;
+  will-change: transform; /* Optimización de rendimiento */
+  transition: transform 0.5s ease-out; /* Suaviza el movimiento */
+  overflow:visible;
 }
 
-.logo {
-  width: 90px;
-  height: auto;
-  background:none;
+.door img {
+  position:absolute;
+  top:0;
+  width: 100vw;
+  height:100vh;
+  object-fit: cover;
+}
+
+/* Ajuste fino para que el zigzag encaje en el centro */
+.left-door img {
+  right: -25vw;
+}
+
+.right-door img {
+  left:-20vw;
+}
+
+/* El contenido de tu landing */
+.main-content {
   position: relative;
-  top: 27px;
-  right:20px;
-
-}
-@keyframes girar-logo {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  z-index: 1;
+  padding-top: 80vh; /* Para que el contenido empiece después de la pantalla inicial */
+  min-height: 200vh;
 }
 
-.logo {
-  pointer-events: none; 
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .logo {
-    animation: girar-logo infinite 10s linear;
-  }
+h1{
+  color:#fff;
+}
+
+p{
+  color:#fff;
 }
