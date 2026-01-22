@@ -6,64 +6,16 @@
   box-sizing:border-box;
 }
 
-/* El contenedor de las imágenes siempre fijo arriba */
-.welcome-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
+.appWrapper {
+  background-color: red; /* Fondo oscuro base */
+  min-height: 100vh;
+}
+
+.spacer {
   height: 100vh;
   display: flex;
-  z-index: 100; /* Por encima de todo */
-  pointer-events: none; /* Permite clickear lo que hay detrás si están abiertas */
-  overflow: hidden;
-}
-
-.door {
-  width: 100vw;
-  height: 100vh;
-  will-change: transform; /* Optimización de rendimiento */
-  transition: transform 0.5s ease-out; /* Suaviza el movimiento */
-  overflow:visible;
-}
-
-.door img {
-  position:absolute;
-  top:0;
-  width: 100vw;
-  height:100vh;
-  object-fit: cover;
-}
-
-/* Ajuste fino para que el zigzag encaje en el centro */
-.left-door img {
-  right: -25vw;
-}
-
-.right-door img {
-  left:-20vw;
-}
-
-/* El contenido de tu landing */
-.main-content {
-  position: relative;
-  z-index: 1;
-  padding-top: 80vh; /* Para que el contenido empiece después de la pantalla inicial */
-  min-height: 200vh;
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-}
-
-h1{
-  color:#fff;
-}
-
-p{
-  color:#fff;
+  align-items: center;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }

@@ -1,12 +1,13 @@
+
 import React from 'react';
 import IntroOverlay from './components/introOverlay/IntroOverlay.jsx';
 import Navbar from './widgets/Navbar/Navbar.jsx';
 import HeroSection from './components/hero/heroSection.jsx';
-import './App.css';
+import styles from './App.css';
 
 function App() {
   return (
-    <div className="appWrapper">
+    <div className={styles.appWrapper}>
       {/* 1. Capa de animación superior */}
       <IntroOverlay />
 
@@ -18,10 +19,10 @@ function App() {
         <HeroSection />
         
         {/* Secciones adicionales para permitir el scroll */}
-        <section id="servicios" className="spacer">
+        <section id="servicios" className={styles.spacer}>
           <h2>Nuestros Servicios</h2>
         </section>
-        <section id="proyectos" className="spacer">
+        <section id="proyectos" className={styles.spacer}>
           <h2>Proyectos Recientes</h2>
         </section>
       </main>

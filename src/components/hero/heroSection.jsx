@@ -1,26 +1,36 @@
+// heroSection.jsx
 import React from 'react';
 import { useScrollAnimation } from '../introOverlay/useScrollAnimation.js';
 import Navbar from '../../widgets/Navbar/Navbar.jsx';
 import styles from './heroSection.module.css';
 
 export default function HeroSection() {
-  const progress = useScrollAnimation(400);
+  const scrollValue = useScrollAnimation(650); 
+  
+  // El texto empieza a aparecer cuando el logo ya avanzó el 40% (0.4)
+  const heroOpacity = Math.max(0, (scrollValue - 0.4) * 2);
+  
+  // Efecto de escala: empieza en 0.8 y llega a 1
+  const heroScale = 0.9 + (Math.min(heroOpacity, 1) * 0.2);
 
   return (
     <div className={styles.wrapper}>
       <Navbar />
       <section 
         className={styles.hero} 
-        style={{ opacity: progress, transform: `scale(${0.9 + progress * 0.1})` }}
+        style={{ 
+          opacity: heroOpacity,
+          transform: `scale(${heroScale})`
+        }}
       >
         <div className={styles.content}>
           <h1>PISOS ELEGANTES</h1>
-          <p>La transformación que tu espacio merece.</p>
+          <p className={styles.parrafo}>La transformación que tu espacio merece.</p>
         </div>
       </section>
       
-      {/* Espacio para permitir el scroll */}
-      <div style={{ height: '200vh' }} />
+      {/* Espaciador para permitir el scroll de la animación y contenido extra */}
+      <div className={styles.animationBuffer} />
     </div>
   );
 }

@@ -1,7 +1,6 @@
 :root {
   font-family: 'Montserrat-Black';
   line-height: 1.5;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #121212;
@@ -29,6 +28,10 @@
   src: url('./assets/fonts/Montserrat-Black.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('./assets/fonts/RobotoCondensed-Light.woff2') format('woff2');
+}
 
 body {
   margin: 0;
