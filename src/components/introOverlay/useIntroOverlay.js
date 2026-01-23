@@ -23,10 +23,17 @@ export function useIntroOverlay(threshold = 400) {
     opacity: 1 - progress
   };
 
+  const overlayStyle = {
+    opacity: 1 - progress,
+    pointerEvents: progress > 0.9 ? 'none' : 'all',
+    visibility: progress >= 1 ? 'hidden' : 'visible'
+  };
+
   return {
     progress,
     logoStyle,
     lineTopStyle,
-    lineBottomStyle
+    lineBottomStyle,
+    overlayStyle
   };
 }

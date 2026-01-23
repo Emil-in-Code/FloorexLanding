@@ -5,7 +5,7 @@ import { useIntroOverlay } from './useIntroOverlay.js'
 
 export default function IntroOverlay() {
 
-  const { logoStyle, lineTopStyle, lineBottomStyle, progress } = useIntroOverlay(400);
+  const { logoStyle, lineTopStyle, lineBottomStyle,overlayStyle, progress } = useIntroOverlay(400);
 
   return (
     <div className={styles.overlay} style={{ opacity: 1 - progress }}>
