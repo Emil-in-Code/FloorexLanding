@@ -3,6 +3,7 @@ import React from 'react';
 import { useScrollAnimation } from '../introOverlay/useScrollAnimation.js';
 import Navbar from '../../widgets/Navbar/Navbar.jsx';
 import styles from './heroSection.module.css';
+import baño from '../../assets/img/baño.webp'
 
 export default function HeroSection() {
   const scrollValue = useScrollAnimation(650); 
@@ -24,13 +25,20 @@ export default function HeroSection() {
         }}
       >
         <div className={styles.content}>
-          <h1>PISOS ELEGANTES</h1>
-          <p className={styles.parrafo}>La transformación que tu espacio merece.</p>
+          <div className= {styles.textGroup}>
+            <h1>PISOS EPÓXICOS</h1>
+            <p className={styles.parrafo}>La transformación que tu espacio merece.</p>
+          </div>
+          <div className={styles.banoContainer}>
+            <img src={baño} alt="foto baño" className={styles.banoImg}/>
+          </div>
         </div>
+
       </section>
       
       {/* Espaciador para permitir el scroll de la animación y contenido extra */}
       <div className={styles.animationBuffer} />
+
     </div>
   );
 }
