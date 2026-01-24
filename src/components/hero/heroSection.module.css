@@ -1,9 +1,9 @@
 .wrapper {
   width: 100%;
-  background-color: #0f172a; 
+  background-color: #121212; 
 }
 
-.hero {
+/*.hero {
   position: sticky;
   top:0;
   min-height: 100vh;
@@ -14,6 +14,16 @@
   text-align: center;
   padding: 2rem 1rem 1rem;
   overflow: hidden;
+}*/
+
+ 
+.hero {
+  position: sticky;
+  top:0;
+  padding: 2rem 2rem 2rem 8rem; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 .animationBuffer {
@@ -24,13 +34,19 @@
   display: flex;
   align-items:center;
   justify-content:center;
-  gap:8rem;
+  gap:4rem;
   width:80%;
 }
 
-.hero h1 {
+.textGroup{
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+}
+
+.title {
   flex:1;
-  font-size: clamp(3rem, 10vw, 6rem);
+  font-size: clamp(1rem, 10vw, 4rem);
   font-weight: 800;
   line-height: 1;
   margin-bottom: 1.5rem;
@@ -38,27 +54,71 @@
   letter-spacing: -0.02em;
   margin-top:43rem;
   text-align:left;
-  padding:10px;
+  padding:1rem;
+  margin-bottom:0;
+}
+
+.titleGradient{
+  background: linear-gradient(135deg, #b2113bff 0%, grey 40%, #b2113bff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .parrafo {
   font-family:Roboto-Light;
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
   text-align:left;
   padding: 1rem;
+  margin-bottom:10px;
+  margin-top:0;
 }
 
-
-.banoContainer{
- width: 500px;
- height:300px;
- border: 3px solid #b2113bff;
- margin-top:43rem;
+/*CTA BTN*/
+.cta{
+  display: flex;
+  gap: 0.6rem;
+  padding:1rem;
+}
+.btn{
+  padding: 0.5rem 0 0.5rem 0;
+  border-radius: 9px;
+  font-weight: 600;
+  transition: all 0.3s;
+  width:30%;
 }
 
-.banoImg {
+.btnContact {
+    background: linear-gradient(135deg, #b2b2b2ff 0%, #b2113bff 100%);
+    color: #000;
+}
+
+.btnContact:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px #b2113bff;
+}
+
+.btnProject{
+    background:none;
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+
+.btnProject:hover {
+    background: rgba(26, 151, 47, 0.2);
+}
+
+/*IMG SECTION*/
+.pulidoraContainer{
+ width: 50rem;
+ height:22rem;
+ margin-top:41rem;
+}
+
+.pulidoraImg {
   width:100%;
-  object-fit: cover;
+  height:100%;
+  object-fit: fit-content;
 }
 
 

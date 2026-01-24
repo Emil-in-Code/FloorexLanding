@@ -3,7 +3,7 @@ import React from 'react';
 import { useScrollAnimation } from '../introOverlay/useScrollAnimation.js';
 import Navbar from '../../widgets/Navbar/Navbar.jsx';
 import styles from './heroSection.module.css';
-import baño from '../../assets/img/baño.webp'
+import heroImg from '../../assets/img/imgHero.png'
 
 export default function HeroSection() {
   const scrollValue = useScrollAnimation(650); 
@@ -26,11 +26,15 @@ export default function HeroSection() {
       >
         <div className={styles.content}>
           <div className= {styles.textGroup}>
-            <h1>PISOS EPÓXICOS</h1>
+            <h1 className={styles.title}>PISOS <span className={styles.titleGradient}>EPÓXICOS</span></h1>
             <p className={styles.parrafo}>La transformación que tu espacio merece.</p>
+            <div className={styles.cta}>
+               <button className={`${styles.btn} ${styles.btnContact}`}>contactar</button>
+               <button className={`${styles.btn} ${styles.btnProject}`}>ver proyectos</button>             
+            </div>
           </div>
-          <div className={styles.banoContainer}>
-            <img src={baño} alt="foto baño" className={styles.banoImg}/>
+          <div className={styles.pulidoraContainer}>
+            <img src={heroImg} alt="foto baño" className={styles.pulidoraImg}/>
           </div>
         </div>
 

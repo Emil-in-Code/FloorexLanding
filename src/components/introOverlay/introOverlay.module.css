@@ -1,7 +1,7 @@
 .overlay {
   position: fixed;
   inset: 0;
-  background-color: #0f172a; /* Color de fondo de tu imagen */
+  background-color: #121212; 
   z-index: 100;
   display: flex;
   justify-content: center;
