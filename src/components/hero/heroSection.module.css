@@ -2,20 +2,6 @@
   width: 100%;
   background-color: #121212; 
 }
-
-/*.hero {
-  position: sticky;
-  top:0;
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-  overflow: hidden;
-}*/
-
  
 .hero {
   position: sticky;
@@ -89,30 +75,34 @@
 }
 
 .btnContact {
-    background: linear-gradient(135deg, #b2b2b2ff 0%, #b2113bff 100%);
-    color: #000;
+  background: linear-gradient(135deg, #b2b2b280 0%, #b2113bff 100%);
+  color: #fff;
+  border: 1px solid #b2113bff;
 }
 
 .btnContact:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 40px #b2113bff;
+  transform: translateY(-1px);
+  background:none;
+  box-shadow: 0 3px 2px #b2113bff;
 }
 
 .btnProject{
-    background:none;
-    color: #fff;
-    backdrop-filter: blur(10px);
+  background:none;
+  color: #fff;
+  backdrop-filter: blur(10px);
+  border: 1px solid #b2113bff;
 }
 
 .btnProject:hover {
-    background: rgba(26, 151, 47, 0.2);
+  background:none;
+  box-shadow: 0 3px 2px #b2113bff;
 }
 
 /*IMG SECTION*/
 .pulidoraContainer{
- width: 50rem;
- height:22rem;
- margin-top:41rem;
+  width: 50rem;
+  height:22rem;
+  margin-top:41rem;
 }
 
 .pulidoraImg {

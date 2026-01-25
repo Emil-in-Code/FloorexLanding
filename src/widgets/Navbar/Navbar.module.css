@@ -99,25 +99,6 @@
   width: 100%;
 }
 
-/* CTA Button */
-.ctaButton {
-  background: #b2113bff;
-  color: #e1e1e1;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.ctaButton:hover {
-  background: #b2113bff;
-  color: #e1e1e1;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
-}
-
 /* Mobile Menu Button */
 .menuButton {
   display: flex;
@@ -146,8 +127,8 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  background: rgba(17, 24, 39, 0.98);
-  border-top: 1px solid rgba(236, 72, 153, 0.2);
+  background: #121212;
+  border-top: 1px solid #b2113b40;
   animation: slideDown 0.3s ease-out;
 }
 
@@ -169,12 +150,12 @@
 }
 
 .mobileLink {
-  color: white;
+  color: #e1e1e1;
   text-decoration: none;
   padding: 0.75rem 0;
   font-weight: 500;
   transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #b2113b40;
 }
 
 .mobileLink:hover {

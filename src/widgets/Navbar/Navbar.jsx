@@ -46,7 +46,6 @@ export default function Navbar() {
             <a href="#servicios" className={styles.navLink}>Servicios</a>
             <a href="#proyectos" className={styles.navLink}>Proyectos</a>
             <a href="#contacto" className={styles.navLink}>Contacto</a>
-            <button className={styles.ctaButton}>Cotizar Ahora</button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,9 +70,7 @@ export default function Navbar() {
             <a href="#contacto" className={styles.mobileLink} onClick={closeMenu}>
               Contacto
             </a>
-            <button className={styles.mobileCtaButton} onClick={closeMenu}>
-              Cotizar Ahora
-            </button>
+
           </div>
         )}
       </nav>

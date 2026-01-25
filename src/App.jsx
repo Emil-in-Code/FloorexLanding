@@ -3,6 +3,9 @@ import IntroOverlay from './components/introOverlay/IntroOverlay.jsx';
 import Navbar from './widgets/Navbar/Navbar.jsx';
 import HeroSection from './components/hero/heroSection.jsx';
 import './App.css';
+import imgAntes from './assets/img/afterImage.jpg'
+import imgDespues from './assets/img/beforeImage.jpg'
+import slider from './components/sliders/slider.jsx'
 
 function App() {
   return (
@@ -23,6 +26,13 @@ function App() {
         </section>
         <section id="proyectos" className="spacer">
           <h2>Proyectos Recientes</h2>
+          <p>Desliza para ver nuestra calidad</p>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+            <Slider 
+              beforeImage={imgAntes} 
+              afterImage={imgDespues} 
+            />
+          </div>
         </section>
       </main>
     </div>

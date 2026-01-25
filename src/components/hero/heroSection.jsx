@@ -29,8 +29,8 @@ export default function HeroSection() {
             <h1 className={styles.title}>PISOS <span className={styles.titleGradient}>EPÓXICOS</span></h1>
             <p className={styles.parrafo}>La transformación que tu espacio merece.</p>
             <div className={styles.cta}>
-               <button className={`${styles.btn} ${styles.btnContact}`}>contactar</button>
-               <button className={`${styles.btn} ${styles.btnProject}`}>ver proyectos</button>             
+               <button className={`${styles.btn} ${styles.btnContact}`}>Contactar</button>
+               <button className={`${styles.btn} ${styles.btnProject}`}>Proyectos</button>             
             </div>
           </div>
           <div className={styles.pulidoraContainer}>
