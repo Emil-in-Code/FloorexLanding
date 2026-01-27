@@ -11,24 +11,24 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('./assets/fonts/Montserrat-Thin.woff2') format('woff2-variation');
+  src: url('./Assets/Fonts/Montserrat-Thin.woff2') format('woff2-variation');
   font-weight:100 900;
 }
 
 @font-face {
   font-family: 'Montserrat-ThinItalic';
-  src: url('./assets/fonts/Montserrat-ThinItalic.woff2') format('woff2-variation');
+  src: url('./Assets/Fonts/Montserrat-ThinItalic.woff2') format('woff2-variation');
   font-weight:100 900;
 }
 
 @font-face {
   font-family: 'Montserrat-Black';
-  src: url('./assets/fonts/Montserrat-Black.woff2') format('woff2');
+  src: url('./Assets/Fonts/Montserrat-Black.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Roboto-Light';
-  src: url('./assets/fonts/RobotoCondensed-Light.woff2') format('woff2');
+  src: url('./Assets/Fonts/RobotoCondensed-Light.woff2') format('woff2');
 }
 
 body {

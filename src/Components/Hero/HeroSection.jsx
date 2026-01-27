@@ -1,9 +1,9 @@
 // heroSection.jsx
 import React from 'react';
-import { useScrollAnimation } from '../introOverlay/useScrollAnimation.js';
+import { useScrollAnimation } from '../IntroOverlay/useScrollAnimation.js';
 import Navbar from '../../widgets/Navbar/Navbar.jsx';
-import styles from './heroSection.module.css';
-import heroImg from '../../assets/img/imgHero.png'
+import styles from './HeroSection.module.css';
+import heroImg from '../../Assets/Images/imgHero.png'
 
 export default function HeroSection() {
   const scrollValue = useScrollAnimation(650); 
@@ -34,7 +34,7 @@ export default function HeroSection() {
             </div>
           </div>
           <div className={styles.pulidoraContainer}>
-            <img src={heroImg} alt="foto baño" className={styles.pulidoraImg}/>
+            <img src={heroImg} alt="foto pulidora" className={styles.pulidoraImg}/>
           </div>
         </div>
 

@@ -1,11 +1,10 @@
 import React from 'react';
-import IntroOverlay from './components/introOverlay/IntroOverlay.jsx';
+import IntroOverlay from './Components/IntroOverlay/IntroOverlay.jsx';
 import Navbar from './widgets/Navbar/Navbar.jsx';
-import HeroSection from './components/hero/heroSection.jsx';
+import HeroSection from './Components/Hero/HeroSection.jsx';
 import './App.css';
-import imgAntes from './assets/img/afterImage.jpg'
-import imgDespues from './assets/img/beforeImage.jpg'
-import slider from './components/sliders/slider.jsx'
+import HorizontalGallery from './Components/HorizontalGallery/HorizontalGallery.jsx'
+import { projectList } from './Data/ProjectData.js';
 
 function App() {
   return (
@@ -21,18 +20,27 @@ function App() {
         <HeroSection />
         
         {/* Secciones adicionales para permitir el scroll */}
+
+        <section id="proyectos" className="spacer">
+          <div>
+            <HorizontalGallery proyectos={projectList}/>
+
+           {/* <ReactCompareSlider
+              itemOne={<ReactCompareSliderImage src={beforeImg} alt="Antes" />}
+              itemTwo={<ReactCompareSliderImage src={afterImg} alt="Después" />}
+              handle={<ReactCompareSliderHandle style={{color: '#b2113bff'}}/>}
+              style={{
+                width: '500px',
+                height: '400px',
+                borderRadius: '9px', // Bordes redondeados
+                border: '2px solid #b2113bff' // Un marco sutil
+              }}
+
+            />*/}
+          </div>
+        </section> 
         <section id="servicios" className="spacer">
           <h2>Nuestros Servicios</h2>
-        </section>
-        <section id="proyectos" className="spacer">
-          <h2>Proyectos Recientes</h2>
-          <p>Desliza para ver nuestra calidad</p>
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-            <Slider 
-              beforeImage={imgAntes} 
-              afterImage={imgDespues} 
-            />
-          </div>
         </section>
       </main>
     </div>

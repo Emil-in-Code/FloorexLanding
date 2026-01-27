@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
-import logo from '../../assets/img/logo.webp'
+import logo from '../../Assets/Images/logo.webp'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
