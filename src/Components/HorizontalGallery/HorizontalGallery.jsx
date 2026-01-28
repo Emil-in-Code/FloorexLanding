@@ -35,19 +35,36 @@ const HorizontalGallery = ({ projects }) => {
         ref={sectionRef} 
         style={{ 
           display: 'flex', 
+          alignItems:'center',
+          justifyContent:'center',
           width: 'fit-content', // Esto permite que el ancho crezca según los proyectos
           height: '100vh',
           alignItems: 'center',
-          marginTop:'5rem'
+          paddingTop:'5rem',
+          paddingLeft:'5rem'
         }}
       >
         {/* Slide 1: Intro fija */}
-        <div style={{ width: '35vw', padding: '0 5%', flexShrink: 0 }}>
-          <h2 style={{ fontSize: '5rem', color: '#e1e1e1' }}>NUESTROS<br/><span style={{ color: '#b2113b' }}>PROYECTOS</span></h2>
-          <p style={{ color: '#888' }}>Desliza hacia abajo ↓</p>
+        <div style={{
+          width: '30vw', 
+          padding: '0 5%',
+          flexShrink: 0,
+          display:'flex',
+          flexDirection:'column',
+          justifyContent:'center',
+          gap:'2px',
+          marginBottom:'4rem'
+
+        }}>
+          <h2 style={{ fontSize: '5rem',color: '#e1e1e1',marginBottom:'0',lineHeight:'1'}}>
+            NUESTROS<br/><span style={{color: '#b2113b', marginBottom:'0' }}>PROYECTOS</span>
+          </h2>
+          <p style={{ color: '#888',marginTop:'20px' }}>
+            Scroll ↓
+          </p>
+
         </div>
 
-        {/* --- PUNTO 2: AQUÍ ESTÁ EL .map() --- */}
         {projects.map((pro) => (
           <div 
             key={pro.id} // Usamos el ID que tienes en App.jsx

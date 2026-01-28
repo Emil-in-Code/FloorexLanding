@@ -5,6 +5,9 @@ import HeroSection from './Components/Hero/HeroSection.jsx';
 import './App.css';
 import HorizontalGallery from './Components/HorizontalGallery/HorizontalGallery.jsx'
 import { projectList } from './Data/ProjectData.js';
+import CurvedLoop from './Components/CuverdLoop/CurvedLoop.jsx';
+import PixelCard from './Components/PixelCard/PixelCard.jsx';
+import baño from './Assets/Images/baño.webp'
 
 function App() {
   return (
@@ -22,12 +25,25 @@ function App() {
         {/* Secciones adicionales para permitir el scroll */}
 
         <section id="projects" className="spacer">
-          <div>
             <HorizontalGallery projects={projectList}/>
-          </div>
         </section> 
         <section id="servicios" className="spacer">
-          <h2>Nuestros Servicios</h2>
+          <CurvedLoop 
+            marqueeText="Nuestros Servicios ✦ Nuestros  Servicios ✦ "
+            speed={2}
+            curveAmount={-0}
+            direction="left"
+            interactive
+            className="custom-text-style"
+          />
+        <PixelCard variant="pink">
+            <div>
+              <h2>Pisos Pulidos</h2>
+              <p>Y abrillantados</p>
+              <img 
+                src={baño} alt=""/>
+            </div>
+          </PixelCard>
         </section>
       </main>
     </div>

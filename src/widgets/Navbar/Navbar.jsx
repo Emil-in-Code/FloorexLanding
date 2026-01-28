@@ -44,7 +44,7 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className={styles.desktopMenu}>
             <a href="#servicios" className={styles.navLink}>Servicios</a>
-            <a href="#proyectos" className={styles.navLink}>Proyectos</a>
+            <a href="#projects" className={styles.navLink}>Proyectos</a>
             <a href="#contacto" className={styles.navLink}>Contacto</a>
           </div>
 
