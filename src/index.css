@@ -1,3 +1,5 @@
+@tailwind components;
+@tailwind utilities;
 :root {
   font-family: 'Montserrat-Black';
   line-height: 1.5;

@@ -31,22 +31,6 @@
   }
 }
 
-.lineTop, .lineBottom {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 200px;
-  background-color: #e1e1e1;
-}
-
-.lineTop {
-  top: 0;
-}
-
-.lineBottom {
-  bottom: 0;
-}
-
 p{
   margin-Top:10rem;
   color:#888;

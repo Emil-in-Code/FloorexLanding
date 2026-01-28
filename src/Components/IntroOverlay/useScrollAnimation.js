@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useScrollAnimation(threshold = 500) {
+export function useScrollAnimation(threshold = 300) {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {

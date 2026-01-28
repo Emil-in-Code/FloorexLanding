@@ -21,22 +21,9 @@ function App() {
         
         {/* Secciones adicionales para permitir el scroll */}
 
-        <section id="proyectos" className="spacer">
+        <section id="projects" className="spacer">
           <div>
-            <HorizontalGallery proyectos={projectList}/>
-
-           {/* <ReactCompareSlider
-              itemOne={<ReactCompareSliderImage src={beforeImg} alt="Antes" />}
-              itemTwo={<ReactCompareSliderImage src={afterImg} alt="Después" />}
-              handle={<ReactCompareSliderHandle style={{color: '#b2113bff'}}/>}
-              style={{
-                width: '500px',
-                height: '400px',
-                borderRadius: '9px', // Bordes redondeados
-                border: '2px solid #b2113bff' // Un marco sutil
-              }}
-
-            />*/}
+            <HorizontalGallery projects={projectList}/>
           </div>
         </section> 
         <section id="servicios" className="spacer">

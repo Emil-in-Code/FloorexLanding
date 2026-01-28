@@ -5,7 +5,7 @@ import { useIntroOverlay } from './useIntroOverlay.js'
 
 // IntroOverlay.jsx
 export default function IntroOverlay() {
-  const { logoStyle, lineTopStyle, lineBottomStyle, overlayStyle } = useIntroOverlay(400);
+  const { logoStyle, lineTopStyle, lineBottomStyle, overlayStyle } = useIntroOverlay(300);
 
   return (
     <div className={styles.overlay} style={overlayStyle}> 

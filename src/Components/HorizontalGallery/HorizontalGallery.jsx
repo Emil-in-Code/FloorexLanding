@@ -7,7 +7,7 @@ import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slide
 // Registramos el plugin para que GSAP sepa que vamos a usar el scroll
 gsap.registerPlugin(ScrollTrigger);
 
-const HorizontalGallery = ({ proyectos }) => {
+const HorizontalGallery = ({ projects }) => {
   const sectionRef = useRef();
   const triggerRef = useRef();
 
@@ -27,7 +27,7 @@ const HorizontalGallery = ({ proyectos }) => {
         pin: true,     // Bloquea la pantalla mientras ocurre el movimiento
       },
     });
-  }, { scope: triggerRef, dependencies: [proyectos] });
+  }, { scope: triggerRef, dependencies: [projects] });
 
   return (
     <div ref={triggerRef} style={{ overflow: 'hidden', backgroundColor: '#121212' }}>
@@ -48,7 +48,7 @@ const HorizontalGallery = ({ proyectos }) => {
         </div>
 
         {/* --- PUNTO 2: AQUÍ ESTÁ EL .map() --- */}
-        {proyectos.map((pro) => (
+        {projects.map((pro) => (
           <div 
             key={pro.id} // Usamos el ID que tienes en App.jsx
             style={{ width: '50vw', display: 'flex', justifyContent: 'center', flexShrink: 0 }}

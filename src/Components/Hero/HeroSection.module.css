@@ -3,13 +3,25 @@
   background-color: #121212; 
 }
  
-.hero {
+/*.hero {
   position: sticky;
   top:0;
   padding: 2rem 2rem 2rem 8rem; 
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+}*/
+
+.containerGh{
+  margin-top:30rem;
+}
+
+.hero{
+  position: relative;
+  min-height: 100vh;
+  overflow:hidden;
+  z-index: 1;
+
 }
 
 .animationBuffer {
@@ -22,6 +34,8 @@
   justify-content:center;
   gap:4rem;
   width:80%;
+  min-height:100%;
+  margin-top:10rem;
 }
 
 .textGroup{
@@ -38,10 +52,8 @@
   margin-bottom: 1.5rem;
   color: #e1e1e1;
   letter-spacing: -0.02em;
-  margin-top:43rem;
   text-align:left;
   padding:1rem;
-  margin-bottom:0;
 }
 
 .titleGradient{
