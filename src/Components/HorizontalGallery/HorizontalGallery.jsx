@@ -11,7 +11,6 @@ const HorizontalGallery = ({ projects }) => {
   const sectionRef = useRef();
   const triggerRef = useRef();
 
-  // --- PUNTO 3: AQUÍ ESTÁ EL useGSAP ---
   useGSAP(() => {
     // Calculamos cuánto mide toda la tira de imágenes
     const totalMovimiento = sectionRef.current.scrollWidth - window.innerWidth;

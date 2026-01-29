@@ -9,7 +9,7 @@ position: absolute; /* Añade esto */
   z-index: 0; /* Al fondo */
 }
 
-.pixel-card {
+/*.pixel-card {
   height: 400px;
   width: 300px;
   position: relative;
@@ -22,6 +22,20 @@ position: absolute; /* Añade esto */
   isolation: isolate;
   transition: border-color 200ms cubic-bezier(0.5, 1, 0.89, 1);
   user-select: none;
+}*/
+
+.pixel-card {
+  height: 450px; /* Aumentamos un poco el alto si es necesario */
+  width: 320px;
+  position: relative;
+  overflow: hidden;
+  display: flex;         /* Cambiado de grid a flex */
+  flex-direction: column; 
+  padding: 20px;         /* Añadimos padding para que el texto no toque los bordes */
+  box-sizing: border-box;
+  border: 1px solid #b2113bff;
+  border-radius: 25px;
+  isolation: isolate;
 }
 
 .pixel-card::before {
@@ -38,4 +52,36 @@ position: absolute; /* Añade esto */
 .pixel-card:hover::before,
 .pixel-card:focus-within::before {
   opacity: 1;
+}
+
+/*.container-card{
+  display: flex;
+  flex-direction:column;
+}*/
+
+.container-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Por encima del canvas */
+  text-align: center;
+  gap: 3px; /* Espacio entre título, p e imagen */
+}
+
+/* 3. Ajustamos el contenedor de la imagen */
+.img-container {
+  width: 100%;  /* Que ocupe el ancho del card */
+  flex-grow: 1; /* Que use el espacio sobrante */
+  overflow: hidden;
+  border-radius: 15px;
+  margin-top: auto; /* Empuja la imagen hacia abajo */
+}
+
+/* 4. Aplicamos el object-fit que consultaste antes */
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto evitará que se deforme */
+  display: block;
 }

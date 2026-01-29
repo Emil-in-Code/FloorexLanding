@@ -29,19 +29,24 @@ function App() {
         </section> 
         <section id="servicios" className="spacer">
           <CurvedLoop 
-            marqueeText="Nuestros Servicios ✦ Nuestros  Servicios ✦ "
+            marqueeText="Bonddex ✦ Sailor Paint ✦ Xingyi ✦ Aurand ✦ HG ✦ Monster ✦"
             speed={2}
             curveAmount={-0}
             direction="left"
-            interactive
+            interactive 
             className="custom-text-style"
           />
         <PixelCard variant="pink">
-            <div>
+            <div className="container-card">
               <h2>Pisos Pulidos</h2>
               <p>Y abrillantados</p>
-              <img 
-                src={baño} alt=""/>
+              <div className = "img-container">
+                <img 
+                  src={baño} 
+                  alt=""
+                  className = "img"
+                />
+              </div>
             </div>
           </PixelCard>
         </section>

@@ -43,8 +43,8 @@ export default function HeroSection() {
           <div className={styles.content}>
 
             <div className= {styles.textGroup}>
-              <h1 className={styles.title}>PISOS <span className={styles.titleGradient}>EPÓXICOS</span></h1>
-              <p className={styles.parrafo}>La transformación que tu espacio merece.</p>
+              <h1 className={styles.title}> <span className={styles.titleGradient}>A Flooring</span> Company</h1>
+              <p className={styles.parrafo}>Floors for life</p>
               <div className={styles.cta}>
                  <button className={`${styles.btn} ${styles.btnContact}`}>Contactar</button>
                  <button className={`${styles.btn} ${styles.btnProject}`}>Proyectos</button>             
