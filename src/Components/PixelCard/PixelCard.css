@@ -69,6 +69,11 @@ position: absolute; /* Añade esto */
   gap: 3px; /* Espacio entre título, p e imagen */
 }
 
+.text-group{
+  display:flex;
+  flex-direction:column;
+}
+
 /* 3. Ajustamos el contenedor de la imagen */
 .img-container {
   width: 100%;  /* Que ocupe el ancho del card */

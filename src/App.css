@@ -7,7 +7,7 @@
 }
 
 .appWrapper {
-  background-color: #121212; 
+  background-color: var(--bgColor); 
   min-height: 100vh;
   width:100%;
 }
@@ -24,4 +24,19 @@
 #projects {
   height: auto; 
   display: block; 
+}
+
+.loopContainer{
+  width:100%;
+  height:50%;
+  padding-top:5rem;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.title-loop{
+  padding:10px;
+  font-size:2.5rem;
+  color:var(--perl);
 }

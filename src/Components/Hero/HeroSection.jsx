@@ -32,7 +32,7 @@ export default function HeroSection() {
             lineThickness={1}
             linesColor="#1e1e1e"
             gridScale={0.1}
-            scanColor="#f20800"
+            scanColor="#ff7700"
             scanOpacity={0.4}
             enablePost
             bloomIntensity={0.6}
@@ -43,7 +43,7 @@ export default function HeroSection() {
           <div className={styles.content}>
 
             <div className= {styles.textGroup}>
-              <h1 className={styles.title}> <span className={styles.titleGradient}>A Flooring</span> Company</h1>
+              <h1 className={styles.title}>A Flooring Company</h1>
               <p className={styles.parrafo}>Floors for life</p>
               <div className={styles.cta}>
                  <button className={`${styles.btn} ${styles.btnContact}`}>Contactar</button>
@@ -52,10 +52,6 @@ export default function HeroSection() {
 
             </div>
 
-
-           {/*<div className={styles.pulidoraContainer}>
-              <img src={heroImg} alt="foto pulidora" className={styles.pulidoraImg}/>
-            </div>*/}
           </div>
         </div>
 

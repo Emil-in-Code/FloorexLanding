@@ -28,18 +28,25 @@ function App() {
             <HorizontalGallery projects={projectList}/>
         </section> 
         <section id="servicios" className="spacer">
-          <CurvedLoop 
-            marqueeText="Bonddex ✦ Sailor Paint ✦ Xingyi ✦ Aurand ✦ HG ✦ Monster ✦"
-            speed={2}
-            curveAmount={-0}
-            direction="left"
-            interactive 
-            className="custom-text-style"
-          />
-        <PixelCard variant="pink">
+          <div className="loopContainer">
+            <h3 className="title-loop">Trabajamos con</h3>
+            <CurvedLoop 
+              marqueeText="Bonddex ✦ Sailor Paint ✦ Xingyi ✦ Aurand ✦ HG ✦ Monster ✦"
+              speed={2}
+              curveAmount={-0}
+              direction="left"
+              interactive 
+              className="custom-text-style"
+            />
+          </div>
+
+
+          <PixelCard variant="pink">
             <div className="container-card">
-              <h2>Pisos Pulidos</h2>
-              <p>Y abrillantados</p>
+              <div className="text-group">
+                <h2>Pisos Pulidos</h2>
+                <p>Y abrillantados</p>
+              </div>
               <div className = "img-container">
                 <img 
                   src={baño} 

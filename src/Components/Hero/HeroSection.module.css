@@ -30,52 +30,55 @@
 
 .content{
   display: flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
-  gap:4rem;
-  width:80%;
+  width:100%;
   min-height:100%;
-  margin-top:10rem;
+  margin:auto;
 }
 
 .textGroup{
   display:flex;
   flex-direction:column;
-  gap:1px;
+  align-items:center;
+  justify-content:center;
 }
 
 .title {
-  flex:1;
   font-size: clamp(1rem, 10vw, 4rem);
   font-weight: 800;
   line-height: 1;
-  margin-bottom: 1.5rem;
-  color: #e1e1e1;
+  margin-bottom: 1px;
+  color: var(--perl);
   letter-spacing: -0.02em;
   text-align:left;
   padding:1rem;
 }
 
-.titleGradient{
-  background: linear-gradient(135deg, #b2113bff 0%, grey 40%, #b2113bff 100%);
+/*.titleGradient{
+  background: linear-gradient(135deg, #b2113b 100%, #a29587 40%, #283618 0%);
+  background: #f7f9f9;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
+}*/
 
 .parrafo {
   font-family:Roboto-Light;
   font-size: clamp(0.9rem, 2vw, 1.5rem);
   text-align:left;
   padding: 1rem;
-  margin-bottom:10px;
   margin-top:0;
-  color:#fff;
+  color:#ffce06;
 }
 
 /*CTA BTN*/
 .cta{
-  display: flex;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:30rem;
   gap: 0.6rem;
   padding:1rem;
 }
@@ -88,7 +91,7 @@
 }
 
 .btnContact {
-  background: linear-gradient(135deg, #b2b2b280 0%, #b2113bff 100%);
+  background:#b2113b;
   color: #fff;
   border: 1px solid #b2113bff;
 }

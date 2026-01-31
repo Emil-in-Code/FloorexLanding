@@ -9,6 +9,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --primary: #b2113b;
+  --bgColor: #121212;
+  --perl: #f7f9f9;
+  --grey: #b2b2b2ff;
 }
 
 @font-face {
