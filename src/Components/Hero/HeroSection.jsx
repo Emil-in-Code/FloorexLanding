@@ -7,7 +7,7 @@ import heroImg from '../../Assets/Images/imgHero.png'
 import GridScan from '../GridScan/GridScan.jsx';
 
 export default function HeroSection() {
-  const scrollValue = useScrollAnimation(300); 
+  const scrollValue = useScrollAnimation(200); 
   
   // El texto empieza a aparecer cuando el logo ya avanzó el 40% (0.4)
   const heroOpacity = Math.max(0, (scrollValue - 0.6) * 2.5);

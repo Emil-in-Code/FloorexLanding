@@ -5,9 +5,10 @@ import HeroSection from './Components/Hero/HeroSection.jsx';
 import './App.css';
 import HorizontalGallery from './Components/HorizontalGallery/HorizontalGallery.jsx'
 import { projectList } from './Data/ProjectData.js';
+import { servicesPics } from './Data/ServicesData.js';
 import CurvedLoop from './Components/CuverdLoop/CurvedLoop.jsx';
 import PixelCard from './Components/PixelCard/PixelCard.jsx';
-import baño from './Assets/Images/baño.webp'
+
 
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
         <section id="projects" className="spacer">
             <HorizontalGallery projects={projectList}/>
         </section> 
-        <section id="servicios" className="spacer">
+
+        <section id="companies" className="spacer">
           <div className="loopContainer">
             <h3 className="title-loop">Trabajamos con</h3>
             <CurvedLoop 
@@ -39,24 +41,26 @@ function App() {
               className="custom-text-style"
             />
           </div>
-
-
-          <PixelCard variant="pink">
-            <div className="container-card">
-              <div className="text-group">
-                <h2>Pisos Pulidos</h2>
-                <p>Y abrillantados</p>
-              </div>
-              <div className = "img-container">
-                <img 
-                  src={baño} 
-                  alt=""
-                  className = "img"
-                />
-              </div>
-            </div>
-          </PixelCard>
         </section>
+
+        <section id="services" className="services-grid"> 
+          <h1>Nuestros Servicios</h1>
+          {servicesPics.map((servicio) => (
+            <PixelCard key={servicio.id}>
+              <div className="container-card">
+                <h1 className="service-title">{servicio.title}</h1>
+                <div className="img-container">
+                  <img 
+                    src={servicio.image} 
+                    className="img" 
+                    loading="lazy" /* Importante: solo carga la imagen cuando el usuario llega a ella */
+                  />
+                </div>
+              </div>
+            </PixelCard>
+          ))}
+        </section>
+
       </main>
     </div>
   );

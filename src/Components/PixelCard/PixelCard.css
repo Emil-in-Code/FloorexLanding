@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
   display: block;
-position: absolute; /* Añade esto */
+  position: absolute; /* Añade esto */
   top: 0;
   left: 0;
   z-index: 0; /* Al fondo */
@@ -33,7 +33,7 @@ position: absolute; /* Añade esto */
   flex-direction: column; 
   padding: 20px;         /* Añadimos padding para que el texto no toque los bordes */
   box-sizing: border-box;
-  border: 1px solid #b2113bff;
+  border: 1px solid var(--primary);
   border-radius: 25px;
   isolation: isolate;
 }
@@ -44,7 +44,7 @@ position: absolute; /* Añade esto */
   inset: 0;
   margin: auto;
   aspect-ratio: 1;
-  background: radial-gradient(circle, #09090b, transparent 85%);
+  background: radial-gradient(circle, var(--primary), transparent 85%);
   opacity: 0;
   transition: opacity 800ms cubic-bezier(0.5, 1, 0.89, 1);
 }
@@ -64,14 +64,14 @@ position: absolute; /* Añade esto */
   flex-direction: column;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Por encima del canvas */
+  z-index: 1;  
   text-align: center;
-  gap: 3px; /* Espacio entre título, p e imagen */
+  justify-content:center;
+  gap: 1px;
 }
 
-.text-group{
-  display:flex;
-  flex-direction:column;
+p{
+  color: var(--perl);
 }
 
 /* 3. Ajustamos el contenedor de la imagen */
