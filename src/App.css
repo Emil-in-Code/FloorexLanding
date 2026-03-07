@@ -23,20 +23,19 @@
 
 #projects {
   height: auto; 
-  display: block; 
+  display: block;
 }
 
 .loopContainer{
   width:100%;
   height:50%;
-  padding-top:5rem;
   display: flex;
   flex-direction:column;
   align-items:center;
 }
 
 .title-loop{
-  padding:10px;
+  padding:5px;
   font-size:2.5rem;
   color:var(--perl);
 }
@@ -44,9 +43,10 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
-  gap: 25px;
-  padding: 40px;
-  justify-items: center; /* Centra las cards si sobra espacio */
+  gap: 15px;
+  padding: 80px;
+  justify-items: center;
+  margin-top:0,5rem;
 }
 
 .service-title{

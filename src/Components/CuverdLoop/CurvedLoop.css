@@ -2,10 +2,10 @@
 .curved-loop-jacket {
   min-height: 20vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-bottom: 10rem;
 }
 
 .curved-loop-svg {
@@ -13,13 +13,14 @@
   width: 100%;
   aspect-ratio: 100 / 12;
   overflow: visible;
-  display: block;
   font-size: 2rem;
-  fill: var(--primary);
+  fill: var(--grey);
+  background: var(--primary);
   user-select: none;
+  padding-top:4rem;
   -moz-user-select: none;
   -webkit-user-select: none;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 1;
+  line-height: 3;
 }

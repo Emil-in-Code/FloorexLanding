@@ -61,6 +61,10 @@ function App() {
           ))}
         </section>
 
+        <section className="about-us">
+          <h2> Sobre nosotros</h2>
+        </section>
+
       </main>
     </div>
   );
