@@ -1,6 +1,5 @@
 import React from 'react';
 import IntroOverlay from './Components/IntroOverlay/IntroOverlay.jsx';
-import Navbar from './widgets/Navbar/Navbar.jsx';
 import HeroSection from './Components/Hero/HeroSection.jsx';
 import './App.css';
 import HorizontalGallery from './Components/HorizontalGallery/HorizontalGallery.jsx'
@@ -8,6 +7,8 @@ import { projectList } from './Data/ProjectData.js';
 import { servicesPics } from './Data/ServicesData.js';
 import CurvedLoop from './Components/CuverdLoop/CurvedLoop.jsx';
 import PixelCard from './Components/PixelCard/PixelCard.jsx';
+
+import  Navbar from './widgets/Navbar/Navbar.jsx';
 
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
         </section>
 
       </main>
+
     </div>
   );
 }
