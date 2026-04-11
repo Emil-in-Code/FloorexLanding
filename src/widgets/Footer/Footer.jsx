@@ -13,27 +13,31 @@ export default function Footer({ id }) {
       <div className={styles.inner}>
 
         <div className={styles.brand}>
-          <p className={styles.brandName}>De Sandro-Seguros</p>
+          <p className={styles.brandName}>Floorex Company</p>
           <div className={styles.divider} />
-          <p className={styles.tagline}>Tu tranquilidad, mi prioridad</p>
+          <p className={styles.tagline}>floors for life</p>
         </div>
 
         <div className={styles.links}>
-          <a className={styles.linkItem} href="https://wa.me/34614866499" target="_blank" rel="noopener noreferrer">
+          <a 
+            className={styles.linkItem}
+            href="https://wa.me/593987844281"
+            target="_blank"
+            rel="noopener noreferrer">
             <span>
               <span className={styles.linkLabel}>WhatsApp</span>
-              <span className={styles.linkValue}>+34 614 866 499</span>
+              <span className={styles.linkValue}>+593987844281</span>
             </span>
           </a>
           <a className={styles.linkItem} href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
             <span>
               <span className={styles.linkLabel}>Instagram</span>
-              <span className={styles.linkValue}>@desandroseguros</span>
+              <span className={styles.linkValue}>@floorex.ec</span>
             </span>
           </a>
           <a 
             className={styles.linkItem} 
-            href="mailto:desandroseguros@gmail.com"
+            href="mailto:floorex@gmail.com"
             onClick={(e) => {
               e.preventDefault();
 
@@ -45,26 +49,26 @@ export default function Footer({ id }) {
               });
 
               setTimeout(() => {
-                window.location.href = "mailto:desandroseguros@gmail.com";
+                window.location.href = "mailto:floorex@gmail.com";
               }, 150);
             }}
           >
             <span>
               <span className={styles.linkLabel}>Email</span>
-              <span className={styles.linkValue}>desandroseguros@gmail.com</span>
+              <span className={styles.linkValue}>floorex@gmail.com</span>
             </span>
           </a>
           <div className={styles.linkItem}>
             <span>
               <span className={styles.linkLabel}>Ubicación</span>
-              <span className={styles.linkValue}>Valencia, España</span>
+              <span className={styles.linkValue}>Guayaquil, Ecuador</span>
             </span>
           </div>
         </div>
 
           {/*Legales*/}
         <div className={styles.bottom}>
-          <span className={styles.copy}> 2026 Desandro Seguros — Todos los derechos reservados</span>
+          <span className={styles.copy}> 2026 Floorex Company — Todos los derechos reservados</span>
           <nav className={styles.legal} aria-label="Aviso legal">
             <Link to="/privacidad" className={styles.legalLink}>Política de privacidad</Link>
             <Link to="/cookies" className={styles.legalLink}>Política de cookies</Link>

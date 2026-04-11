@@ -1,4 +1,6 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import IntroOverlay from './Components/IntroOverlay/IntroOverlay.jsx';
 import HeroSection from './Components/Hero/HeroSection.jsx';
 import './App.css';
@@ -8,7 +10,7 @@ import { servicesPics } from './Data/ServicesData.js';
 import CurvedLoop from './Components/CuverdLoop/CurvedLoop.jsx';
 import PixelCard from './Components/PixelCard/PixelCard.jsx';
 
-import  Navbar from './widgets/Navbar/Navbar.jsx';
+import { Navbar, Footer}  from './widgets';
 
 
 function App() {
@@ -68,6 +70,7 @@ function App() {
 
       </main>
 
+      <Footer id="Footer" />
     </div>
   );
 }
