@@ -1,20 +1,26 @@
-import React from 'react';
+import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import usePageTracking from "./hook/useGtmTracking.js";
 
-import IntroOverlay from './Components/IntroOverlay/IntroOverlay.jsx';
-import HeroSection from './Components/Hero/HeroSection.jsx';
 import './App.css';
-import HorizontalGallery from './Components/HorizontalGallery/HorizontalGallery.jsx'
-import { projectList } from './Data/ProjectData.js';
-import { servicesPics } from './Data/ServicesData.js';
-import CurvedLoop from './Components/CuverdLoop/CurvedLoop.jsx';
-import PixelCard from './Components/PixelCard/PixelCard.jsx';
-
+import { CurvedLoop, GridScan, Hero, HorizontalGallery, PixelCard, IntroOverlay } from './Components';
 import { Navbar, Footer}  from './widgets';
 
+import { projectList } from './Data/ProjectData.js';
+import { servicesPics } from './Data/ServicesData.js';
+
+
+//Carga diferida: estos bundles solo se descargan cuando el usuario navega a la ruta
+const PrivacyPage = lazy(() => import('./pages/privacyPage.jsx'));
+const CookiesPage = lazy(() => import ('./pages/CookiePage.jsx')) 
+const LegalNoticePage = lazy(() => import ('./pages/LegalNoticePage.jsx')) 
 
 function App() {
+
+  usePageTracking();
+
   return (
+
     <div className="appWrapper">
       {/* 1. Capa de animación superior */}
       <IntroOverlay />
@@ -24,7 +30,7 @@ function App() {
 
       {/* 3. Contenido Principal */}
       <main>
-        <HeroSection />
+        <Hero />
         
         {/* Secciones adicionales para permitir el scroll */}
 
@@ -69,6 +75,45 @@ function App() {
         </section>
 
       </main>
+
+      <AboutMe />
+
+      {/* RUTA DE DETALLE */}
+      <Route
+          path="/seguro/:id"
+          element={<ServiceDetail />}
+      />
+
+      {/* RUTAS LEGALES — lazy loaded */}
+      <Route
+          path="/privacidad"
+          element={
+            <Suspense fallback={<div style={{ padding: '4rem', textAlign: 'center', color: '#6b6b6b' }}>Cargando...</div>}>
+              <PrivacidadPage />
+            </Suspense>
+          }
+      />
+
+      <Route
+          path="/cookies"
+          element={
+            <Suspense fallback={<div style={{ padding: '4rem', textAlign: 'center', color: '#6b6b6b' }}>Cargando...</div>}>
+              <CookiesPage />
+            </Suspense> 
+          }
+      />
+
+      <Route
+          path="/legal"
+          element={
+            <Suspense fallback={<div style={{ padding: '4rem', textAlign: 'center', color: '#6b6b6b' }}>Cargando...</div>}>
+              <LegalNoticePage />
+            </Suspense> 
+          }
+    
+      />
+
+      </Routes>
 
       <Footer id="Footer" />
     </div>
