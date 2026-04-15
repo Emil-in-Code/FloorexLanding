@@ -10,12 +10,22 @@
   color:var(--primary);
 }
 
-.paragraph{
+.introduction, .mision, .vision{
   margin-top: 15px;
   margin-bottom:2rem;
+  font-family: 2rem;
+  line-height:2.3;
   color: var(--perl);
-  font-family:'Montserrat';
+  font-family:"Montserrat";
   font-weight:300;
+}
+.misionSpan, .visionSpan{
+  color: var(--primary);
+  font-weight:bold;
+  font-size:1.5rem;
+  background: linear-gradient(to right, #f7f9f9, #b2b2b2);
+  border-radius: 7px;
+  padding:7px;
 }
 
 
