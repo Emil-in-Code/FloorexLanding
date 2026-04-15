@@ -1,5 +1,21 @@
-.span{
-  color: var(--bgColor);
--webkit-text-stroke: 1px var(--primary);
+.aboutSection{
+  padding: 3rem;
 }
+
+.subtexto{
+  font-size:40px;
+}
+
+.span{
+  color:var(--primary);
+}
+
+.paragraph{
+  margin-top: 15px;
+  margin-bottom:2rem;
+  color: var(--perl);
+  font-family:'Montserrat';
+  font-weight:300;
+}
+
 

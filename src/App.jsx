@@ -70,7 +70,6 @@ function App() {
           ))}
         </section>
 
-
         <AboutUs />
 
       </main>

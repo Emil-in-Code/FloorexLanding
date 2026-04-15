@@ -2,8 +2,19 @@ import styles from "./AboutUs.module.css"
 
 export default function AboutUs() {
   return (
-    <section>
-      <h2 className= {styles.subtexto}>Sobre<span className= {styles.span}>Nosotros</span></h2>
+    <section className={styles.aboutSection}>
+      <div className={styles.aboutContainer}>
+        <h2 className= {styles.subtexto}>Sobre<span className= {styles.span}>Nosotros</span></h2>
+        <p className={styles.paragraph}>FloorEx es nueva, pero nuestra experiencia no.<br />
+           Antes de lanzar la empresa, invertimos años acumulando horas de aprendizaje en obra, 
+           en cursos especializados y en contacto directo con proveedores de calidad. Trabajamos en
+           todo tipo de pisos industriales y comerciales, vimos soluciones que prometían y fallaban,
+           y decidimos que había que hacerlo bien de una vez.
+           Por eso creamos FloorEx: para ofrecer soluciones definitivas para pisos, con claridad,
+          energía y responsabilidad. Porque un piso bien hecho no es un gasto, es una herramienta que
+          trabaja para el cliente toda la vida.
+        </p> 
+      </div>
     </section>
 
   )
