@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import usePageTracking from "./hook/useGtmTracking.js";
 
 import './App.css';
-import { CurvedLoop, GridScan, Hero, HorizontalGallery, PixelCard, IntroOverlay } from './Components';
+import { CurvedLoop, GridScan, Hero, HorizontalGallery, PixelCard, IntroOverlay,AboutUs } from './Components';
 import { Navbar, Footer}  from './widgets';
 
 import { projectList } from './Data/ProjectData.js';
@@ -70,48 +70,40 @@ function App() {
           ))}
         </section>
 
-        <section className="about-us">
-          <h2> Sobre nosotros</h2>
-        </section>
+
+        <AboutUs />
 
       </main>
 
-      <AboutMe />
+      <Routes>
+        {/* RUTAS LEGALES — lazy loaded */}
+        <Route
+            path="/privacidad"
+            element={
+              <Suspense fallback={<div style={{ padding: '4rem', textAlign: 'center', color: '#6b6b6b' }}>Cargando...</div>}>
+                <PrivacyPage />
+              </Suspense>
+            }
+        />
 
-      {/* RUTA DE DETALLE */}
-      <Route
-          path="/seguro/:id"
-          element={<ServiceDetail />}
-      />
+        <Route
+            path="/cookies"
+            element={
+              <Suspense fallback={<div style={{ padding: '4rem', textAlign: 'center', color: '#6b6b6b' }}>Cargando...</div>}>
+                <CookiesPage />
+              </Suspense> 
+            }
+        />
 
-      {/* RUTAS LEGALES — lazy loaded */}
-      <Route
-          path="/privacidad"
-          element={
-            <Suspense fallback={<div style={{ padding: '4rem', textAlign: 'center', color: '#6b6b6b' }}>Cargando...</div>}>
-              <PrivacidadPage />
-            </Suspense>
-          }
-      />
-
-      <Route
-          path="/cookies"
-          element={
-            <Suspense fallback={<div style={{ padding: '4rem', textAlign: 'center', color: '#6b6b6b' }}>Cargando...</div>}>
-              <CookiesPage />
-            </Suspense> 
-          }
-      />
-
-      <Route
-          path="/legal"
-          element={
-            <Suspense fallback={<div style={{ padding: '4rem', textAlign: 'center', color: '#6b6b6b' }}>Cargando...</div>}>
-              <LegalNoticePage />
-            </Suspense> 
-          }
+        <Route
+            path="/legal"
+            element={
+              <Suspense fallback={<div style={{ padding: '4rem', textAlign: 'center', color: '#6b6b6b' }}>Cargando...</div>}>
+                <LegalNoticePage />
+              </Suspense> 
+            }
     
-      />
+        />
 
       </Routes>
 
