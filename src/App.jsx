@@ -53,7 +53,7 @@ function App() {
         </section>
 
         <section id="services" className="services-grid"> 
-          <h1>Nuestros Servicios</h1>
+          <h1 >Nuestros Servicios</h1>
           {servicesPics.map((servicio) => (
             <PixelCard key={servicio.id}>
               <div className="container-card">

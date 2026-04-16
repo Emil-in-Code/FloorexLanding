@@ -19,6 +19,7 @@ export default function AboutUs() {
           Buscamos darte soluciones definitivas para los pisos industriales y comerciales, creando <br />
           superficies eficientes y duraderas; con ideas claras y responsabilidad técnica para cada proyecto.
         </p>
+
         <p className={styles.mision}> 
           <sapn className={styles.misionSpan}>MISIÓN:</sapn><br />
           Posicionarnos en el mercado como referentes en la aplicación de soluciones definitivas para pisos 
