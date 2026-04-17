@@ -1,29 +1,42 @@
-.aboutSection{
-  padding: 3rem;
+/* AboutUs.module.css */
+
+.aboutSection {
+  padding: 2rem;
 }
 
-.subtexto{
-  font-size:40px;
+.aboutContainer {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* 👈 esto reemplaza los margin-bottom manuales */
 }
 
-.span{
-  color:var(--primary);
+.subtexto {
+  font-size: 40px;
+  margin: 0; /* antes tenías margin-bottom:0.5 sin unidad (inválido) */
 }
 
-.introduction, .mision, .vision{
-  margin-top: 15px;
-  margin-bottom:2rem;
-  font-family: 2rem;
-  line-height:2.3;
+/* Apunta al <p> que genera SplitText dentro de los divs de texto */
+.subtexto :global(.split-parent) {
+  display: block !important; /* 👈 clave: evita que quede inline-block apilado raro */
+  margin-bottom: 1rem;
+  line-height: 1.6;
   color: var(--perl);
+  font-family: Roboto-Light;
+  font-weight: 300;
 }
-.misionSpan, .visionSpan{
-  color: var(--primary);
-  font-weight:bold;
-  font-size:1.5rem;
-  background: linear-gradient(to right, #f7f9f9, #b2b2b2);
-  border-radius: 7px;
-  padding:7px;
+
+/* Los h2/h3 con SplitText adentro también necesitan espacio */
+.subtexto h3 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.aboutContainer h2 :global(.split-parent),
+.aboutContainer h3 :global(.split-parent) {
+  color: #b2113b;
+  margin-top:2rem;
+  font-family:'Montserrat-Black';
 }
 
 

@@ -24,6 +24,7 @@ export default function AboutUs() {
             en cursos especializados y en contacto directo con proveedores de calidad.'
             delay={30}
             splitType="words" // "words" queda mejor para textos largos que "chars"
+            tag="div"
           />
           <br />
           <SplitText
@@ -32,24 +33,41 @@ export default function AboutUs() {
             FloorEx: para ofrecer soluciones definitivas para pisos, con claridad, energía y responsabilidad."
             delay={30}
             splitType="words"
+            tag="div"
           />
         </div> 
 
         <div className={styles.subtexto}>
-          <span className={styles.vision}>VISIÓN:</span><br />
+          <h3 className={styles.subtexto}>
+            <SplitText 
+              text="VISIÓN" 
+              delay={50} 
+              tag="span"
+            />
+          </h3>
           <SplitText
             text="Buscamos darte soluciones definitivas para los pisos industriales y comerciales, creando superficies eficientes y duraderas; con ideas claras y responsabilidad técnica para cada proyecto."
             delay={30}
             splitType="words"
+            tag="div"
           />
         </div>
 
+
         <div className={styles.subtexto}> 
-          <span className={styles.misionSpan}>MISIÓN:</span><br />
+          <h3 className={styles.subtexto}>
+            <SplitText 
+              text="MISIÓN" 
+              delay={50} 
+              role="heading"
+              tag="span"
+            />
+          </h3>
           <SplitText
             text="Posicionarnos en el mercado como referentes en la aplicación de soluciones definitivas para pisos industriales y comerciales, creando superficies para toda la vida."
             delay={30}
             splitType="words"
+            tag="div"
           />
         </div>
       </div>

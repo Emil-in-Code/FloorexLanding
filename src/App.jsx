@@ -69,9 +69,9 @@ function App() {
             </PixelCard>
           ))}
         </section>
-
-        <AboutUs />
-
+        <section>
+          <AboutUs />
+        </section>
       </main>
       <Routes>
         {/* RUTAS LEGALES — lazy loaded */}
