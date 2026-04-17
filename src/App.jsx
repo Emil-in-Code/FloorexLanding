@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import usePageTracking from "./hook/useGtmTracking.js";
 
 import './App.css';
-import { CurvedLoop, GridScan, Hero, HorizontalGallery, PixelCard, IntroOverlay,AboutUs } from './Components';
+import { CurvedLoop, GridScan, Hero, HorizontalGallery, PixelCard, IntroOverlay,AboutUs} from './Components';
 import { Navbar, Footer}  from './widgets';
 
 import { projectList } from './Data/ProjectData.js';
@@ -73,7 +73,6 @@ function App() {
         <AboutUs />
 
       </main>
-
       <Routes>
         {/* RUTAS LEGALES — lazy loaded */}
         <Route

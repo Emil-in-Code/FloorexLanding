@@ -16,8 +16,6 @@
   font-family: 2rem;
   line-height:2.3;
   color: var(--perl);
-  font-family:"Montserrat";
-  font-weight:300;
 }
 .misionSpan, .visionSpan{
   color: var(--primary);
