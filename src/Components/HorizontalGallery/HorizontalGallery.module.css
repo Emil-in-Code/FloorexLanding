@@ -1,0 +1,128 @@
+/* ─── Wrapper (el que hace pin en desktop) ─── */
+.triggerWrapper {
+  overflow: hidden;
+  background-color: #121212;
+}
+
+/* ─── Tira horizontal (desktop) ─── */
+.strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 100vh;
+  padding-top: 5rem;
+  padding-left: 5rem;
+}
+
+/* ─── Slide de intro ─── */
+.introSlide {
+  width: 30vw;
+  padding: 0 5%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 4rem;
+}
+
+.introTitle {
+  font-size: 5rem;
+  color: #e1e1e1;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.introAccent {
+  color: #b2113b;
+  margin-bottom: 0;
+}
+
+.introHint {
+  color: #888;
+  margin-top: 20px;
+}
+
+/* ─── Card de proyecto ─── */
+.projectCard {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.projectInner {
+  width: 90%;
+  max-width: 850px;
+}
+
+.projectTitle {
+  color: #e1e1e1;
+  margin-top: 20px;
+}
+
+/* ═══════════════════════════════════════════
+   MOBILE / TABLET  (≤ 768px)
+   Layout vertical — sin GSAP
+═══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .triggerWrapper {
+    overflow: visible; /* scroll normal */
+    width: 100%;
+  }
+
+  /* En mobile la tira pasa a ser una columna */
+  .strip {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 3rem 1.25rem 4rem;
+    padding-left: 1.25rem; /* pisamos el padding-left: 5rem del desktop */
+    gap: 2.5rem;
+  }
+
+  /* Intro ocupa todo el ancho */
+  .introSlide {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .introTitle {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+
+  .introHint {
+    display: none; /* en mobile el hint de scroll no tiene sentido */
+  }
+
+  /* Cards apiladas */
+  .projectCard {
+    width: 100%;
+    flex-shrink: 1;
+  }
+
+  .projectInner {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ─── Tablet intermedio (769px – 1024px) ─── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .introSlide {
+    width: 35vw;
+  }
+
+  .introTitle {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+  }
+
+  .projectCard {
+    width: 60vw;
+  }
+}

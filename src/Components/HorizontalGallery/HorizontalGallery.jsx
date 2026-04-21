@@ -1,84 +1,81 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
+import styles from './HorizontalGallery.module.css';
 
-// Registramos el plugin para que GSAP sepa que vamos a usar el scroll
 gsap.registerPlugin(ScrollTrigger);
+
+// Hook para saber si estamos en mobile/tablet
+const useIsMobile = (breakpoint = 768) => {
+  const [isMobile, setIsMobile] = useState(
+    () => window.innerWidth <= breakpoint
+  );
+
+  useEffect(() => {
+    const mq = window.matchMedia(`(max-width: ${breakpoint}px)`);
+    const handler = (e) => setIsMobile(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, [breakpoint]);
+
+  return isMobile;
+};
 
 const HorizontalGallery = ({ projects }) => {
   const sectionRef = useRef();
   const triggerRef = useRef();
+  const isMobile = useIsMobile(768);
 
   useGSAP(() => {
-    // Calculamos cuánto mide toda la tira de imágenes
+    // Solo inicializamos el scroll horizontal en desktop
+    if (isMobile) return;
+
     const totalMovimiento = sectionRef.current.scrollWidth - window.innerWidth;
 
-    gsap.to(sectionRef.current, {
-      x: -totalMovimiento, // Se mueve hacia la izquierda
-      ease: "none",
+    const ctx = gsap.to(sectionRef.current, {
+      x: -totalMovimiento,
+      ease: 'none',
       scrollTrigger: {
         trigger: triggerRef.current,
-        start: "top top",
-        end: "+=2000", // Aumenta este número para que el scroll sea más lento
-        scrub: 1,      // Hace que la animación siga suavemente al mouse
-        pin: true,     // Bloquea la pantalla mientras ocurre el movimiento
+        start: 'top top',
+        end: '+=2000',
+        scrub: 1,
+        pin: true,
       },
     });
-  }, { scope: triggerRef, dependencies: [projects] });
+
+    return () => ctx.revert?.();
+  }, { scope: triggerRef, dependencies: [projects, isMobile] });
 
   return (
-    <div ref={triggerRef} style={{ overflow: 'hidden', backgroundColor: '#121212' }}>
-      <div 
-        ref={sectionRef} 
-        style={{ 
-          display: 'flex', 
-          alignItems:'center',
-          justifyContent:'center',
-          width: 'fit-content', // Esto permite que el ancho crezca según los proyectos
-          height: '100vh',
-          alignItems: 'center',
-          paddingTop:'5rem',
-          paddingLeft:'5rem'
-        }}
-      >
-        {/* Slide 1: Intro fija */}
-        <div style={{
-          width: '30vw', 
-          padding: '0 5%',
-          flexShrink: 0,
-          display:'flex',
-          flexDirection:'column',
-          justifyContent:'center',
-          gap:'2px',
-          marginBottom:'4rem'
+    <div ref={triggerRef} className={styles.triggerWrapper}>
+      <div ref={sectionRef} className={styles.strip}>
 
-        }}>
-          <h2 style={{ fontSize: '5rem',color: '#e1e1e1',marginBottom:'0',lineHeight:'1'}}>
-            NUESTROS<br/><span style={{color: '#b2113b', marginBottom:'0' }}>PROYECTOS</span>
+        {/* Slide intro */}
+        <div className={styles.introSlide}>
+          <h2 className={styles.introTitle}>
+            NUESTROS<br />
+            <span className={styles.introAccent}>PROYECTOS</span>
           </h2>
-          <p style={{ color: '#888',marginTop:'20px' }}>
-            Scroll ↓
-          </p>
-
+          <p className={styles.introHint}>Scroll ↓</p>
         </div>
 
+        {/* Cards de proyectos */}
         {projects.map((pro) => (
-          <div 
-            key={pro.id} // Usamos el ID que tienes en App.jsx
-            style={{ width: '50vw', display: 'flex', justifyContent: 'center', flexShrink: 0 }}
-          >
-            <div style={{ width: '90%', maxWidth: '850px' }}>
+          <div key={pro.id} className={styles.projectCard}>
+            <div className={styles.projectInner}>
               <ReactCompareSlider
                 itemOne={<ReactCompareSliderImage src={pro.antes} />}
                 itemTwo={<ReactCompareSliderImage src={pro.despues} />}
                 style={{ height: '350px', borderRadius: '20px' }}
               />
-              <h3 style={{ color: '#e1e1e1', marginTop: '20px' }}>{pro.titulo}</h3>
+              <h3 className={styles.projectTitle}>{pro.titulo}</h3>
             </div>
           </div>
         ))}
+
       </div>
     </div>
   );

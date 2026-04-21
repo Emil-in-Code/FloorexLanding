@@ -2,6 +2,87 @@
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.appWrapper {
+  background-color: var(--bgColor); 
+  min-height: 100vh;
+  width: 100%;
+}
+
+.spacer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e1e1e1;
+}
+
+#projects {
+  height: auto;
+  display: block;
+  padding: 0;
+  min-height: unset; /* cancela el 100vh del .spacer — la galería maneja su propia altura */
+}
+
+@media (max-width: 768px) {
+  #projects {
+    width: 100%;
+    overflow: hidden; /* evita scroll horizontal fantasma en mobile */
+  }
+}
+
+.loopContainer {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-loop {
+  padding: 5px;
+  font-size: 2.5rem;
+  color: var(--perl);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+  gap: 30px;
+  padding: 100px 80px;
+  justify-items: center;
+  margin-top: 0.5rem; /* tenías una coma en vez de punto, causaba que se ignorara */
+  align-items: start;
+}
+
+.service-title {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    padding: 60px 20px;
+    grid-template-columns: 1fr; /* una columna en mobile */
+    gap: 20px;
+  }
+
+  .title-loop {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+}
+
+
+
+
+/*#root {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
   box-sizing:border-box;
   overflow-x: hidden;
 }
@@ -54,4 +135,4 @@
 .service-title{
   font-size:2.5rem;
 }
-
+*/

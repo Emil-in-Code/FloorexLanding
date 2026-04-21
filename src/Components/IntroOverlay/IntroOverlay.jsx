@@ -13,7 +13,7 @@ export default function IntroOverlay() {
       <div className={styles.logoContainer} style={logoStyle}>
         <img src={logo} alt="logo de bienvenida" className={styles.svg} />
       </div>
-      <p>Scroll</p>
+      <p>Scroll ↓</p>
       {/*<div className={styles.lineBottom} style={lineBottomStyle} />*/}
     </div>
   );
