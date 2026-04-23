@@ -1,19 +1,58 @@
 // heroSection.jsx
-import React from 'react';
+import React, { useState, useEffect,} from 'react';
+
 import { useScrollAnimation } from '../IntroOverlay/useScrollAnimation.js';
 import Navbar from '../../widgets/Navbar/Navbar.jsx';
 import styles from './HeroSection.module.css';
 import heroImg from '../../Assets/Images/imgHero.png'
 import GridScan from '../GridScan/GridScan.jsx';
 
+function useBreakpoint() {
+  const [breakpoint, setBreakpoint] = useState(() => {
+    if (typeof window === 'undefined') return 'desktop';
+    const w = window.innerWidth;
+    if (w < 768) return 'mobile';
+    if (w < 1024) return 'tablet';
+    return 'desktop';
+  });
+
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth;
+      if (w < 768) setBreakpoint('mobile');
+      else if (w < 1024) setBreakpoint('tablet');
+      else setBreakpoint('desktop');
+    };
+    window.addEventListener('resize', update, { passive: true });
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
+  return breakpoint;
+}
+
 export default function HeroSection() {
-  const scrollValue = useScrollAnimation(200); 
+  const scrollValue = useScrollAnimation(100); 
   
   // El texto empieza a aparecer cuando el logo ya avanzó el 40% (0.4)
   const heroOpacity = Math.max(0, (scrollValue - 0.6) * 2.5);
   
   // Efecto de escala: empieza en 0.8 y llega a 1
   const heroScale = 0.95 + (Math.min(heroOpacity, 1) * 0.2);
+
+  const breakpoint = useBreakpoint();
+  const isMobile = breakpoint === 'mobile';
+  const isTablet = breakpoint === 'tablet';
+
+  //  Delay controlado (mejora LCP)
+  const [showEffect, setShowEffect] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowEffect(true);
+    }, 500); // se puede ajustar 300–800ms
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className={styles.wrapper}>
