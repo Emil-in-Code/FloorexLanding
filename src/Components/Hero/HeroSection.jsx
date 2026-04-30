@@ -66,19 +66,24 @@ export default function HeroSection() {
         }}
       >  
         <div className={styles.containerGh}>
-          <GridScan
-            sensitivity={0.55}
-            lineThickness={1}
-            linesColor="#1e1e1e"
-            gridScale={0.1}
-            scanColor="#ff7700"
-            scanOpacity={0.4}
-            enablePost
-            bloomIntensity={0.6}
-            chromaticAberration={0.002}
-            noiseIntensity={0.01}
-            enableWebcam={false}
-          />
+          <div className={styles.gridScan}>
+             <GridScan
+              sensitivity={0.55}
+              lineThickness={1}
+              linesColor="#1e1e1e"
+              gridScale={0.1}
+              scanColor="#ff7700"
+              scanOpacity={0.4}
+              enablePost
+              bloomIntensity={0.6}
+              chromaticAberration={0.002}
+              noiseIntensity={0.01}
+              enableWebcam={false}
+            />
+          </div>
+
+          <div className={styles.gradientBg}>
+          </div>
           <div className={styles.content}>
 
             <div className= {styles.textGroup}>
