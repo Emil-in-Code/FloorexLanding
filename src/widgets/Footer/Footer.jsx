@@ -49,13 +49,13 @@ export default function Footer({ id }) {
               });
 
               setTimeout(() => {
-                window.location.href = "mailto:floorex@gmail.com";
+                window.location.href = "mailto:floorex.ec@gmail.com";
               }, 150);
             }}
           >
             <span>
               <span className={styles.linkLabel}>Email</span>
-              <span className={styles.linkValue}>floorex@gmail.com</span>
+              <span className={styles.linkValue}>floorex.ec@gmail.com</span>
             </span>
           </a>
           <div className={styles.linkItem}>

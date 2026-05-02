@@ -5,11 +5,13 @@ export function useScrollAnimation(threshold = 300) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const progress = Math.min(window.scrollY / threshold, 1); // cap en 1, no en 2
+      // Calculamos el progreso de 0 a 1 en los primeros 'threshold' píxeles
+      const currentScroll = window.scrollY;
+      const progress = Math.min(currentScroll / threshold, 2);
       setScrollProgress(progress);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [threshold]);
 

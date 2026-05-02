@@ -173,7 +173,7 @@ export default function PrivacyPolicy() {
     <div className={styles.wrapper}>
       {/* Header */}
       <header className={styles.header}>
-        <span className={styles.eyebrow}>De Sandro Seguros</span>
+        <span className={styles.eyebrow}>Floorex</span>
         <h1 className={styles.title}>Política de Privacidad</h1>
         <p className={styles.meta}>Última actualización: {LAST_UPDATED}</p>
         <p className={styles.intro}>

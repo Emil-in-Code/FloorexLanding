@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Legal  from "../components/Legal/legalNotice.jsx";
+import Legal  from "../Components/Legal/LegalNotice.jsx";
 import { RESPONSIBLE } from "../Data/legalNotice.js";
 
 export default function LegalNoticePage() {

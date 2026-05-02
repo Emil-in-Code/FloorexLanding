@@ -1,12 +1,17 @@
+
 .overlay {
   position: fixed;
   inset: 0;
-  background-color: #121212; 
+  background-color: #121212;
   z-index: 100;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  /* pointer-events se maneja desde el hook, 
+     pero el transition en opacity ayuda a suavizar */
+  transition: opacity 0.15s ease, visibility 0s;
 }
 
 .logoContainer {
@@ -14,6 +19,9 @@
   width: 200px;
   height: 200px;
   z-index: 102;
+  /* Necesario para que translate(-50%, -50%) del hook funcione */
+  top: 50%;
+  left: 50%;
 }
 
 .svg {
@@ -23,15 +31,22 @@
 }
 
 @keyframes girar {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
-p{
-  margin-Top:10rem;
-  color:#888;
+.overlay p {
+  margin-top: 10rem;
+  color: #888;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  /* La opacidad la controla el hook con style inline */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .logoContainer {
+    width: 130px;
+    height: 130px;
+  }
 }

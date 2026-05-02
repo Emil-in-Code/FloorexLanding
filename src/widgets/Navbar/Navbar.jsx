@@ -1,6 +1,7 @@
 // Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { NavHashLink } from 'react-router-hash-link';
 import styles from './Navbar.module.css';
 import logo from '../../Assets/Images/logo.webp'
 
@@ -43,9 +44,10 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className={styles.desktopMenu}>
-            <a href="#servicios" className={styles.navLink}>Servicios</a>
-            <a href="#projects" className={styles.navLink}>Proyectos</a>
-            <a href="#contacto" className={styles.navLink}>Contacto</a>
+            <NavHashLink smooth to="/#services" className={styles.navLink}>Servicios</NavHashLink>
+            <NavHashLink smooth to="/#projects" className={styles.navLink}>Proyectos</NavHashLink>
+            <NavHashLink smooth to="/#aboutUs" className={styles.navLink}>Sobre Nosotros</NavHashLink>
+
           </div>
 
           {/* Mobile Menu Button */}

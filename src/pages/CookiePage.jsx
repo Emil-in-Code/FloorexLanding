@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Cookies  from "../components/Legal/Cookies.jsx";
+import Cookies  from "../Components/Legal/Cookies.jsx";
 import { RESPONSIBLE } from "../Data/Cookies.js";
 
 export default function CookiesPage() {

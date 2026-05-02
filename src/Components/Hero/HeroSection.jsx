@@ -1,11 +1,12 @@
 // heroSection.jsx
-import React, { useState, useEffect,} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { useScrollAnimation } from '../IntroOverlay/useScrollAnimation.js';
 import Navbar from '../../widgets/Navbar/Navbar.jsx';
 import styles from './HeroSection.module.css';
-import heroImg from '../../Assets/Images/imgHero.png'
+import heroImg from '../../Assets/Images/imgHero.png';
 import GridScan from '../GridScan/GridScan.jsx';
+import CtaButton from '../Cta/cta.jsx';
 
 function useBreakpoint() {
   const [breakpoint, setBreakpoint] = useState(() => {
@@ -31,80 +32,79 @@ function useBreakpoint() {
 }
 
 export default function HeroSection() {
-  const scrollValue = useScrollAnimation(100); 
-  
-  // El texto empieza a aparecer cuando el logo ya avanzó el 40% (0.4)
-  const heroOpacity = Math.max(0, (scrollValue - 0.6) * 2.5);
-  
-  // Efecto de escala: empieza en 0.8 y llega a 1
-  const heroScale = 0.95 + (Math.min(heroOpacity, 1) * 0.2);
+  const scrollValue = useScrollAnimation(100);
+
+  // El hero empieza a aparecer en 0.65 (cuando el overlay ya está en opacity 0).
+  // Llega a opacity 1 en progress 1.
+  // Rango disponible: 0.65 → 1 = 0.35 unidades → factor 1/0.35 ≈ 2.86
+  const heroOpacity = Math.min(1, Math.max(0, (scrollValue - 0.65) * 2.86));
+
+  // Escala: parte en 0.95, llega a 1
+  const heroScale = 0.95 + heroOpacity * 0.05;
 
   const breakpoint = useBreakpoint();
-  const isMobile = breakpoint === 'mobile';
-  const isTablet = breakpoint === 'tablet';
-
-  //  Delay controlado (mejora LCP)
-  const [showEffect, setShowEffect] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowEffect(true);
-    }, 500); // se puede ajustar 300–800ms
-
-    return () => clearTimeout(timer);
-  }, []);
+  const isDesktop = breakpoint === 'desktop';
 
   return (
     <div className={styles.wrapper}>
       <Navbar />
 
-      <section 
-        className={styles.hero} 
-        style={{ 
+      <section
+        className={styles.hero}
+        style={{
           opacity: heroOpacity,
-          transform: `scale(${heroScale})`
+          transform: `scale(${heroScale})`,
         }}
-      >  
+      >
         <div className={styles.containerGh}>
-          <div className={styles.gridScan}>
-             <GridScan
-              sensitivity={0.55}
-              lineThickness={1}
-              linesColor="#1e1e1e"
-              gridScale={0.1}
-              scanColor="#ff7700"
-              scanOpacity={0.4}
-              enablePost
-              bloomIntensity={0.6}
-              chromaticAberration={0.002}
-              noiseIntensity={0.01}
-              enableWebcam={false}
-            />
-          </div>
+          {/* GridScan solo en desktop/tablet */}
+          {isDesktop && (
+            <div className={styles.gridScan}>
+              <GridScan
+                sensitivity={0.55}
+                lineThickness={1}
+                linesColor="#1e1e1e"
+                gridScale={0.1}
+                scanColor="#ff7700"
+                scanOpacity={0.4}
+                enablePost
+                bloomIntensity={0.6}
+                chromaticAberration={0.002}
+                noiseIntensity={0.01}
+                enableWebcam={false}
+              />
+            </div>
+          )}
 
-          <div className={styles.gradientBg}>
-          </div>
+          {/* Fondo animado siempre presente en mobile, 
+              en desktop funciona como overlay sutil */}
+          <div className={styles.gradientBg} />
+
           <div className={styles.content}>
-
-            <div className= {styles.textGroup}>
+            <div className={styles.textGroup}>
               <h1 className={styles.title}>A Flooring Company</h1>
               <p className={styles.parrafo}>Floors for life</p>
+
               <div className={styles.cta}>
-                 <button className={`${styles.btn} ${styles.btnContact}`}>Contactar</button>
-                 <button className={`${styles.btn} ${styles.btnProject}`}>Proyectos</button>             
-              </div> 
+                <CtaButton
+                  wp="593987844281"
+                  className={`${styles.btn} ${styles.btnContact}`}
+                  text="Contactar"
+                />
+                <CtaButton
+                  to="/seguro/1"
+                  className={`${styles.btn} ${styles.btnServices}`}
+                  text="Servicios"
+                />                    
 
+              </div>
             </div>
-
           </div>
         </div>
-
-
       </section>
-      
-      {/* Espaciador para permitir el scroll de la animación y contenido extra */}
-      <div className={styles.animationBuffer} />
 
+      {/* Buffer mínimo: solo lo necesario para el scroll de la animación */}
+      <div className={styles.animationBuffer} />
     </div>
   );
 }

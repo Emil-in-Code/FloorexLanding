@@ -110,7 +110,7 @@ export default function legalSections() {
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
-        <span className={styles.eyebrow}>De Sandro Seguros</span>
+        <span className={styles.eyebrow}>Floorex</span>
         <h1 className={styles.title}>Aviso Legal</h1>
         <p className={styles.meta}>Última actualización: {LEGAL_LAST_UPDATED}</p>
         <p className={styles.intro}>
@@ -128,7 +128,7 @@ export default function legalSections() {
             </div>
 
           <div className={styles.contactRow}>
-            <span className={styles.contactLabel}>Documento</span>
+            <span className={styles.contactLabel}>Cédula</span>
             <span className={styles.contactValue}>
               {RESPONSIBLE.dni} 
             </span>

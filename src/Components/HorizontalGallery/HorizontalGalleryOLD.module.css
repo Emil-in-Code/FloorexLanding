@@ -1,9 +1,3 @@
-/* ─── Compare Slider responsivo ─── */
-.compareSlider {
-  height: 350px;
-  width: 100%;
-}
-
 /* ─── Wrapper (el que hace pin en desktop) ─── */
 .triggerWrapper {
   overflow: hidden;
@@ -74,10 +68,8 @@
 ═══════════════════════════════════════════ */
 @media (max-width: 768px) {
   .triggerWrapper {
-    overflow-x: hidden; /* evita desborde horizontal */
-    overflow-y: visible;
+    overflow: visible; /* scroll normal */
     width: 100%;
-    box-sizing: border-box;
   }
 
   /* En mobile la tira pasa a ser una columna */
@@ -87,9 +79,8 @@
     width: 100%;
     height: auto;
     padding: 3rem 1.25rem 4rem;
-    padding-left: 1.25rem;
+    padding-left: 1.25rem; /* pisamos el padding-left: 5rem del desktop */
     gap: 2.5rem;
-    box-sizing: border-box;
   }
 
   /* Intro ocupa todo el ancho */
@@ -106,35 +97,18 @@
   }
 
   .introHint {
-    display: none;
+    display: none; /* en mobile el hint de scroll no tiene sentido */
   }
 
-  /* Cards apiladas — contenidas al viewport */
+  /* Cards apiladas */
   .projectCard {
     width: 100%;
-    max-width: 100%;
     flex-shrink: 1;
-    box-sizing: border-box;
-    overflow: hidden; /* evita que el slider rompa el layout */
   }
 
   .projectInner {
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
-    overflow: hidden;
-  }
-
-  /* Fuerza al ReactCompareSlider a respetar el contenedor */
-  .projectInner > * {
-    max-width: 100% !important;
-    width: 100% !important;
-    box-sizing: border-box;
-  }
-
-  /* Altura proporcional en mobile */
-  .compareSlider {
-    height: clamp(200px, 56vw, 320px);
   }
 }
 

@@ -67,10 +67,9 @@ const HorizontalGallery = ({ projects }) => {
           <div key={pro.id} className={styles.projectCard}>
             <div className={styles.projectInner}>
               <ReactCompareSlider
-                itemOne={<ReactCompareSliderImage src={pro.antes} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />}
-                itemTwo={<ReactCompareSliderImage src={pro.despues} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />}
-                className={styles.compareSlider}
-                style={{ borderRadius: '20px' }}
+                itemOne={<ReactCompareSliderImage src={pro.antes} />}
+                itemTwo={<ReactCompareSliderImage src={pro.despues} />}
+                style={{ height: '350px', borderRadius: '20px' }}
               />
               <h3 className={styles.projectTitle}>{pro.titulo}</h3>
             </div>

@@ -112,7 +112,7 @@ export default function CookiesPolicy() {
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
-        <span className={styles.eyebrow}>De Sandro Seguros</span>
+        <span className={styles.eyebrow}>Floorex</span>
         <h1 className={styles.title}>Política de Cookies</h1>
         <p className={styles.meta}>Última actualización: {COOKIES_LAST_UPDATED}</p>
         <p className={styles.intro}>

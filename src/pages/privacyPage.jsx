@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Privacy from "../components/Legal/Privacy.jsx";
+import Privacy from "../Components/Legal/Privacy.jsx";
 import { RESPONSIBLE } from "../Data/Privacy.js";
 
 export default function PrivacyPage() {
