@@ -21,12 +21,19 @@ function HomePage() {
       <main>
         <Hero />
 
-        <section id="projects" className="spacer">
+        <section id="projects">
           <HorizontalGallery projects={projectList} />
         </section>
 
-        <section id="companies" className="spacer">
-          <div className="loopContainer">
+        <section id="companies">
+          <h3 className="title-loop">Trabajamos con</h3>
+          <CurvedLoop 
+            text="Bonddex ✦ Sailor Paint ✦ Xingyi ✦ Aurand ✦ HG ✦ Monster  ✦ "
+            speed={30}
+            repeat={8}
+          />
+        </section>
+          {/* <div className="loopContainer">
             <h3 className="title-loop">Trabajamos con</h3>
             <CurvedLoop
               marqueeText="Bonddex ✦ Sailor Paint ✦ Xingyi ✦ Aurand ✦ HG ✦ Monster ✦"
@@ -36,8 +43,7 @@ function HomePage() {
               interactive
               className="custom-text-style"
             />
-          </div>
-        </section>
+          </div>*/}
 
         <section id="services" className="services-grid">
           <h1 className="general-title">Nuestros Servicios</h1>
