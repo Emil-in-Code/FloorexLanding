@@ -1,10 +1,23 @@
 /* AboutUs.module.css */
 
+/* ─────────────────────────────────────────────
+   SECCIÓN PRINCIPAL
+   ───────────────────────────────────────────── */
+
 .aboutSection {
-  padding: 2rem;
+  padding: 1.25rem 1rem;
+  /* CAMBIO: antes era padding: 2rem en todos lados.
+     En mobile eso generaba muy poco margen lateral (especialmente en pantallas de 360px),
+     haciendo que el texto casi tocara los bordes. Ahora el padding horizontal es 1rem
+     y el vertical 1.25rem. Se escala en los breakpoints de abajo. */
+
   position: relative;
   overflow: hidden;
 }
+
+/* ─────────────────────────────────────────────
+   FONDO ANIMADO (sin cambios funcionales)
+   ───────────────────────────────────────────── */
 
 .gradientBg {
   display: block;
@@ -18,9 +31,9 @@
     radial-gradient(circle at 60% 85%, #000, transparent 45%);
   filter: blur(80px);
   opacity: 0.35;
-  z-index: 0; /* Lo ponemos en 0 o -1 */
+  z-index: 0;
   animation: pulseBg 6s ease-in-out infinite alternate;
-  pointer-events: none; /* Para que no interfiera con clicks */
+  pointer-events: none;
 }
 
 @keyframes pulseBg {
@@ -29,47 +42,121 @@
   100% { opacity: 0.1; transform: scale(1); }
 }
 
-/* Ajuste de alineación para mobile [Mejora sugerida] */
-.subtexto :global(.split-parent) {
-  text-align: left; /* 👈 Alineación recomendada */
-  line-height: 1.6;
-  z-index: 1; /* Asegura que el texto esté sobre el gradiente */
-  position: relative;
-}
+/* ─────────────────────────────────────────────
+   CONTENEDOR PRINCIPAL
+   ───────────────────────────────────────────── */
+
 .aboutContainer {
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* 👈 esto reemplaza los margin-bottom manuales */
+  gap: 1.5rem;
+  /* CAMBIO: gap era 2rem. En mobile ese espacio entre bloques resultaba
+     excesivo y hacía el scroll más largo de lo necesario. 1.5rem es más
+     compacto sin perder la separación visual entre secciones. */
+
+  position: relative;
+  z-index: 1;
+  /* NUEVO: position + z-index agregados al contenedor.
+     Sin esto, el gradientBg (z-index: 0) podía interferir visualmente
+     con el contenido en algunos navegadores mobile al hacer scroll. */
 }
+
+/* ─────────────────────────────────────────────
+   TEXTO GENERAL (subtexto)
+   ───────────────────────────────────────────── */
 
 .subtexto {
-  font-size: 40px;
-  margin: 0; /* antes tenías margin-bottom:0.5 sin unidad (inválido) */ 
+  font-size: clamp(1rem, 4vw, 1.5rem);
+  /* CAMBIO: antes era font-size: 40px fijo. Ese valor corresponde a un h2,
+     pero se aplicaba también a los párrafos de texto corrido, haciéndolos
+     enormes en mobile. clamp(1rem, 4vw, 1.5rem) significa:
+       - mínimo 16px (legible en cualquier pantalla)
+       - crece con el viewport (4vw ≈ 18px en 450px de ancho)
+       - máximo 24px para el body text */
 
+  margin: 0;
 }
 
-/* Apunta al <p> que genera SplitText dentro de los divs de texto */
+/* Ajuste de alineación para los split-parent generados por SplitText */
 .subtexto :global(.split-parent) {
-  display: block !important; /* 👈 clave: evita que quede inline-block apilado raro */
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  display: block !important;
+  /* Evita que queden inline-block apilados de forma extraña (sin cambios) */
+
+  text-align: left;
+  line-height: 1.7;
+  /* CAMBIO: line-height pasó de 1.6 a 1.7.
+     En tipografías pequeñas (mobile) un interlineado un poco más amplio
+     mejora la legibilidad, especialmente en Roboto-Light. */
+
+  margin-bottom: 0.75rem;
+  /* CAMBIO: antes no había margin-bottom explícito aquí (o era 1rem).
+     0.75rem da separación entre párrafos sin inflar el scroll en mobile. */
+
   color: var(--perl);
   font-family: Roboto-Light;
   font-weight: 300;
+  position: relative;
+  z-index: 1;
 }
 
-/* Los h2/h3 con SplitText adentro también necesitan espacio */
+/* ─────────────────────────────────────────────
+   TÍTULOS h2 / h3
+   ───────────────────────────────────────────── */
+
 .subtexto h3 {
-  font-size: 2.5rem;
+  font-size: clamp(1.4rem, 5vw, 2.5rem);
+  /* CAMBIO: antes era 2.5rem fijo (40px). En mobile ese valor era
+     demasiado grande para un subtítulo de sección como VISIÓN o MISIÓN.
+     clamp() lo hace crecer desde 1.4rem (22px) hasta 2.5rem en desktop. */
+
   margin-bottom: 0.5rem;
 }
 
 .aboutContainer h2 :global(.split-parent),
 .aboutContainer h3 :global(.split-parent) {
   color: #b2113b;
-  margin-top:2rem;
-  font-family:'Montserrat-Black';
+  font-family: 'Montserrat-Black';
+
+  margin-top: 1rem;
+  /* CAMBIO: margin-top era 2rem. En mobile ese espacio encima de cada
+     subtítulo sumaba demasiado al scroll total. 1rem es suficiente para
+     separar visualmente la sección anterior. */
 }
 
+/* ─────────────────────────────────────────────
+   RESPONSIVE — TABLET Y DESKTOP
+   ───────────────────────────────────────────── */
 
+@media (min-width: 640px) {
+  /* NUEVO: breakpoint tablet.
+     A partir de 640px el layout ya tiene espacio para padding más generoso
+     y los gaps pueden volver a valores más amplios. */
+
+  .aboutSection {
+    padding: 2rem 2.5rem;
+  }
+
+  .aboutContainer {
+    gap: 2rem;
+  }
+
+  .subtexto {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    /* En tablet el texto body puede crecer un poco más. */
+  }
+}
+
+@media (min-width: 1024px) {
+  /* NUEVO: breakpoint desktop.
+     Recupera el padding generoso original y permite que los títulos
+     lleguen a su tamaño máximo definido por el clamp. */
+
+  .aboutSection {
+    padding: 3rem 4rem;
+  }
+
+  .aboutContainer {
+    gap: 2.5rem;
+  }
+}
