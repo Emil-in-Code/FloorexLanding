@@ -5,7 +5,7 @@ export const RESPONSIBLE = {
   name: "Joaquin Flor",
   trade: "Floorex",
   dni:"0924791882",
-  address: "Calle larga, puerta 8,CP 46017 Cuenca, Ecuador",
+  address: "Colinas de los Ceibos calle 8va y AV.3ra #203 Guayaquil, Ecuador",
   email: "floorex.ec@gmail.com",
   website: "floorex.com.ec",
 };
@@ -59,12 +59,11 @@ export const sections = [
     number: "3",
     title: "Bases legales para el tratamiento",
     content:
-      "De acuerdo con el Reglamento (UE) 2016/679 (RGPD), el tratamiento de sus datos personales se fundamenta en las siguientes bases legales:",
+      "De acuerdo con la LOPDP (Ecuador), tratamos sus datos bajo las siguientes condiciones:",
     list: [
-      "Consentimiento (art. 6.1.a): para el tratamiento de cookies de analítica y publicidad, y para el envío de comunicaciones comerciales.",
-      "Ejecución de un contrato o medidas precontractuales (art. 6.1.b): cuando el tratamiento es necesario para atender su solicitud de información sobre nuestros servicios.",
-      "Cumplimiento de obligación legal (art. 6.1.c): cuando la ley nos obliga a conservar o comunicar determinados datos.",
-      "Intereses legítimos (art. 6.1.f): para la mejora de nuestros servicios y la seguridad del sitio web, siempre que no prevalezcan sus derechos y libertades.",
+      "Consentimiento: Para el uso de cookies de marketing y analítica.",
+      "Medidas precontractuales: Para gestionar su solicitud de información sobre nuestros servicios de pisos industriales.",
+      "Interés legítimo: Para garantizar la seguridad del sitio web y mejorar nuestros servicios comerciales.",
     ],
   },
   {
@@ -75,10 +74,10 @@ export const sections = [
       {
         title: "Proveedores de servicios y encargados del tratamiento",
         content:
-          "Compartimos datos con los siguientes terceros en calidad de encargados del tratamiento, conforme a acuerdos que cumplen con el RGPD:",
+          "Compartimos datos mínimos necesarios con proveedores tecnológicos que actúan como encargados del tratamiento:",
         list: [
-          "Google LLC (Google Analytics 4 y Google Ads): para analítica web y publicidad. Google actúa bajo el Marco de Privacidad de Datos UE-EE.UU.",
-          "Meta Platforms Ireland Ltd (Meta Pixel / Facebook Ads): para publicidad personalizada y medición de conversiones, si este servicio se encuentra activo.",
+          "Google LLC (Google Analytics 4 y Google Ads): para analítica web y publicidad.",
+          "Meta Platforms,Inc.: Publicidad personalizada (si el pixel está activo",
           "Vercel Inc.: proveedor de alojamiento web del sitio. Los datos técnicos pueden procesarse en sus servidores.",
         ],
       },
@@ -108,18 +107,15 @@ export const sections = [
     number: "6",
     title: "Transferencias internacionales de datos",
     content:
-      "Algunos de nuestros proveedores (Google LLC, Meta Platforms Ireland Ltd, Vercel Inc.) pueden transferir datos a países fuera del Espacio Económico Europeo, incluyendo Estados Unidos. Estas transferencias están amparadas por:",
-    list: [
-      "El Marco de Privacidad de Datos UE-EE.UU. (Data Privacy Framework), adoptado por la Comisión Europea.",
-      "Cláusulas Contractuales Tipo (CCT) aprobadas por la Comisión Europea (art. 46 RGPD).",
-    ],
+      "Nuestros proveedores (Google, Meta, Vercel) almacenan información en servidores fuera de Ecuador, principalmente en Estados Unidos. Estas transferencias se realizan bajo estándares internacionales de seguridad y protección de datos para garantizar un nivel de protección adecuado.",
+
   },
   {
     id: "conservacion",
     number: "7",
     title: "Conservación de datos",
     content:
-      "Conservaremos sus datos personales únicamente durante el tiempo necesario para los fines descritos en este Aviso, con un periodo máximo de 2 años, salvo que una obligación legal exija su conservación durante un plazo mayor (por ejemplo, la Ley General Tributaria establece 4 años para obligaciones fiscales).",
+      "Conservaremos sus datos personales durante el tiempo necesario para cumplir con su solicitud (máximo 2 años para contactos comerciales), a menos que la legislación tributaria ecuatoriana exija un periodo mayor para registros contables.",
     extra:
       "Una vez transcurrido el periodo de conservación, los datos serán suprimidos o anonimizados de forma segura.",
   },

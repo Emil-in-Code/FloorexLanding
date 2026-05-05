@@ -5,7 +5,7 @@ export const RESPONSIBLE = {
   name: "Joaquin Flor",
   trade: "Floorex",
   cédula:"0924791882",
-  address: "Calle larga, puerta 8,CP 46017 Cuenca, Ecuador",
+  address: "Colinas de los Ceibos calle 8va y AV.3ra #203 Guayaquil, Ecuador",
   email: "floorex.ec@gmail.com",
   website: "floorex.com.ec",
 };

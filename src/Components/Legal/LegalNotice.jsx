@@ -114,16 +114,17 @@ export default function legalSections() {
         <h1 className={styles.title}>Aviso Legal</h1>
         <p className={styles.meta}>Última actualización: {LEGAL_LAST_UPDATED}</p>
         <p className={styles.intro}>
-          En cumplimiento con el deber de información establecido en la Ley 34/2002
-          de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE),
-          se facilitan a continuación los datos identificativos del titular de este sitio web:
+          En cumplimiento con el deber de información establecido en la Ley
+          de Comercio Electrónico, Firmas Electrónicas y Mensajes de Datos de la
+          República del Ecuador, se facilitan a continuación los datos
+          identificativos del titular de este sitio web:
         </p>
 
         <div className={styles.contactCard}>
             <div className={styles.contactRow}>
               <span className={styles.contactLabel}>Titular</span>
               <span className={styles.contactValue}>
-                {RESPONSIBLE.name} ({RESPONSIBLE.trade})
+                {RESPONSIBLE.name} (en adelante, {RESPONSIBLE.trade})
               </span>
             </div>
 
@@ -145,6 +146,12 @@ export default function legalSections() {
               <a href={`mailto:${RESPONSIBLE.email}`}>{RESPONSIBLE.email}</a>
             </span>
           </div>
+
+          <div className={styles.contactRow}>
+            <span className={styles.contactLabel}>Actividad</span>
+            <span className={styles.contactValue}>{RESPONSIBLE.activity}</span>
+          </div>
+
         </div>
 
       </header>

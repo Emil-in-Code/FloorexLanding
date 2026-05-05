@@ -4,10 +4,10 @@ export const RESPONSIBLE = {
   name: "Joaquin Flor",
   dni: "0924791882",
   trade: "Floorex",
-  address: "Calle larga y luis cordero, puerta 8,CP 46017 Cuenca, Ecuador",
+  address: "Colinas de los Ceibos calle 8va y AV.3ra #203 Guayaquil, Ecuador",
   email: "floorex.ec@gmail.com",
   website: "floorex.com.ec",
-  activity:"arreglo de pisos insustriales y comerciales",
+  activity:"FloorEx es una empresa especializada en pisos industriales; nuestros servicios abarcan desde la venta de maquinaria especializada hasta la colocación del sistema industrial que mejor se adapte a la necesidad de tu piso.",
 };
 
 export const LegalSections =[
@@ -56,10 +56,10 @@ export const LegalSections =[
     id:"Información-comercial",
     number:"5",
     title:"Información comercial",
-    content:`La información comercial mostrada en este sitio web tiene carácter meramente informativo 
-             y no constituye una oferta vinculante. 
-             La contratación de proudctos de seguro se realiza fuera del sitio web, 
-             estando sujeta a las condiciones específicas de la aseguradora correspondiente.
-             El titular actúa como mediador de seguros.`,
+    content:`La información sobre servicios y maquinaria mostrada 
+             en este sitio web tiene carácter meramente informativo y referencial,
+             no constituyendo una oferta contractual vinculante. La contratación final
+             de los servicios técnicos o la compra de maquinaria se formalizará fuera de 
+             este sitio web mediante los canales de venta oficiales y contratos específicos.`,
   }, 
 ]

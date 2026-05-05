@@ -177,16 +177,14 @@ export default function PrivacyPolicy() {
         <h1 className={styles.title}>Política de Privacidad</h1>
         <p className={styles.meta}>Última actualización: {LAST_UPDATED}</p>
         <p className={styles.intro}>
-          Este Aviso de Privacidad de{" "}
-          <strong>{RESPONSIBLE.name}</strong> (operando como{" "}
-          <strong>{RESPONSIBLE.trade}</strong>), con domicilio en{" "}
-          {RESPONSIBLE.address}, describe cómo y por qué podemos acceder,
-          recopilar, almacenar, usar y/o compartir su información personal
-          cuando utiliza nuestros servicios.
+          Este Aviso de Privacidad describe cómo y por qué FloorEx puede recopilar, 
+          almacenar y tratar su información personal cuando utiliza nuestros
+          servicios o visita nuestro sitio web.  
         </p>
         <p className={styles.contactLine}>
-          ¿Preguntas? Escríbanos a{" "}
+          Si tiene dudas puede escribirnos a:{" "}
           <a href={`mailto:${RESPONSIBLE.email}`}>{RESPONSIBLE.email}</a>
+
         </p>
       </header>
 
