@@ -1,16 +1,26 @@
-# React + Vite
+FloorEx - Landing Page Profesional
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio contiene el código fuente del sitio web que se está desarrollando para FloorEx, una empresa especializada en soluciones definitivas para pisos industriales, comerciales y deportivos.
 
-Currently, two official plugins are available:
+El objetivo principal de este proyecto fue crear una presencia digital sólida que refleje la experiencia técnica, la responsabilidad y la energía de una empresa nueva pero con gran trayectoria en el sector.
+🚀 Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    React + Vite: Para una estructura de frontend rápida y moderna.
 
-## React Compiler
+    CSS: Implementación de un diseño limpio, profesional y mobile-first.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    Componentes Modulares: Estructura organizada para facilitar el mantenimiento y la escalabilidad de la web.
 
-## Expanding the ESLint configuration
+📋 Características del Proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    Sección "Sobre Nosotros": Narrativa enfocada en la experiencia previa de los fundadores y su compromiso con la calidad.
+
+    Catálogo de Servicios: Exposición detallada de soluciones técnicas (Poliuretano, pinturas epóxicas, pulido de pisos,etc.) con énfasis en los beneficios para el cliente.
+
+    Enfoque en Conversión: Diseño orientado a que el usuario pueda contactar rápidamente para solicitar presupuestos.
+
+    Optimización SEO: Estructura de etiquetas y contenido optimizada para motores de búsqueda en el sector industrial.
+
+    Optimización SEM: El sitio web se encuentra conectado a todos los servicios gestión y administración publicitaria de google.
+    
+    Legales: Cuenta con todas las páginas legales (aviso legal, política de privacidad, cookies) cumpliendo todas las leyes y protegiendo a la empresa. 
