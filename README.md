@@ -1,4 +1,4 @@
-FloorEx - Landing Page Profesional
+FloorEx - Sitio Web Profesional
 
 Este repositorio contiene el código fuente del sitio web que se está desarrollando para FloorEx, una empresa especializada en soluciones definitivas para pisos industriales, comerciales y deportivos.
 
@@ -21,6 +21,6 @@ El objetivo principal de este proyecto fue crear una presencia digital sólida q
 
     Optimización SEO: Estructura de etiquetas y contenido optimizada para motores de búsqueda en el sector industrial.
 
-    Optimización SEM: El sitio web se encuentra conectado a todos los servicios gestión y administración publicitaria de google.
+    Optimización SEM: El sitio web se encuentra conectado a todos los servicios de gestión y administración publicitaria de google.
     
     Legales: Cuenta con todas las páginas legales (aviso legal, política de privacidad, cookies) cumpliendo todas las leyes y protegiendo a la empresa. 
