@@ -41,7 +41,7 @@ export default function AboutUs() {
         <div className={styles.subtexto}>
           <h3 className={styles.subtexto}>
             <SplitText 
-              text="VISIÓN" 
+              text="Visión" 
               delay={50} 
               tag="span"
             />
@@ -58,7 +58,7 @@ export default function AboutUs() {
         <div className={styles.subtexto}> 
           <h3 className={styles.subtexto}>
             <SplitText 
-              text="MISIÓN" 
+              text="Misión" 
               delay={50} 
               role="heading"
               tag="span"

@@ -75,7 +75,7 @@ export default function Footer({ id }) {
             <Link to="/legal" className={styles.legalLink}>Aviso Legal</Link>
           </nav>
           <span className={styles.dev}>
-            Diseñado y desarrollado con ♥ por <a href="#" className={styles.devLink}>Emilio Flor</a>
+            Diseñado y desarrollado con ♥ por <a href="https://soy-emilio.vercel.app/" className={styles.devLink}>Emilio Flor</a>
           </span>
         </div>
 

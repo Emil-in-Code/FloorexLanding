@@ -16,7 +16,7 @@ export const services = [
       keywords:`pisos pulidos de cemento, pulido de hormigón,mejores empresas de pisos pulidos en Ecuador`,
       //og:image específica por servicio, tiene que ser de 1200 x 630 px
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/seguros/decesos`,
+      canonical: `${BASE_URL}/servicio/pulido`,
     },
     detail:
     `
@@ -25,31 +25,39 @@ export const services = [
         <em>Preventiva VIVO</em>, tu tranquilidad y la de los tuyos es lo que más nos
         importa.
       </p>
-      <h2>Coberturas Incluídas</h2>
+      <h2>¿Dónde se puede instalar?</h2>
       <ul>
         <li>
-          <h3>Traslado completo</h3>
-          <article>Gestión y gastos desde cualquier parte del mundo al cementerio elegido en España. Incluye gastos de acompañante (hasta 1.500€) y retorno de menores.</article>
+          <h3>Residencial</h3>
+          <article>Elegancia moderna sin complicaciones.</article>
         </li>
         <li>
-          <h3>Asistenecia psicológica</h3>
-          <article>Orientación y apoyo profesional en momentos de crisis o angustia tras la pérdida.</article>
+          <h3>Comercial</h3>
+          <article>Imagen profesional que soporta alto tránsito.</article>
         </li>
         <li> 
-          <h3>Asistenecia al servicio funerario</h3>
-          <article>Apoyo total a la familia desde el primer momento hasta el final del servicio.</article>
+          <h3>Industrial</h3>
+          <article>Resistencia extrema para entornos exigentes.</article>
         </li>
         <li>
-          <h3>Testamento abierto Notarial</h3>
-          <article>Asistencia web/telefónica y firma ante notario (incluso a domicilio si hay movilidad reducida).</article>
+          <h3>Showrooms</h3>
+          <article>Acabado brillante que realiza tus productos.</article>
         </li>
         <li>
-          <h3>Testamento vital</h3>
-          <article>Asesoría legal para dejar instrucciones sobre cuidados de salud y destino final del cuerpo u órganos.</article>
+          <h3>Restaurantes</h3>
+          <article>Higiene, fácil limpieza y estilo inolvidable.</article>
         </li>
         <li>
-          <h3>Gestiones jurídicas</h3>
-          <article>Tramitación de herencias, pensiones y redacción de documentos ante cualquier organismo.</article>
+          <h3>Hoteles</h3>
+          <article>Primera impresión impecable, día tras día.</article>
+        </li> 
+        <li>
+          <h3>Garajes</h3>
+          <article>Adiós al polvo y a las manchas difíciles.</article>
+        </li> 
+        <li>
+          <h3>Supermercados</h3>
+          <article>Seguro antideslizante y limpieza rápida.</article>
         </li>
       </ul>`
   },

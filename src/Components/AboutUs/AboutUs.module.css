@@ -68,9 +68,7 @@
 
 .subtexto {
   font-size: clamp(1rem, 4vw, 1.5rem);
-  /* CAMBIO: antes era font-size: 40px fijo. Ese valor corresponde a un h2,
-     pero se aplicaba también a los párrafos de texto corrido, haciéndolos
-     enormes en mobile. clamp(1rem, 4vw, 1.5rem) significa:
+  /* 
        - mínimo 16px (legible en cualquier pantalla)
        - crece con el viewport (4vw ≈ 18px en 450px de ancho)
        - máximo 24px para el body text */
@@ -90,11 +88,8 @@
      mejora la legibilidad, especialmente en Roboto-Light. */
 
   margin-bottom: 0.75rem;
-  /* CAMBIO: antes no había margin-bottom explícito aquí (o era 1rem).
-     0.75rem da separación entre párrafos sin inflar el scroll en mobile. */
-
   color: var(--perl);
-  font-family: Roboto-Light;
+  font-family:"Roboto";
   font-weight: 300;
   position: relative;
   z-index: 1;
@@ -116,12 +111,9 @@
 .aboutContainer h2 :global(.split-parent),
 .aboutContainer h3 :global(.split-parent) {
   color: #b2113b;
-  font-family: 'Montserrat-Black';
-
+  font-family:"Montserrat";
+  font-weight:800;
   margin-top: 1rem;
-  /* CAMBIO: margin-top era 2rem. En mobile ese espacio encima de cada
-     subtítulo sumaba demasiado al scroll total. 1rem es suficiente para
-     separar visualmente la sección anterior. */
 }
 
 /* ─────────────────────────────────────────────

@@ -33,17 +33,7 @@ function HomePage() {
             repeat={8}
           />
         </section>
-          {/* <div className="loopContainer">
-            <h3 className="title-loop">Trabajamos con</h3>
-            <CurvedLoop
-              marqueeText="Bonddex ✦ Sailor Paint ✦ Xingyi ✦ Aurand ✦ HG ✦ Monster ✦"
-              speed={2}
-              curveAmount={-0}
-              direction="left"
-              interactive
-              className="custom-text-style"
-            />
-          </div>*/}
+
 
         <section id="services" className="services-grid">
           <h1 className="general-title">Nuestros Servicios</h1>

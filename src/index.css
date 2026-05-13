@@ -1,6 +1,5 @@
-
 :root {
-  font-family: 'Montserrat-Black';
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   color-scheme: light dark;
   color: #e1e1e1;
@@ -13,29 +12,6 @@
   --perl: #f7f9f9;
   --grey: #b2b2b2ff;
 }
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('./Assets/Fonts/Montserrat-Thin.woff2') format('woff2-variation');
-  font-weight:100 900;
-}
-
-@font-face {
-  font-family: 'Montserrat-ThinItalic';
-  src: url('./Assets/Fonts/Montserrat-ThinItalic.woff2') format('woff2-variation');
-  font-weight:100 900;
-}
-
-@font-face {
-  font-family: 'Montserrat-Black';
-  src: url('./Assets/Fonts/Montserrat-Black.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Roboto-Light';
-  src: url('./Assets/Fonts/RobotoCondensed-Light.woff2') format('woff2');
-}
-
 
 body, html {
   margin: 0;
@@ -54,8 +30,8 @@ a, ul{
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  font-family: Montserrat-Black;
-  font-weight: 800;
+  font-family:'Montserrat';
+  font-weight: 900;
 }
 
 
