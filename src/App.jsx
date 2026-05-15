@@ -12,6 +12,7 @@ import { servicesPics } from './Data/ServicesData.js';
 const PrivacyPage = lazy(() => import('./pages/privacyPage.jsx'));
 const CookiesPage = lazy(() => import('./pages/CookiePage.jsx'));
 const LegalNoticePage = lazy(() => import('./pages/LegalNoticePage.jsx'));
+const ServiceDetailPage = lazy(() => import('./pages/ServiceDetail.jsx'));
 
 // ✅ Extraé la home a su propio componente
 function HomePage() {
@@ -82,6 +83,9 @@ function App() {
         } />
         <Route path="/legal" element={
           <Suspense fallback={fallback}><LegalNoticePage /></Suspense>
+        } />
+        <Route path="/servicio/:id" element={
+          <Suspense fallback={fallback}><ServiceDetailPage /></Suspense>
         } />
       </Routes>
 

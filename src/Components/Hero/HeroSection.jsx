@@ -92,7 +92,7 @@ export default function HeroSection() {
                   text="Contactar"
                 />
                 <CtaButton
-                  to= "/seguro/1"
+                  to= "/servicio/1"
                   className={`${styles.btn} ${styles.btnServices}`}
                   text="Servicios"
                 />                    
