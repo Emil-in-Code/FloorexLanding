@@ -1,4 +1,4 @@
-import pulidos from '../Assets/ServiceDetail/pulidos.jpeg'
+import { servicesImg } from '../Data/GalleryServices.js'
 
 // ─── Constantes SEO ────────────────────────────────────────
 const BASE_URL = 'https://floorex.ec';
@@ -9,16 +9,14 @@ export const services = [
     id: 1,
     title: "Pisos pulidos/abrillantados",
     text: "En cualquier espacio que necesite durabilidad, estética y bajo mantenimiento.",
-    image: pulidos,
+    image: servicesImg.pulidos.hero,
     waMessage: "Hola, estoy interesado en el servicio de pisos pulidos/abrillantados ¿me podría dar más información?",
     badge: "más contratado",
 
     // ── Campos nuevos ───────────────────────────────────────
 
     // Imágenes para la galería (pueden ser las mismas de Assets/Images)
-    gallery: [
-      // pulidos, otraFoto, otraFoto2  ← agregá tus imports acá
-    ],
+    gallery: servicesImg.pulidos.gallery,
 
     // Ventajas que se muestran como cards con ícono
     // El ícono puede ser un emoji o un SVG string simple
@@ -34,10 +32,10 @@ export const services = [
     // Pasos del proceso — personalizable por servicio
     process: [
       { title: 'Evaluación del piso',       desc: 'Inspeccionamos el estado del concreto y definimos el proceso ideal según las condiciones del lugar.' },
-      { title: 'Preparación y rectificado', desc: 'Eliminamos imperfecciones, reparamos fisuras y nivelamos la superficie para garantizar un resultado uniforme.' },
-      { title: 'Pulido con diamantes',      desc: 'Aplicamos una secuencia progresiva de discos diamantados para alcanzar el nivel de brillo requerido.' },
-      { title: 'Densificado',               desc: 'Aplicamos densificador de litio para endurecer y sellar los poros del concreto desde adentro.' },
-      { title: 'Protección final',          desc: 'Sellador de alta resistencia que protege contra manchas, humedad y desgaste por tráfico.' },
+      { title: 'Preparación y rectificado', desc: 'Desbastamos la superficie para exponer los agregados -al nivel deseado- y crear una base sólida.' },
+      { title: 'Pulido progresivo con diamantes',      desc: 'Aplicamos una secuencia progresiva de discos diamantados para alcanzar el nivel de brillo requerido.' },
+      { title: 'Densificado',               desc: 'Aplicamos densificadores tales como el litio,sodio o potasio para endurecer y sellar los poros del concreto desde adentro.' },
+      { title: 'Brillo final',          desc: 'Usamos pads de resina fenólica para obtener un acabado fino, brillante y similar a la piedra natural… sin necesidad de selladores tópicos en la superficie.' },
     ],
 
     // ── SEO ─────────────────────────────────────────────────
@@ -90,7 +88,29 @@ export const services = [
       </ul>
     `,
   },
-
+  {
+    id: 2,
+    title: "Pisos Deportivos",
+    text: "Buenas canchas para buenos jugadores",
+    image: null,
+    waMessage: "Hola, estoy interesado en el servicio de ... ¿me podría dar más información?",
+    badge: "",          // ← dejar vacío si no tiene badge
+    gallery: [],
+    benefits: [
+      { icon: '', title: '', desc: '' },
+    ],
+    process: [
+      { title: '', desc: '' },
+    ],
+    seo: {
+      title: "",
+      description: ``,
+      keywords: ``,
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical: `${BASE_URL}/servicio/`,
+    },
+    detail: ``,
+  },
   // ─── Plantilla para nuevos servicios ───────────────────────
   // Copiá este bloque y completá los campos.
   /*

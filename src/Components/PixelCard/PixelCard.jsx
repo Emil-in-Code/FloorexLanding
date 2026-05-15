@@ -123,7 +123,7 @@ const VARIANTS = {
   }
 };
 
-export default function PixelCard({ variant = 'default', gap, speed, colors, noFocus, className = '', children }) {
+export default function PixelCard({ variant = 'default', gap, speed, colors, noFocus, className = '', children, onClick }) {
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
   const pixelsRef = useRef([]);
@@ -234,6 +234,8 @@ export default function PixelCard({ variant = 'default', gap, speed, colors, noF
       onFocus={finalNoFocus ? undefined : onFocus}
       onBlur={finalNoFocus ? undefined : onBlur}
       tabIndex={finalNoFocus ? -1 : 0}
+      onClick={onClick}
+      style={{ cursor: onClick ? 'pointer' : 'default' }}
     >
       <canvas className="pixel-canvas" ref={canvasRef} />
       {children}

@@ -159,7 +159,7 @@ export default function ServiceDetail() {
           <p className={styles.ctaLabel}>¿Listo para empezar?</p>
           <h2 className={styles.ctaTitle}>Hablemos de tu proyecto</h2>
           <p className={styles.ctaSub}>
-            Contanos qué necesitás y te damos una cotización sin compromiso.
+            Cuéntanos qué necesitas y te damos una cotización sin compromiso.
           </p>
           <div className={styles.ctaButtons}>
             <a

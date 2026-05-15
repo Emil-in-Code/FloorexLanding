@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import usePageTracking from "./hook/useGtmTracking.js";
 
 import './App.css';
@@ -16,6 +16,7 @@ const ServiceDetailPage = lazy(() => import('./pages/ServiceDetail.jsx'));
 
 // ✅ Extraé la home a su propio componente
 function HomePage() {
+  const navigate = useNavigate();
   return (
     <>
       <IntroOverlay />
@@ -39,7 +40,11 @@ function HomePage() {
         <section id="services" className="services-grid">
           <h1 className="general-title">Nuestros Servicios</h1>
           {servicesPics.map((servicio) => (
-            <PixelCard key={servicio.id}>
+            <PixelCard key={servicio.id}
+              onClick={() => {
+                navigate(`/servicio/${servicio.id}`);
+              }}
+            >
               <div className="container-card">
                 <h1 className="service-title">{servicio.title}</h1>
                 <div className="img-container">
