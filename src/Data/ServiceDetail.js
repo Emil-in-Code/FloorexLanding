@@ -24,7 +24,7 @@ export const services = [
       { icon: '🌿', title: '100% ecológico',       desc: 'Sin capas ni químicos superficiales. Cuidamos el medioambiente.' },
       { icon: '⏳', title: 'Larga durabilidad',    desc: 'El brillo es parte del concreto, no se desgasta con el uso.' },
       { icon: '🧹', title: 'Bajo mantenimiento',   desc: 'Limpieza rápida y sin productos especiales.' },
-      { icon: '✨', title: 'Acabado premium',       desc: 'Brillo natural y uniforme en toda la superficie.' },
+      { icon: '✨', title: 'Acabado premium',      desc: 'Brillo natural y uniforme en toda la superficie.' },
       { icon: '🔒', title: 'Antideslizante',       desc: 'Certificado seguro para zonas de alto tránsito.' },
       { icon: '💰', title: 'Costo-eficiente',      desc: 'Inversión única que no requiere renovaciones periódicas.' },
     ],
@@ -40,7 +40,7 @@ export const services = [
 
     // ── SEO ─────────────────────────────────────────────────
     seo: {
-      title: "Piso pulido | durabilidad y bajo mantenimiento",
+      title: "Pisos deportivos | recupera la jugabilidad",
       description: `Solución 100% ecológica que garantiza larga durabilidad sin contaminar el medio ambiente,
                     ya que nuestro proceso no aplica capas superficiales que se desgastan con el uso;
                     pulimos el propio concreto con diamantes para lograr un brillo duradero, natural y sostenible.`,
@@ -91,20 +91,28 @@ export const services = [
   {
     id: 2,
     title: "Pisos Deportivos",
-    text: "Buenas canchas para buenos jugadores",
-    image: null,
-    waMessage: "Hola, estoy interesado en el servicio de ... ¿me podría dar más información?",
+    text: "Que nada te saque del juego",
+    image:servicesImg.deportivo.hero,
+    waMessage: "Hola, estoy interesado en el servicio de los pisos deportivos ¿me podría dar más información?",
     badge: "",          // ← dejar vacío si no tiene badge
     gallery: [],
     benefits: [
-      { icon: '', title: '', desc: '' },
+      { icon: '', title: 'Sin demolición',    desc: 'Recuperamos pisos deportivos viejos o en mal estado' },
+      { icon: '💰', title: 'Costo-eficiente', desc: 'Adaptamos el sistema a tu presupuesto y nivel de exigencia (uso escolar, federado o recreativo)' },
+      { icon: '⏳', title: 'Tiempo de ejecución',    desc: 'Tu espacio estará listo en apenas unos días para que puedas volver a jugar' },
+      { icon: '🔒', title: 'Acabado liso',       desc: 'Agarre controlado en el punto justo de deslizamiento, sin frenadas bruscas ni resbalones' },
+      { icon: '⏳', title: 'Larga durabilidad',    desc: 'Resistencia al arrastre de zapatillas, exposición solar,lluvias y limpieza sin decoloración' },
+      { icon: '', title: 'Estetica profesional',    desc: 'Colores vivos,líneas nítidas marcadas con pintura especial, terminación mate o satinado' },
     ],
     process: [
       { title: '', desc: '' },
     ],
     seo: {
       title: "",
-      description: ``,
+      description: `¿Tu cancha o pista tienen el hormigón agrietado, irregular o demasiado agresivo
+                    para la práctica deportiva?
+                    Entonces recupera la superficie y conviertela en un piso deportivo profesional:
+                    Liso, duradero y estéticamente impecable`,
       keywords: ``,
       ogImage: OG_IMAGE_DEFAULT,
       canonical: `${BASE_URL}/servicio/`,
