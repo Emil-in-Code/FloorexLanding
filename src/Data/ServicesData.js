@@ -19,7 +19,7 @@ export const servicesPics = [
   },
   {
     id: 3,
-    title: "Pintura epóxica",
+    title: "Pisos Epóxicos",
     image: pinturaEpoxi
   },
   {
@@ -29,7 +29,7 @@ export const servicesPics = [
   },
   {
     id: 5,
-    title: "Pintura industrial",
+    title: "Superficies de concreto",
     image: pinturaIndus
   },
   {
