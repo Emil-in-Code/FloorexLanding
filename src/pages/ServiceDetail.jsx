@@ -1,11 +1,11 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { services } from '../Data/ServiceDetail.js';
 import styles from './ServiceDetail.module.css';
 
 export default function ServiceDetail() {
   const { id } = useParams();
-  const navigate = useNavigate();
 
   const currentIndex = services.findIndex((s) => s.id === Number(id));
   const service = services[currentIndex];
@@ -28,6 +28,32 @@ export default function ServiceDetail() {
 
   return (
     <div className={styles.page}>
+
+      {/* ── SEO ──────────────────────────────────────────── */}
+      <Helmet>
+        {/* Básicos */}
+        <title>{service.seo.title}</title>
+        <meta name="description" content={service.seo.description} />
+        <meta name="keywords"    content={service.seo.keywords} />
+        <link rel="canonical"    href={service.seo.canonical} />
+
+        {/* Open Graph — WhatsApp, Facebook, LinkedIn */}
+        <meta property="og:type"         content="website" />
+        <meta property="og:url"          content={service.seo.canonical} />
+        <meta property="og:title"        content={service.seo.title} />
+        <meta property="og:description"  content={service.seo.description} />
+        <meta property="og:image"        content={service.seo.ogImage} />
+        <meta property="og:image:width"  content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale"       content="es_EC" />
+        <meta property="og:site_name"    content="FloorEx" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card"        content="summary_large_image" />
+        <meta name="twitter:title"       content={service.seo.title} />
+        <meta name="twitter:description" content={service.seo.description} />
+        <meta name="twitter:image"       content={service.seo.ogImage} />
+      </Helmet>
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className={styles.hero}>
@@ -85,7 +111,7 @@ export default function ServiceDetail() {
       <section className={styles.section}>
         <div className={styles.sectionInner}>
           <div className={styles.sectionLabel}>Descripción</div>
-          <p className={styles.seoDescription}>{service.seo.description}</p>
+          <p className={styles.description}>{service.description}</p>
           <div
             className={styles.detailHtml}
             dangerouslySetInnerHTML={{ __html: service.detail }}
@@ -124,7 +150,7 @@ export default function ServiceDetail() {
                   key={i}
                   className={`${styles.galleryItem} ${i === 0 ? styles.galleryFeatured : ''}`}
                 >
-                  <img src={img} alt={`${service.title} proyecto ${i + 1}`} />
+                  <img src={img} alt={`${service.title} — proyecto ${i + 1}`} />
                 </div>
               ))}
             </div>
@@ -159,7 +185,7 @@ export default function ServiceDetail() {
           <p className={styles.ctaLabel}>¿Listo para empezar?</p>
           <h2 className={styles.ctaTitle}>Hablemos de tu proyecto</h2>
           <p className={styles.ctaSub}>
-            Cuéntanos qué necesitas y te damos una cotización sin compromiso.
+            ¡Basta bots! Cuéntanos qué necesitas y te damos una cotización personalizada y sin compromiso.
           </p>
           <div className={styles.ctaButtons}>
             <a
@@ -172,7 +198,7 @@ export default function ServiceDetail() {
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
                 <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.854L0 24l6.336-1.503A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 01-5.01-1.378l-.36-.214-3.732.885.936-3.618-.235-.372A9.793 9.793 0 012.182 12C2.182 6.565 6.565 2.182 12 2.182S21.818 6.565 21.818 12 17.435 21.818 12 21.818z"/>
               </svg>
-              Escríbenos por WhatsApp
+              Hablar con una persona
             </a>
 
             {nextService ? (
@@ -190,5 +216,3 @@ export default function ServiceDetail() {
     </div>
   );
 }
-
-

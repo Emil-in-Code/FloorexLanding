@@ -1,9 +1,9 @@
 import deportivo from '../Assets/Images/deportivo.webp'
 import baño from '../Assets/Images/baño.webp'
 import pinturaEpoxi from '../Assets/Images/pinturaEpoxi.webp'
-import pinturaIndus from '../Assets/Images/pinturaIndus_Página 6.webp'
+import señalética from '../Assets/Images/señalética-1.webp'
 import poliuretanoCemen from '../Assets/Images/poliuretanoCementicio_Página 5.webp'
-import superficie from '../Assets/Images/superficie_Página 3.webp'
+import superficie from '../Assets/Images/superficie4.webp'
 import ventaMaquina from '../Assets/Images/ventaMaquina.webp'
  
 
@@ -30,12 +30,12 @@ export const servicesPics = [
   {
     id: 5,
     title: "Superficies de concreto",
-    image: pinturaIndus
+    image: superficie
   },
   {
     id: 6,
-    title: "Pulidoras diamantadas",
-    image: superficie
+    title: "Pintura señalética",
+    image: señalética
   },
   {
     id: 7,

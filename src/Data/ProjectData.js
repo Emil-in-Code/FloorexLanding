@@ -13,6 +13,6 @@ export const projectList = [
   { id: 1, titulo: "Pintura industrial", antes: before1, despues: after1 },
   { id: 2, titulo: "Depósito Epóxico", antes: before2, despues: after2 }, 
   { id: 3, titulo: "Pintura Industrial", antes: before3, despues: after3 },
-  { id: 4, titulo: "Pintura Industrial", antes: before4, despues: after4 }, 
+  { id: 4, titulo: "Señalética", antes: before4, despues: after4 }, 
   { id: 5, titulo: "Poliuretano Cementicio", antes: before5, despues: after5 }
 ]

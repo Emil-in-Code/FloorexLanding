@@ -2,7 +2,7 @@ import { servicesImg } from '../Data/GalleryServices.js'
 
 // ─── Constantes SEO ────────────────────────────────────────
 const BASE_URL = 'https://floorex.ec';
-const OG_IMAGE_DEFAULT = '/seo/opengraph.png';
+const OG_IMAGE_DEFAULT = '/seo/opengraph.webp';
 
 export const services = [
   {
@@ -12,14 +12,10 @@ export const services = [
     image: servicesImg.pulidos.hero,
     waMessage: "Hola, estoy interesado en el servicio de pisos pulidos/abrillantados ¿me podría dar más información?",
     badge: "más contratado",
-
-    // ── Campos nuevos ───────────────────────────────────────
-
-    // Imágenes para la galería (pueden ser las mismas de Assets/Images)
     gallery: servicesImg.pulidos.gallery,
-
-    // Ventajas que se muestran como cards con ícono
-    // El ícono puede ser un emoji o un SVG string simple
+    description: `Solución 100% ecológica que garantiza larga durabilidad sin contaminar el medio ambiente,
+                  ya que nuestro proceso no aplica capas superficiales que se desgastan con el uso;
+                  pulimos el propio concreto con diamantes para lograr un brillo duradero, natural y sostenible.`,
     benefits: [
       { icon: '🌿', title: '100% ecológico',       desc: 'Sin capas ni químicos superficiales. Cuidamos el medioambiente.' },
       { icon: '⏳', title: 'Larga durabilidad',    desc: 'El brillo es parte del concreto, no se desgasta con el uso.' },
@@ -40,10 +36,9 @@ export const services = [
 
     // ── SEO ─────────────────────────────────────────────────
     seo: {
-      title: "Pisos deportivos | recupera la jugabilidad",
-      description: `Solución 100% ecológica que garantiza larga durabilidad sin contaminar el medio ambiente,
-                    ya que nuestro proceso no aplica capas superficiales que se desgastan con el uso;
-                    pulimos el propio concreto con diamantes para lograr un brillo duradero, natural y sostenible.`,
+      title: "Pisos Pulidos y Abrillantados de Concreto u Hormigón - FloorEx",
+      description: `Servicio de pulido mecánico de concreto con diamantes en Ecuador. 
+                    Acabado brillante de alta durabilidad, antideslizante y 100% ecológico.`,
       keywords: `pisos pulidos de cemento, pulido de hormigón, mejores empresas de pisos pulidos en Ecuador`,
       ogImage: OG_IMAGE_DEFAULT,
       canonical: `${BASE_URL}/servicio/pulido`,
@@ -95,7 +90,11 @@ export const services = [
     image:servicesImg.deportivo.hero,
     waMessage: "Hola, estoy interesado en el servicio de los pisos deportivos ¿me podría dar más información?",
     badge: "",          // ← dejar vacío si no tiene badge
-    gallery: [],
+    gallery: [], 
+    description: `¿Tu cancha o pista tienen el hormigón agrietado, irregular o demasiado agresivo
+                    para la práctica deportiva?
+                    Entonces recupera la superficie y conviertela en un piso deportivo profesional:
+                    Liso, duradero y estéticamente impecable`,
     benefits: [
       { icon: '⚒️', title: 'Sin demolición',    desc: 'Recuperamos pisos deportivos viejos o en mal estado' },
       { icon: '💰', title: 'Costo-eficiente', desc: 'Adaptamos el sistema a tu presupuesto y nivel de exigencia (uso escolar, federado o recreativo)' },
@@ -111,13 +110,12 @@ export const services = [
     ],
     seo: {
       title: "Pisos deportivos profesionales - Floorex",
-      description: `¿Tu cancha o pista tienen el hormigón agrietado, irregular o demasiado agresivo
-                    para la práctica deportiva?
-                    Entonces recupera la superficie y conviertela en un piso deportivo profesional:
-                    Liso, duradero y estéticamente impecable`,
+      description: `Recuperamos canchas y pistas con hormigón 
+                    dañado sin demolición. Sistemas acrílicos y
+                    poliuretánicos para básquet, paddle, vóley y multiuso.`,
       keywords: `pisos deportivos, resinas acrilicas, poliuretano deportes, basquet, handball, paddle, voley, pintura canchas, recuperacion de pisos`,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/`,
+      canonical: `${BASE_URL}/servicio/deportivos`,
     },
     detail: `
       <h2>¿Qué pisos trabajamos?</h2>
@@ -160,7 +158,9 @@ export const services = [
     image: servicesImg.epoxico.hero,
     waMessage: "Hola, estoy interesado en el servicio de pisos epóxicos ¿me podría dar más información?",
     badge: "",          // ← dejar vacío si no tiene badge
-    gallery: servicesImg.epoxico.gallery,
+    gallery: servicesImg.epoxico.gallery, 
+    description: `¿Necesitas que tu piso aguante cargas pesadas, derrames químicos o tránsito constante? 
+                    En FloorEx diseñamos la solución epóxica a la medida de tu industria.`,
     benefits: [
       { icon: '📏', title: 'Autonivelante', desc: 'Ideal para reparar y nivelar superficies irregulares, creando una base monolítica y de alta resistencia mecánica' },
       { icon: '🚛', title: 'Alto tráfico', desc: 'Para zonas sometidas a paso continuo de personas, carretillas o vehículos' },
@@ -173,11 +173,11 @@ export const services = [
     ],
     seo: {
       title: "Pisos Epóxicos Industriales y Comerciales - FloorEx",
-      description: `¿Necesitas que tu piso aguante cargas pesadas, derrames químicos o tránsito constante? 
-                    En FloorEx diseñamos la solución epóxica a la medida de tu industria.`,
+      description: `Recubrimientos epóxicos de alta resistencia para industrias,
+                    talleres, parkings y laboratorios. Sistemas autonivelantes y de grado alimenticio.`,
       keywords:`pisos epoxicos, recubrimientos epoxicos, mortero autonivelante, pintura alto trafico, grado alimenticio, pisos industriales, reparacion pisos epoxicos`,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/`,
+      canonical: `${BASE_URL}/servicio/epoxicos`,
     },
     detail: `
       <h2>¿Dónde se usan?</h2>
@@ -221,6 +221,18 @@ export const services = [
     waMessage: "Hola, estoy interesado en el servicio de poliuretano cementicio ¿me podría dar más información?",
     badge: "",          // ← dejar vacío si no tiene badge
     gallery: servicesImg.cementicio.gallery,
+    description: `Cuando la exigencia es máxima, el piso no puede fallar. Por eso, gigantes mundiales
+                  como iPhone, Colgate, Walmart, Bimbo, Hikvision, Coca Cola, Red Bull y muchas otras 
+                  confían en la tecnología UQESH®️.
+                  Somos distribuidores y aplicadores oficiales de la tecnología UQESH® en Ecuador.
+                  Pisos híbridos ecológicos de máxima resistencia térmica, química y de alto tráfico.
+                  ¿Qué hace tan especial al sistema UQESH®️?
+                  A diferencia del epóxico tradicional, el poliuretano cementicio es un sistema híbrido
+                  que combina la robustez del cemento con la flexibilidad avanzada del poliuretano.
+                  El resultado: un piso que no se agrieta con los cambios de temperatura, resiste químicos
+                  agresivos y soporta tráfico pesado sin deteriorarse. Y con UQESH®️, la diferencia es aún mayor:
+                  su fórmula a base de aceite de ricino vegetal (no derivados del petróleo) es completamente ecológica, 
+                  con certificación LEED y apta para contacto directo con alimentos.`,
     benefits: [
       { icon: '🌡️', title: 'Resistencia térmica', desc: 'Soporta choques térmicos desde -40°C hasta +150°C, ideal para cámaras frigoríficas o lavado con vapor.' },
       { icon: '🧪', title: 'Química superior',    desc: 'Resiste ácidos, álcalis, grasas, aceites y limpiezas agresivas sin degradarse ni perder propiedades.' },
@@ -235,16 +247,9 @@ export const services = [
     ],
     seo: {
       title: "Pisos de Poliuretano Cementicio UQESH® en Ecuador - FloorEx",
-      description: `Distribuidores y aplicadores oficiales de la tecnología UQESH® en Ecuador.
-                    Pisos híbridos ecológicos de máxima resistencia térmica, química y de alto tráfico.
-                    ¿Qué hace tan especial al sistema UQESH®️?
-                    A diferencia del epóxico tradicional, el poliuretano cementicio es un sistema híbrido
-                    que combina la robustez del cemento con la flexibilidad avanzada del poliuretano.
-                    El resultado: un piso que no se agrieta con los cambios de temperatura, resiste químicos
-                    agresivos y soporta tráfico pesado sin deteriorarse. Y con UQESH®️, la diferencia es aún mayor:
-                    su fórmula a base de aceite de ricino vegetal (no derivados del petróleo) es completamente ecológica, 
-                    con certificación LEED y apta para contacto directo con alimentos.
-                    `,
+      description: `Distribuidores autorizados de tecnología UQESH®. Pisos híbridos de 
+                    poliuretano cementicio para industrias de alimentos,
+                    frigoríficos y alta exigencia térmica.`,
       keywords: `poliuretano cementicio, uqesh ecuador, pisos industriales, grado alimenticio, pisos para frigorificos, mortero cementicio, floorex`,
       ogImage: OG_IMAGE_DEFAULT,
       canonical: `${BASE_URL}/servicio/poliuretano-cementicio-uqesh`,
@@ -279,10 +284,12 @@ export const services = [
      id: 5,
      title: "Preparación de Superficies",
      text: "La base que define un piso exitoso",
-     image: servicesImg.preparacion?.hero || null, // ← Puedes mapearlo en tu archivo de imágenes si agregas este servicio
+     image: servicesImg.superficies.hero, // ← Puedes mapearlo en tu archivo de imágenes si agregas este servicio
      waMessage: "Hola, estoy interesado en el servicio de preparación de superficies de concreto ¿me podría dar más información?",
      badge: "",          // ← dejar vacío si no tiene badge
-     gallery: [],
+     gallery: servicesImg.superficies.gallery,
+     description:`Un recubrimiento solo es tan bueno como la superficie sobre la que se aplica. En FloorEx preparamos el hormigón con maquinaria profesional, escarificación y pulido mecánico.`,
+
      benefits: [
        { icon: '🏗️', title: 'Adherencia absoluta', desc: 'Evita desprendimientos prematuros, grietas o pérdida de adherencia. Tu nuevo piso se agarra de verdad.' },
        { icon: '⚙️', title: 'Criterio técnico',     desc: 'Preparamos el hormigón sin atajos, utilizando maquinaria profesional y adaptándonos a cada necesidad.' },
@@ -295,7 +302,8 @@ export const services = [
      ],
      seo: {
        title: "Preparación de Superficies de Concreto y Hormigón - FloorEx",
-       description: `Un recubrimiento solo es tan bueno como la superficie sobre la que se aplica. En FloorEx preparamos el hormigón con maquinaria profesional, escarificación y pulido mecánico.`,
+       description:`Preparación técnica del concreto mediante escarificación, desbaste mecánico 
+                    y perfil de anclaje (CSP 1 al 9). Asegura la máxima adherencia de tus resinas.`,
        keywords: `preparacion de superficies, escarificacion concreto, pulido mecanico, perfil de anclaje, csp concreto, remover epoxico, lavado industrial`,
        ogImage: OG_IMAGE_DEFAULT,
        canonical: `${BASE_URL}/servicio/preparacion-superficies`,
@@ -325,10 +333,70 @@ export const services = [
         </li>
       </ul>
     `,
+  },
+  {
+    id: 6,
+    title: "Señalética vial e industrial",
+    text: "Orden, seguridad y eficiencia en tu piso",
+    image: servicesImg.señaletica.hero,
+    waMessage: "Hola, estoy interesado en el servicio de señalética vial e industrial ¿me podría dar más información?",
+    badge: "",          // ← dejar vacío si no tiene badge
+    gallery: servicesImg.señaletica.gallery,
+    description: `Un piso impecable no basta si tu personal o visitantes 
+                  no saben por dónde transitar, dónde almacenar o cómo evacuar.
+                  La señalética industrial es la diferencia entre un espacio funcional
+                  y uno realmente seguro.En FloorEx diseñamos y aplicamos señalización 
+                  horizontal y vertical sobre superficies de concreto, epóxico o poliuretano con pinturas
+                  de alta resistencia que soportan el tránsito y la limpieza de tu operación.`,
+    benefits: [
+      { icon: '🛡️', title: 'Seguridad total', desc: 'Delimitamos áreas de paso, zonas de carga, riesgos eléctricos, salidas de emergencia y extintores.' },
+      { icon: '📊', title: 'Organización visual', desc: 'Pasillos, estacionamientos, líneas de producción y zonas de almacenamiento claramente identificados.' },
+      { icon: '🚜', title: 'Alta durabilidad', desc: 'Resiste el arrastre de montacargas, rodillos, grasas, químicos y lavados frecuentes sin borrarse.' },
+      { icon: '👁️', title: 'Alta visibilidad', desc: 'Colores de alto contraste (amarillo, rojo, verde, blanco, negro) bajo cualquier tipo de iluminación.' },
+      { icon: '📋', title: 'Cumplimiento normativo', desc: 'Adaptamos la señalética a las normativas vigentes del país y estándares internacionales (ISO, INEN, NFPA).' },
+    ],
+    process: [
+      { title: 'Relevamiento y Diseño', desc: 'Analizamos el flujo de tu operación para diseñar la distribución de pasillos, racks, zonas de carga o estacionamientos.' },
+      { title: 'Selección del Sistema', desc: 'Elegimos la pintura de alta resistencia (epóxica, poliuretánica o vial) adecuada según el tipo de soporte y desgaste mecánico.' },
+      { title: 'Demarcación y Aplicación', desc: 'Trazamos y aplicamos las líneas, símbolos y flechas con acabados nítidos, colores de alto contraste y secado rápido.' },
+    ],
+    seo: {
+      title: "Señalización Vial e Industrial y Demarcación - FloorEx",
+      description: "Diseño y aplicación de señalización horizontal de alto tráfico para industrias, bodegas y estacionamientos. Cumplimiento de normas ISO e INEN.",
+      keywords: "senaletica industrial, senalizacion vial, demarcacion de pisos, pintura de alto trafico, delimitar pasillos industriales, floorex",
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical: `${BASE_URL}/servicio/senaletica-vial-industrial`,
+    },
+    detail: `
+      <h2>¿Dónde la aplicamos?</h2>
+      <ul>
+        <li>
+          <h3>Naves industriales y bodegas</h3>
+          <article>Optimización del espacio de almacenamiento y delimitación de rutas seguras para montacargas.</article>
+        </li>
+        <li>
+          <h3>Plantas de producción y líneas de ensamble</h3>
+          <article>Organización visual de estaciones de trabajo, áreas de peligro y zonas de tránsito peatonal.</article>
+        </li>
+        <li>
+          <h3>Estacionamientos y rampas</h3>
+          <article>Pintura de tráfico para cajones de parqueo, flechas de dirección, pasos peatonales y numeración.</article>
+        </li>
+        <li>
+          <h3>Hospitales, laboratorios y comercios</h3>
+          <article>Señalización clara de zonas restringidas, accesos de emergencia y centros de distribución de alta rotación.</article>
+        </li>
+        <li>
+          <h3>Talleres y áreas de mantenimiento</h3>
+          <article>Demarcación resistente al derrame de grasas, aceites y productos químicos agresivos.</article>
+        </li>
+      </ul>
+    `,
   }
+];
+
 
   // ─── Plantilla para nuevos servicios ───────────────────────
-  // Copiá este bloque y completá los campos.
   /*
   {
     id: 2,
@@ -354,4 +422,3 @@ export const services = [
     detail: ``,
   },
   */
-];
