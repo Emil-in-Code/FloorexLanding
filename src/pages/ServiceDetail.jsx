@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import { services } from '../Data/ServiceDetail.js';
 import styles from './ServiceDetail.module.css';
 
+import ServiceSchema from '../Components/Seo/ServiceSchema.jsx'
+
 export default function ServiceDetail() {
   const { id } = useParams();
 
@@ -54,6 +56,8 @@ export default function ServiceDetail() {
         <meta name="twitter:description" content={service.seo.description} />
         <meta name="twitter:image"       content={service.seo.ogImage} />
       </Helmet>
+
+      <ServiceSchema service={service} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className={styles.hero}>

@@ -5,8 +5,10 @@ import pulido3 from '../Assets/ServiceDetail/pulido3.webp'
 import pulido4 from '../Assets/ServiceDetail/pulido4.webp'
 
 //--------DEPORTIVOS---------------//
-import heroTennis from '../Assets/Images/deportivo.webp' 
-
+import heroTennis from '../Assets/ServiceDetail/deportivo.webp' 
+import deportivo1 from '../Assets/ServiceDetail/deportivo1.webp'
+import deportivo2 from '../Assets/ServiceDetail/deportivo2.webp'
+import deportivo3 from '../Assets/ServiceDetail/deportivo3.webp'
 
 //------EPÓXICOS------------------//
 import heroEpo from '../Assets/ServiceDetail/heroEpo.webp'
@@ -47,7 +49,7 @@ export const servicesImg = {
   deportivo: {
     id:2,
     hero: heroTennis,
-    gallery:[]
+    gallery:[deportivo3,deportivo1,deportivo2,heroTennis]
   },
 
   epoxico: {

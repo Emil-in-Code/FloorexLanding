@@ -90,7 +90,7 @@ export const services = [
     image:servicesImg.deportivo.hero,
     waMessage: "Hola, estoy interesado en el servicio de los pisos deportivos ¿me podría dar más información?",
     badge: "",          // ← dejar vacío si no tiene badge
-    gallery: [], 
+    gallery:servicesImg.deportivo.gallery, 
     description: `¿Tu cancha o pista tienen el hormigón agrietado, irregular o demasiado agresivo
                     para la práctica deportiva?
                     Entonces recupera la superficie y conviertela en un piso deportivo profesional:

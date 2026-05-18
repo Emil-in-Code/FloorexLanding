@@ -6,6 +6,8 @@ import './App.css';
 import { CurvedLoop, GridScan, Hero, HorizontalGallery, PixelCard, IntroOverlay, AboutUs } from './Components';
 import { Navbar, Footer } from './widgets';
 
+import LocalBusinessSchema from './Components/Seo/LocalBussinessSchema.jsx'
+
 import { projectList } from './Data/ProjectData.js';
 import { servicesPics } from './Data/ServicesData.js';
 
@@ -19,6 +21,7 @@ function HomePage() {
   const navigate = useNavigate();
   return (
     <>
+      <LocalBusinessSchema />
       <IntroOverlay />
       <main>
         <Hero />
