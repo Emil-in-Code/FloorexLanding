@@ -235,7 +235,7 @@ export default function PixelCard({ variant = 'default', gap, speed, colors, noF
       onBlur={finalNoFocus ? undefined : onBlur}
       tabIndex={finalNoFocus ? -1 : 0}
       onClick={onClick}
-      style={{ cursor: onClick ? 'pointer' : 'default' }}
+      style={{ cursor: onClick ? 'pointer' : 'default'}}
     >
       <canvas className="pixel-canvas" ref={canvasRef} />
       {children}

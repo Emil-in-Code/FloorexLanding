@@ -15,6 +15,7 @@ const PrivacyPage = lazy(() => import('./pages/privacyPage.jsx'));
 const CookiesPage = lazy(() => import('./pages/CookiePage.jsx'));
 const LegalNoticePage = lazy(() => import('./pages/LegalNoticePage.jsx'));
 const ServiceDetailPage = lazy(() => import('./pages/ServiceDetail.jsx'));
+const MaquinariaDetailPage = lazy(() => import('./pages/MaquinariaDetail.jsx'));
 
 // ✅ Extraé la home a su propio componente
 function HomePage() {
@@ -45,7 +46,11 @@ function HomePage() {
           {servicesPics.map((servicio) => (
             <PixelCard key={servicio.id}
               onClick={() => {
+                if (servicio.id ===7 ) {
+                  navigate('/producto/1')
+                } else{
                 navigate(`/servicio/${servicio.id}`);
+                }
               }}
             >
               <div className="container-card">
@@ -94,6 +99,9 @@ function App() {
         } />
         <Route path="/servicio/:id" element={
           <Suspense fallback={fallback}><ServiceDetailPage /></Suspense>
+        } />
+        <Route path="/producto/:id" element={
+          <Suspense fallback={fallback}><MaquinariaDetailPage /></Suspense>
         } />
       </Routes>
 
