@@ -104,38 +104,129 @@ export const productos = [
   },
   {
     id: 3,
-    slug: "",
-    title: "",
-    subtitle: "",
-    badge:"",
-    text: "",
+    slug: "pulidora-control-remoto-xingyi-gx858",
+    title: "Pulidora a Control Remoto Xingyi GX858",
+    subtitle: "Máquina industrial de alto rendimiento para preparación y pulido de superficies",
+    badge: "Alto Rendimiento",
+    text: "Máquina industrial diseñada para el desbaste, pulido y abrillantado de grandes superficies de hormigón, terrazo y piedra.",
     description:
-      "",
-    price: "",
+      "La pulidora a control remoto Xingyi GX858 es una solución de alta gama para proyectos de construcción y renovación. Ideal para eliminar revestimientos viejos, nivelar superficies y lograr acabados profesionales con el mínimo esfuerzo del operario gracias a su sistema de guiado autónomo.",
+    price: "$14.500,00",
     waMessage:
-      "Hola FloorEx! Me interesa la aspiradora industrial. ¿Pueden darme información y precio actualizado?",
-    images: productImg.aspiradora.gallery,
+      "Hola FloorEx! Me interesa la pulidora a control remoto Xingyi GX858. ¿Pueden darme información y precio actualizado?",
+    images: productImg.pulidoraRemoto.gallery,
     specs: [
-      { label: "Motor", value: "2,2 kW/3HP" },
-      { label: "Caudal de aire", value: "350 m3/h (206 cfm)" },
-      { label: "Diámetro", value: "50mm" },
-      { label: "Peso", value: "68 kg" },
       { label: "Voltaje", value: "220V-240 V" },
+      { label: "Motor", value: "15 kW / 20 HP" },
+      { label: "Inversor", value: "20 HP" },
+      { label: "Ancho de trabajo", value: "820 mm" },
+      { label: "Discos", value: "4 cabezales (Sistema planetario)" },
+      { label: "Rango de velocidad", value: "450 - 1950 rpm" },
+      { label: "Peso", value: "595,5 kg" },
+      { label: "Peso adicional", value: "15 kg x 2 (33 lb x 2)"},
+      { label: "Depósito de agua", value: "30 litros"}
     ],
     advantages: [
-      { icon: "", title: "", desc: "" },
-      { icon: "", title: "", desc: "" },
-      { icon: "", title: "", desc: "" },
-      { icon: "", title: "", desc: "" },
-      { icon: "", title: "", desc: "" },
-      { icon: "", title: "", desc: "" },
+      { 
+        icon: "🕹️", 
+        title: "Operación a Distancia", 
+        desc: "Control remoto con joystick que reduce la fatiga del operario y aumenta la productividad en largas jornadas." 
+      },
+      { 
+        icon: "♻️", 
+        title: "Sistema Planetario", 
+        desc: "Equipada con cuatro discos giratorios que garantizan un desgaste uniforme y una planimetría perfecta." 
+      },
+      { 
+        icon: "🔋", 
+        title: "Batería Auxiliar", 
+        desc: "Permite mover y cargar la máquina en vehículos de transporte sin necesidad de conectarla a la red eléctrica." 
+      },
+      { 
+        icon: "⚡", 
+        title: "Velocidad Ajustable", 
+        desc: "Control total sobre la velocidad de avance de las ruedas y de las revoluciones de los discos (450-1950 rpm)." 
+      },
+      { 
+        icon: "💥", 
+        title: "Remoción Eficiente", 
+        desc: "Excelente fuerza de desbaste ideal para arrancar capas de resinas epoxi, adhesivos y pinturas viejas." 
+      },
+      { 
+        icon: "✨", 
+        title: "Acabados Profesionales", 
+        desc: "Lista para procesos de diamantado y pulido progresivo hasta alcanzar el nivel de brillo deseado." 
+      },
     ],
     seo: {
-      title: "",
-      description:"",
-      keywords: "",
-      canonical: "https://www.floorex.ec/producto/2",
-      ogImage: "/img/maquinaria/lijadora-og.jpg",
+      title: "Pulidora Xingyi GX858 a Control Remoto | FloorEx Ecuador",
+      description: "Adquiere la pulidora industrial Xingyi GX858 en Ecuador. Alto rendimiento para desbaste, remoción de epoxi y pulido de hormigón con control remoto.",
+      keywords: "pulidora industrial, xingyi gx858, pulidora control remoto, pulido de hormigón, desbaste de pisos, floorex",
+      canonical: "https://www.floorex.ec/producto/3",
+      ogImage: "/img/maquinaria/pulidora-gx858-og.jpg",
     },
   },
+  {
+    id: 4,
+    slug: "aspiradora-industrial-IVC45L-manual",
+    title: "aspiradora industrial IVC45L (manual)",
+    subtitle: "Máquina industrial de alto rendimiento para preparación y pulido de superficies",
+    badge: "Alto Rendimiento",
+    text: "Máquina industrial diseñada para el desbaste, pulido y abrillantado de grandes superficies de hormigón, terrazo y piedra.",
+    description:
+      "La pulidora a control remoto Xingyi GX858 es una solución de alta gama para proyectos de construcción y renovación. Ideal para eliminar revestimientos viejos, nivelar superficies y lograr acabados profesionales con el mínimo esfuerzo del operario gracias a su sistema de guiado autónomo.",
+    price: "$14.500,00",
+    waMessage:
+      "Hola FloorEx! Me interesa la pulidora a control remoto Xingyi GX858. ¿Pueden darme información y precio actualizado?",
+    images: productImg.pulidoraRemoto.gallery,
+    specs: [
+      { label: "Voltaje", value: "220V-240 V" },
+      { label: "Motor", value: "15 kW / 20 HP" },
+      { label: "Inversor", value: "20 HP" },
+      { label: "Ancho de trabajo", value: "820 mm" },
+      { label: "Discos", value: "4 cabezales (Sistema planetario)" },
+      { label: "Rango de velocidad", value: "450 - 1950 rpm" },
+      { label: "Peso", value: "595,5 kg" },
+      { label: "Peso adicional", value: "15 kg x 2 (33 lb x 2)"},
+      { label: "Depósito de agua", value: "30 litros"}
+    ],
+    advantages: [
+      { 
+        icon: "🕹️", 
+        title: "Operación a Distancia", 
+        desc: "Control remoto con joystick que reduce la fatiga del operario y aumenta la productividad en largas jornadas." 
+      },
+      { 
+        icon: "♻️", 
+        title: "Sistema Planetario", 
+        desc: "Equipada con cuatro discos giratorios que garantizan un desgaste uniforme y una planimetría perfecta." 
+      },
+      { 
+        icon: "🔋", 
+        title: "Batería Auxiliar", 
+        desc: "Permite mover y cargar la máquina en vehículos de transporte sin necesidad de conectarla a la red eléctrica." 
+      },
+      { 
+        icon: "⚡", 
+        title: "Velocidad Ajustable", 
+        desc: "Control total sobre la velocidad de avance de las ruedas y de las revoluciones de los discos (450-1950 rpm)." 
+      },
+      { 
+        icon: "💥", 
+        title: "Remoción Eficiente", 
+        desc: "Excelente fuerza de desbaste ideal para arrancar capas de resinas epoxi, adhesivos y pinturas viejas." 
+      },
+      { 
+        icon: "✨", 
+        title: "Acabados Profesionales", 
+        desc: "Lista para procesos de diamantado y pulido progresivo hasta alcanzar el nivel de brillo deseado." 
+      },
+    ],
+    seo: {
+      title: "Pulidora Xingyi GX858 a Control Remoto | FloorEx Ecuador",
+      description: "Adquiere la pulidora industrial Xingyi GX858 en Ecuador. Alto rendimiento para desbaste, remoción de epoxi y pulido de hormigón con control remoto.",
+      keywords: "pulidora industrial, xingyi gx858, pulidora control remoto, pulido de hormigón, desbaste de pisos, floorex",
+      canonical: "https://www.floorex.ec/producto/3",
+      ogImage: "/img/maquinaria/pulidora-gx858-og.jpg",
+    },
 ];
