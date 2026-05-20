@@ -253,7 +253,7 @@ export default function MaquinariaDetail() {
           <h2 className={styles.ctaTitle}>{producto.title}</h2>
           <p className={styles.ctaPrice}>{producto.price}</p>
           <p className={styles.ctaSub}>
-            Hablá con nuestro equipo para obtener este producto
+            Habla con nuestro equipo para obtener este producto
           </p>
           <div className={styles.ctaButtons}>
             <a

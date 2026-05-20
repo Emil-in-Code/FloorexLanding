@@ -169,64 +169,184 @@ export const productos = [
   {
     id: 4,
     slug: "aspiradora-industrial-IVC45L-manual",
-    title: "aspiradora industrial IVC45L (manual)",
-    subtitle: "Máquina industrial de alto rendimiento para preparación y pulido de superficies",
+    title: "Aspiradora industrial IVC45L (manual)",
+    subtitle: "Extractor de polvo de alta capacidad con diseño de elevación y filtrado HEPA 13",
     badge: "Alto Rendimiento",
-    text: "Máquina industrial diseñada para el desbaste, pulido y abrillantado de grandes superficies de hormigón, terrazo y piedra.",
+    text: "Diseñada para las exigencias del desbaste industrial, combina un potente caudal de aire con un sistema de filtrado en dos etapas para capturar el polvo más fino sin saturarse.",
     description:
-      "La pulidora a control remoto Xingyi GX858 es una solución de alta gama para proyectos de construcción y renovación. Ideal para eliminar revestimientos viejos, nivelar superficies y lograr acabados profesionales con el mínimo esfuerzo del operario gracias a su sistema de guiado autónomo.",
-    price: "$14.500,00",
+      "La aspiradora industrial IVC45L (manual) es una solución robusta y eficiente para la gestión de residuos en proyectos de preparación de superficies. Destaca por su innovador diseño de barril elevable asistido por resortes de gas, que permite compactar el equipo reduciendo su altura en 30 cm para facilitar un transporte cómodo. Su avanzado sistema de filtración de dos etapas incluye un separador ciclónico en primera instancia y un filtro de grado médico HEPA 13 en la segunda, garantizando un aire libre de partículas nocivas. Además, su panel de control centralizado y el sistema de embolsado continuo aseguran una operación limpia, rápida y segura para la salud del operario.",
+    price: "$5.500,00",
     waMessage:
-      "Hola FloorEx! Me interesa la pulidora a control remoto Xingyi GX858. ¿Pueden darme información y precio actualizado?",
-    images: productImg.pulidoraRemoto.gallery,
+      "Hola FloorEx! Me interesa la aspiradora industrial IVC45L. ¿Pueden darme información y precio actualizado?",
+    images: productImg.aspiradoraivc45.gallery,
     specs: [
       { label: "Voltaje", value: "220V-240 V" },
-      { label: "Motor", value: "15 kW / 20 HP" },
-      { label: "Inversor", value: "20 HP" },
-      { label: "Ancho de trabajo", value: "820 mm" },
-      { label: "Discos", value: "4 cabezales (Sistema planetario)" },
-      { label: "Rango de velocidad", value: "450 - 1950 rpm" },
-      { label: "Peso", value: "595,5 kg" },
-      { label: "Peso adicional", value: "15 kg x 2 (33 lb x 2)"},
-      { label: "Depósito de agua", value: "30 litros"}
+      { label: "Motor", value: "5,5 kW / 7,5 HP" },
+      { label: "Caudal de aire", value: "600m3/h (353 cfm)" },
+      { label: "Diámetro de succión", value: "50 mm/80 mm" },
+      { label: "Peso", value: "223 kg" },
+      { label: "Filtro", value: "Hepa 13 2,8 m2" },
     ],
     advantages: [
       { 
-        icon: "🕹️", 
-        title: "Operación a Distancia", 
-        desc: "Control remoto con joystick que reduce la fatiga del operario y aumenta la productividad en largas jornadas." 
+        icon: "🏗️", 
+        title: "Diseño de Barril Elevable", 
+        desc: "Sistema de elevación asistido por resorte de gas que reduce la altura en 30 cm para optimizar el espacio de transporte." 
       },
       { 
-        icon: "♻️", 
-        title: "Sistema Planetario", 
-        desc: "Equipada con cuatro discos giratorios que garantizan un desgaste uniforme y una planimetría perfecta." 
+        icon: "🌀", 
+        title: "Separador Ciclónico", 
+        desc: "Filtración de primera etapa mediante supresión de polvo por vórtice, bloqueando las partículas gruesas antes de llegar al filtro." 
       },
       { 
-        icon: "🔋", 
-        title: "Batería Auxiliar", 
-        desc: "Permite mover y cargar la máquina en vehículos de transporte sin necesidad de conectarla a la red eléctrica." 
+        icon: "🛡️", 
+        title: "Filtro HEPA 13 Absoluto", 
+        desc: "Segunda etapa con filtro de alta eficiencia capaz de absorber de manera firme el polvo más fino y peligroso en suspensión." 
       },
       { 
-        icon: "⚡", 
-        title: "Velocidad Ajustable", 
-        desc: "Control total sobre la velocidad de avance de las ruedas y de las revoluciones de los discos (450-1950 rpm)." 
+        icon: "🎛️", 
+        title: "Panel Central Integrado", 
+        desc: "Consola de mandos centralizada y de diseño intuitivo para un control y operación ágil durante la jornada de trabajo." 
       },
       { 
-        icon: "💥", 
-        title: "Remoción Eficiente", 
-        desc: "Excelente fuerza de desbaste ideal para arrancar capas de resinas epoxi, adhesivos y pinturas viejas." 
+        icon: "🥡", 
+        title: "Embolsado Continuo Longopac", 
+        desc: "Equipada con sistema de bolsa continua que proporciona una descarga de residuos rápida, segura y completamente libre de nubes de polvo." 
       },
       { 
-        icon: "✨", 
-        title: "Acabados Profesionales", 
-        desc: "Lista para procesos de diamantado y pulido progresivo hasta alcanzar el nivel de brillo deseado." 
+        icon: "📉", 
+        title: "Menor Presión de Mantenimiento", 
+        desc: "Su sistema multicapa retiene de forma eficiente la suciedad prolongando los intervalos de limpieza de los filtros." 
       },
     ],
     seo: {
-      title: "Pulidora Xingyi GX858 a Control Remoto | FloorEx Ecuador",
-      description: "Adquiere la pulidora industrial Xingyi GX858 en Ecuador. Alto rendimiento para desbaste, remoción de epoxi y pulido de hormigón con control remoto.",
-      keywords: "pulidora industrial, xingyi gx858, pulidora control remoto, pulido de hormigón, desbaste de pisos, floorex",
-      canonical: "https://www.floorex.ec/producto/3",
-      ogImage: "/img/maquinaria/pulidora-gx858-og.jpg",
+      title: "Aspiradora Industrial IVC45L | FloorEx Ecuador",
+      description: "Adquiere la aspiradora industrial IVC45L de 7.5 HP en Ecuador. Filtración HEPA 13 de dos etapas, diseño elevable compacto y embolsado continuo sin polvo.",
+      keywords: "aspiradora industrial, IVC45L, extractor de polvo, filtrado HEPA 13, longopac, maquinaria para pisos, floorex",
+      canonical: "https://www.floorex.ec/producto/4",
+      ogImage: "/img/maquinaria/aspiradora-ivc45l-og.jpg",
     },
+  },
+{
+    id: 5,
+    slug: "Rectificadora-de-suelo-GX550",
+    title: "Rectificadora de suelo Xingyi GX550",
+    subtitle: "Pulidora planetaria industrial de alta resistencia con caja de engranajes de aleación dual",
+    badge: "Tecnología Avanzada",
+    text: "La evolución de las series clásicas Q/X de XINGYI. Equipada con un sistema planetario de 3 cabezales de mínimo mantenimiento y un chasis robusto con presión de desbaste ajustable.",
+    description:
+      "La rectificadora y pulidora de suelo Xingyi GX550 representa el pináculo de la evolución técnica de la marca, perfeccionada a partir de las legendarias series Q/X que lideraron el mercado por más de 16 años. Este modelo destaca por incorporar la tecnología patentada de fundición para cajas de engranajes de aleación dual de XINGYI, lo que reduce drásticamente la necesidad de mantenimiento en sus 3 cabezales planetarios. Su estructura de acero soldado de alta resistencia cuenta con un manillar de operación ergonómico y un sistema de pesas adicionales de dos posiciones que permite al operario regular con precisión la presión sobre el suelo según el tipo de trabajo.",
+    price: "$5.900,00",
+    waMessage:
+      "Hola FloorEx! Me interesa la rectificadora de suelo GX550. ¿Pueden darme información y precio actualizado?",
+    images: productImg.rectificadora.gallery,
+    specs: [
+      { label: "Voltaje", value: "220V-240 V" },
+      { label: "Motor", value: "4 kW / 5,5 HP" },
+      { label: "Discos", value: "230 mm x 3 (3 cabezales)" },
+      { label: "Peso", value: "221 kg" },
+      { label: "Peso adicional", value: "20kg x 2 (88 lb)" },
+      { label: "Depósito de agua", value: "25 litros" },
+    ],
+    advantages: [
+      { 
+        icon: "⚙️", 
+        title: "Caja de Aleación Dual", 
+        desc: "Tecnología de fundición avanzada de XINGYI que garantiza una transmisión hermética y un nivel de mantenimiento extremadamente bajo." 
+      },
+      { 
+        icon: "🪐", 
+        title: "Sistema Planetario de 3 Cabezales", 
+        desc: "Distribución perfecta de la fuerza rotativa en sus discos de 230 mm para lograr una planimetría uniforme y acabados de nivel profesional." 
+      },
+      { 
+        icon: "🏋️", 
+        title: "Presión Ajustable en 2 Posiciones", 
+        desc: "Chasis diseñado para albergar pesas adicionales (20 kg x 2), permitiendo adaptar el peso y la agresividad del desbaste según la dureza del suelo." 
+      },
+      { 
+        icon: "🔩", 
+        title: "Estructura de Acero Reforzada", 
+        desc: "Cuerpo de la máquina con soldadura industrial pesada que absorbe las vibraciones y prolonga la vida útil del equipo en entornos exigentes." 
+      },
+      { 
+        icon: "⚡", 
+        title: "Motor e Inversor de Última Generación", 
+        desc: "Componentes electrónicos desarrollados con la tecnología más reciente, optimizados específicamente para los ciclos de carga de XINGYI." 
+      },
+      { 
+        icon: "⏳", 
+        title: "16 Años de Evolución", 
+        desc: "Un equipo heredero de las series clásicas Q/X, optimizado tras más de una década y media de pruebas y rendimiento probado en el mercado global." 
+      },
+    ],
+    seo: {
+      title: "Rectificadora de suelo Xingyi GX550 | FloorEx Ecuador",
+      description: "Descubre la pulidora planetaria industrial Xingyi GX550 de 5.5 HP en Ecuador. Caja de cambios de aleación dual, 3 cabezales y presión de desbaste regulable.",
+      keywords: "rectificadora de suelo, Xingyi GX550, pulidora planetaria, desbaste de pisos, maquinaria industrial, pulido de hormigón, floorex",
+      canonical: "https://www.floorex.ec/producto/5",
+      ogImage: "/img/maquinaria/rectificadora-gx550-og.jpg",
+    },
+  },
+  {
+    id: 6,
+    slug: "aspiradora-industrial-xingyi-ivc-v3",
+    title: "Aspiradora Industrial Xingyi IVC-V3",
+    subtitle: "Aspirador comercial de alta eficiencia diseñado para pulidoras de hormigón",
+    badge: "Alta Eficiencia",
+    text: "Equipo compacto y potente diseñado especialmente para la recolección eficiente de polvo en trabajos de desbaste y pulido.",
+    description:
+      "La Xingyi IVC-V3 es una aspiradora comercial robusta desarrollada específicamente para trabajar en conjunto con pulidoras de hormigón. Cuenta con un sistema avanzado de filtro de cartucho (tipo órgano) y un contenedor de polvo con ruedas que facilita su transporte y optimiza las jornadas de trabajo libres de polvo.",
+    price: "$2.500,00",
+    waMessage:
+      "Hola FloorEx! Me interesa la aspiradora industrial Xingyi IVC-V3. ¿Pueden darme información y precio actualizado?",
+    images: productImg.aspiradorav3.gallery,
+    specs: [
+      { label: "Voltaje", value: "220V-240 V" },
+      { label: "Motor", value: "3,3 kW" },
+      { label: "Caudal de aire", value: "538 m3/h (225 cfm)" },
+      { label: "Succión", value: "22 kPa/220 mbar" },
+      { label: "Peso", value: "92 Kg" },
+      { label: "Tamaño de manguera", value: "80 mm" },
+    ],
+    advantages: [
+      { 
+        icon: "🏗️", 
+        title: "Diseño Especializado", 
+        desc: "Desarrollada específicamente para conectarse y trabajar en conjunto con pulidoras de hormigón." 
+      },
+      { 
+        icon: "🌪️", 
+        title: "Alta Eficiencia", 
+        desc: "Excelente capacidad de recolección de partículas suspendidas, manteniendo el entorno de trabajo limpio." 
+      },
+      { 
+        icon: "🫁", 
+        title: "Filtro de Cartucho", 
+        desc: "Equipada con un sistema de filtro plisado (tipo órgano) que optimiza el flujo de aire y retiene el polvo fino." 
+      },
+      { 
+        icon: "🛒", 
+        title: "Contenedor Móvil", 
+        desc: "La caja recolectora de polvo integra ruedas independientes para un vaciado rápido y sin esfuerzo." 
+      },
+      { 
+        icon: "📦", 
+        title: "Estructura Compacta", 
+        desc: "Su tamaño optimizado permite ubicarla fácilmente en zonas estrechas de la obra sin estorbar." 
+      },
+      { 
+        icon: "🧳", 
+        title: "Fácil de Transportar", 
+        desc: "Diseño ligero y maniobrable que facilita su carga, traslado en vehículos y movimiento en el proyecto." 
+      },
+    ],
+    seo: {
+      title: "Aspiradora Industrial Xingyi IVC-V3 | FloorEx Ecuador",
+      description: "Compra la aspiradora comercial Xingyi IVC-V3 en Ecuador. Diseñada para pulidoras de hormigón, con filtro de alta eficiencia y recolector móvil.",
+      keywords: "aspiradora industrial, xingyi ivc-v3, aspirador comercial, recolector de polvo, pulido de hormigón, floorex",
+      canonical: "https://www.floorex.ec/producto/6", // Corregido de 5 a 6 para coincidir con el id
+      ogImage: "/img/maquinaria/aspiradora-ivc-v3-og.jpg",
+    },
+  },
 ];
