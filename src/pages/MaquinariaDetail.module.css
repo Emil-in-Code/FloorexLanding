@@ -511,7 +511,7 @@
 }
 
 .ctaInner {
-  max-width: 580px;
+  max-width: 80%;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -607,11 +607,12 @@
 
   .heroCta {
     flex-direction: column;
+    width:80%;
   }
 
   .btnPrimary,
   .btnOutline {
-    width: 100%;
+    width: 80%;
     justify-content: center;
   }
 
@@ -637,7 +638,7 @@
 
   .ctaButtons {
     flex-direction: column;
-    width: 100%;
+    align-items:center;
   }
 
   .priceValue {

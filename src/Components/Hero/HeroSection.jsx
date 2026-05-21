@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { useScrollAnimation } from '../IntroOverlay/useScrollAnimation.js';
 import Navbar from '../../widgets/Navbar/Navbar.jsx';
 import styles from './HeroSection.module.css';
-import heroImg from '../../Assets/Images/imgHero.png';
 import GridScan from '../GridScan/GridScan.jsx';
 import CtaButton from '../Cta/cta.jsx';
 
