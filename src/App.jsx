@@ -42,7 +42,7 @@ function HomePage() {
 
 
         <section id="services" className="services-grid">
-          <h1 className="general-title">Nuestros Servicios</h1>
+          <h2 className="general-title">Nuestros Servicios</h2>
           {servicesPics.map((servicio) => (
             <PixelCard key={servicio.id}
               onClick={() => {
@@ -54,7 +54,7 @@ function HomePage() {
               }}
             >
               <div className="container-card">
-                <h1 className="service-title">{servicio.title}</h1>
+                <h3 className="service-title">{servicio.title}</h3>
                 <div className="img-container">
                   <img src={servicio.image} className="img" loading="lazy" />
                 </div>

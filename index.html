@@ -1,42 +1,58 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="FloorEx" />
+    <meta name="theme-color" content="#1a1a1a" />
 
-    <meta name="author" content="Emilio Flor" />
-     
-    <!-- SEO base / fallback para crawlers y Vercel preview -->
-    <meta name="description" content="Pisos industriales y venta de maquinaria especializada" />
+    <meta name="description" content="FloorEx — Especialistas en pisos industriales y comerciales en Ecuador. Pisos pulidos, epóxicos, deportivos y poliuretano cementicio UQESH®. Servicio en Guayaquil y Cuenca." />
 
-    <!-- Open Graph (thumbnail en Vercel, WhatsApp, redes) -->
-    <meta property="og:title" content="FloorEx | Pisos Industriales" />
-    <meta property="og:description" content="Pisos industriales y venta de maquinaria especializada" />
-    <meta property="og:image" content="" />
+    <!-- CAMBIO: og:image ahora tiene URL absoluta (era string vacío — bug activo) -->
+    <meta property="og:title" content="FloorEx | Pisos Industriales en Ecuador" />
+    <meta property="og:description" content="Especialistas en pisos pulidos, epóxicos, deportivos y UQESH® en Ecuador. Cotizá sin compromiso." />
+    <meta property="og:image" content="https://TU_DOMINIO.ec/seo/opengraph.webp" /> <!--agregar el dominio final-->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
+    <!-- CAMBIO: og:url ahora tiene valor real (era vacío) -->
+    <meta property="og:url" content="https://TU_DOMINIO.ec/" /> <!--agregar el dominio final-->
+    <meta property="og:locale" content="es_EC" />
+    <meta property="og:site_name" content="FloorEx" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="FloorEx | Pisos industriales" />
-    <meta name="twitter:description" content="Pisos industriales y venta de maquinaria" />
-    <meta name="twitter:image" content="" />
+    <meta name="twitter:title" content="FloorEx | Pisos Industriales en Ecuador" />
+    <meta name="twitter:description" content="Especialistas en pisos pulidos, epóxicos, deportivos y UQESH® en Ecuador." />
+    <!-- CAMBIO: twitter:image con URL absoluta (era vacío) -->
+    <meta name="twitter:image" content="https://TU_DOMINIO.ec/seo/opengraph.webp" /> <!--agregar el dominio final-->
 
-    <!-- Canonical base -->
-    <link rel="canonical" href="" />
-   
-    <!-- Fuentes globales -->
+    <link rel="canonical" href="https://TU_DOMINIO.ec/" /><!--agregar el dominio final-->
+
+    <!-- ─── Google Tag Manager ─────────────────────────────────────────────
+         ACCIÓN: Reemplazá GTM-XXXXXXX con tu ID real de GTM.
+         Este snippet va en el <head>, lo antes posible.                     -->
+    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <!-- Fallback si Helmet no carga -->
-    <title>FloorEx | pisos industriales en Ecuador </title>
-
-    <title>FloorEx</title>
+    <title>FloorEx | Pisos industriales en Ecuador</title>
   </head>
   <body>
+    <!-- ─── Google Tag Manager (noscript) ────────────────────────────────
+         ACCIÓN: Activar junto con el snippet del <head>. Va inmediatamente
+         después de la apertura del <body>.                                  -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

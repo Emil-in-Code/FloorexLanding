@@ -1,10 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { BreadcrumbSchema, FAQSchema } from '../Components/Seo/ServiceSchema.jsx';
 import { services } from '../Data/ServiceDetail.js';
 import styles from './ServiceDetail.module.css';
 
-import ServiceSchema from '../Components/Seo/ServiceSchema.jsx'
+import ServiceSchema from '../Components/Seo/ServiceSchema.jsx';
 
 export default function ServiceDetail() {
   const { id } = useParams();
@@ -36,11 +37,10 @@ export default function ServiceDetail() {
         {/* Básicos */}
         <title>{service.seo.title}</title>
         <meta name="description" content={service.seo.description} />
-        <meta name="keywords"    content={service.seo.keywords} />
         <link rel="canonical"    href={service.seo.canonical} />
 
         {/* Open Graph — WhatsApp, Facebook, LinkedIn */}
-        <meta property="og:type"         content="website" />
+        <meta property="og:type"         content="article" />
         <meta property="og:url"          content={service.seo.canonical} />
         <meta property="og:title"        content={service.seo.title} />
         <meta property="og:description"  content={service.seo.description} />
@@ -58,6 +58,16 @@ export default function ServiceDetail() {
       </Helmet>
 
       <ServiceSchema service={service} />
+
+      <BreadcrumbSchema items={[
+        { name: 'Inicio', url: 'https://TU_DOMINIO.ec/' },
+        { name: 'Servicios', url: 'https://TU_DOMINIO.ec/#services' },
+        { name: service.title, url: service.seo.canonical },
+      ]} />
+      <FAQSchema items={service.benefits.map(b => ({
+        question: b.title,
+        answer: b.desc,
+      }))} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
       <section className={styles.hero}>

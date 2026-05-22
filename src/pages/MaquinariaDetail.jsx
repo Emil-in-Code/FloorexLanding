@@ -1,6 +1,7 @@
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ProductSchema, BreadcrumbSchema } from '../Components/Seo/ServiceSchema.jsx';
 import { productos } from '../Data/MaquinariaDetail.js';
 import styles from './MaquinariaDetail.module.css';
 
@@ -54,10 +55,9 @@ export default function MaquinariaDetail() {
       <Helmet>
         <title>{producto.seo.title}</title>
         <meta name="description" content={producto.seo.description} />
-        <meta name="keywords"    content={producto.seo.keywords} />
         <link rel="canonical"    href={producto.seo.canonical} />
 
-        <meta property="og:type"         content="website" />
+        <meta property="og:type"         content="product" />
         <meta property="og:url"          content={producto.seo.canonical} />
         <meta property="og:title"        content={producto.seo.title} />
         <meta property="og:description"  content={producto.seo.description} />
@@ -72,6 +72,13 @@ export default function MaquinariaDetail() {
         <meta name="twitter:description" content={producto.seo.description} />
         <meta name="twitter:image"       content={producto.seo.ogImage} />
       </Helmet>
+
+      <ProductSchema producto={producto} />
+      <BreadcrumbSchema items={[
+        { name: 'Inicio', url: 'https://TU_DOMINIO.ec/' },
+        { name: 'Maquinaria', url: 'https://TU_DOMINIO.ec/maquinaria' },
+        { name: producto.title, url: producto.seo.canonical },
+      ]} />
 
       {/* ── HERO ───────────────────────────────────────────── */}
       <section className={styles.hero}>
