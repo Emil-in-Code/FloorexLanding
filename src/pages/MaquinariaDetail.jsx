@@ -6,10 +6,10 @@ import { productos } from '../Data/MaquinariaDetail.js';
 import styles from './MaquinariaDetail.module.css';
 
 export default function MaquinariaDetail() {
-  const { id } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
 
-  const currentIndex = productos.findIndex((p) => p.id === Number(id));
+  const currentIndex = productos.findIndex((p) => p.slug === slug);
   const producto = productos[currentIndex];
 
   // Carrusel de fotos del producto actual
@@ -19,7 +19,7 @@ export default function MaquinariaDetail() {
   useEffect(() => {
     setActiveImg(0);
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [id]);
+  }, [slug]);
 
   const prevImg = useCallback(() => {
     setActiveImg((i) => (i === 0 ? producto.images.length - 1 : i - 1));
@@ -30,8 +30,8 @@ export default function MaquinariaDetail() {
   }, [producto]);
 
   // Navegar a otro producto desde la galería
-  const handleGalleryClick = (clickedId) => {
-    navigate(`/producto/${clickedId}`);
+  const handleGalleryClick = (clickedSlug) => {
+    navigate(`/producto/${clickedSlug}`);
   };
 
   if (!producto) {
@@ -57,7 +57,7 @@ export default function MaquinariaDetail() {
         <meta name="description" content={producto.seo.description} />
         <link rel="canonical"    href={producto.seo.canonical} />
 
-        <meta property="og:type"         content="product" />
+        <meta property="og:type"         content="website" />
         <meta property="og:url"          content={producto.seo.canonical} />
         <meta property="og:title"        content={producto.seo.title} />
         <meta property="og:description"  content={producto.seo.description} />
@@ -236,7 +236,7 @@ export default function MaquinariaDetail() {
               <button
                 key={p.id}
                 className={styles.galleryItem}
-                onClick={() => handleGalleryClick(p.id)}
+                onClick={() => handleGalleryClick(p.slug)}
                 title={p.title}
               >
                 <img

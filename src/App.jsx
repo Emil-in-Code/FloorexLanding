@@ -5,6 +5,7 @@ import usePageTracking from "./hook/useGtmTracking.js";
 import './App.css';
 import { CurvedLoop, GridScan, Hero, HorizontalGallery, PixelCard, IntroOverlay, AboutUs } from './Components';
 import { Navbar, Footer } from './widgets';
+import { services } from './Data/ServiceDetail.js'
 
 import LocalBusinessSchema from './Components/Seo/LocalBussinessSchema.jsx'
 
@@ -16,6 +17,7 @@ const CookiesPage = lazy(() => import('./pages/CookiePage.jsx'));
 const LegalNoticePage = lazy(() => import('./pages/LegalNoticePage.jsx'));
 const ServiceDetailPage = lazy(() => import('./pages/ServiceDetail.jsx'));
 const MaquinariaDetailPage = lazy(() => import('./pages/MaquinariaDetail.jsx'));
+
 
 // ✅ Extraé la home a su propio componente
 function HomePage() {
@@ -46,10 +48,20 @@ function HomePage() {
           {servicesPics.map((servicio) => (
             <PixelCard key={servicio.id}
               onClick={() => {
-                if (servicio.id ===7 ) {
-                  navigate('/producto/1')
-                } else{
-                navigate(`/servicio/${servicio.id}`);
+                if (servicio.id === 7) {
+                  // Redirección temporal basada en slug para la maquinaria
+                  navigate('/producto/pulidora-portatil');
+                } else {
+                  // 🧠 Buscamos el servicio equivalente en el archivo de detalles usando el id de la card
+                  const servicioEnDetalle = services.find(s => s.id === servicio.id);
+                  
+                  // 🚀 Si lo encuentra y tiene slug, navegamos forzando minúsculas por estándar SEO
+                  if (servicioEnDetalle && servicioEnDetalle.slug) {
+                    navigate(`/servicio/${servicioEnDetalle.slug.toLowerCase()}`);
+                  } else {
+                    // ⚠️ Respaldo por si algún servicio en el array de detalles no tiene slug definido aún
+                    navigate(`/servicio/${servicio.id}`);
+                  }
                 }
               }}
             >
@@ -97,10 +109,10 @@ function App() {
         <Route path="/legal" element={
           <Suspense fallback={fallback}><LegalNoticePage /></Suspense>
         } />
-        <Route path="/servicio/:id" element={
+        <Route path="/servicio/:slug" element={
           <Suspense fallback={fallback}><ServiceDetailPage /></Suspense>
         } />
-        <Route path="/producto/:id" element={
+        <Route path="/producto/:slug" element={
           <Suspense fallback={fallback}><MaquinariaDetailPage /></Suspense>
         } />
       </Routes>

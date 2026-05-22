@@ -8,15 +8,16 @@ import styles from './ServiceDetail.module.css';
 import ServiceSchema from '../Components/Seo/ServiceSchema.jsx';
 
 export default function ServiceDetail() {
-  const { id } = useParams();
+  const { slug } = useParams();
 
-  const currentIndex = services.findIndex((s) => s.id === Number(id));
+
+  const currentIndex = services.findIndex((s) => s.slug === slug);
   const service = services[currentIndex];
   const nextService = services[currentIndex + 1] || null;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [id]);
+  }, [slug]);
 
   if (!service) {
     return (
@@ -40,7 +41,7 @@ export default function ServiceDetail() {
         <link rel="canonical"    href={service.seo.canonical} />
 
         {/* Open Graph — WhatsApp, Facebook, LinkedIn */}
-        <meta property="og:type"         content="article" />
+        <meta property="og:type"         content="website" />
         <meta property="og:url"          content={service.seo.canonical} />
         <meta property="og:title"        content={service.seo.title} />
         <meta property="og:description"  content={service.seo.description} />
@@ -100,7 +101,7 @@ export default function ServiceDetail() {
             </a>
 
             {nextService ? (
-              <Link to={`/servicio/${nextService.id}`} className={styles.btnOutline}>
+              <Link to={`/servicio/${nextService.slug}`} className={styles.btnOutline}>
                 {nextService.title} →
               </Link>
             ) : (
@@ -216,7 +217,7 @@ export default function ServiceDetail() {
             </a>
 
             {nextService ? (
-              <Link to={`/servicio/${nextService.id}`} className={styles.btnOutline}>
+              <Link to={`/servicio/${nextService.slug}`} className={styles.btnOutline}>
                 Ver siguiente servicio →
               </Link>
             ) : (

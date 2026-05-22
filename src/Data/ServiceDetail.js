@@ -7,6 +7,7 @@ const OG_IMAGE_DEFAULT = '/seo/opengraph.webp';
 export const services = [
   {
     id: 1,
+    slug: "pisos-pulidos-abrillantados",
     title: "Pisos pulidos/abrillantados",
     text: "En cualquier espacio que necesite durabilidad, estética y bajo mantenimiento.",
     image: servicesImg.pulidos.hero,
@@ -85,6 +86,7 @@ export const services = [
   },
   {
     id: 2,
+    slug: "pisos-deportivos",
     title: "Pisos Deportivos",
     text: "Que nada te saque del juego",
     image:servicesImg.deportivo.hero,
@@ -153,6 +155,7 @@ export const services = [
   },
   {
     id: 3,
+    slug:"pisos-epoxicos",
     title: "Pisos epóxicos",
     text: "Resistencia extrema con acabado profesional",
     image: servicesImg.epoxico.hero,
@@ -215,6 +218,7 @@ export const services = [
   },
   {
     id: 4,
+    slug:"poliretano-cementicio",
     title: "Poliuretano Cementicio (UQESH®)",
     text: "La tecnología que eligen los gigantes mundiales",
     image: servicesImg.cementicio.hero,
@@ -282,6 +286,7 @@ export const services = [
   },
   {
      id: 5,
+     slug:"preparacion-superficies",
      title: "Preparación de Superficies",
      text: "La base que define un piso exitoso",
      image: servicesImg.superficies.hero, // ← Puedes mapearlo en tu archivo de imágenes si agregas este servicio
@@ -336,6 +341,7 @@ export const services = [
   },
   {
     id: 6,
+    slug:"señaletica-vial-industrial",
     title: "Señalética vial e industrial",
     text: "Orden, seguridad y eficiencia en tu piso",
     image: servicesImg.señaletica.hero,

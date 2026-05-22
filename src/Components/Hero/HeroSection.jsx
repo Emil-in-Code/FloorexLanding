@@ -1,6 +1,5 @@
 // heroSection.jsx
 import React, { useState, useEffect } from 'react';
-
 import { useScrollAnimation } from '../IntroOverlay/useScrollAnimation.js';
 import Navbar from '../../widgets/Navbar/Navbar.jsx';
 import styles from './HeroSection.module.css';
@@ -91,7 +90,7 @@ export default function HeroSection() {
                   text="Contactar"
                 />
                 <CtaButton
-                  to= "/servicio/1"
+                  href= "#services"
                   className={`${styles.btn} ${styles.btnServices}`}
                   text="Servicios"
                 />                    
