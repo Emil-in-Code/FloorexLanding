@@ -38,7 +38,7 @@ export default function MaquinariaDetail() {
     return (
       <div className={styles.notFound}>
         <p>Producto no encontrado.</p>
-        <Link to="/maquinaria">← Volver a maquinaria</Link>
+        <Link to="/">← Volver al inicio</Link>
       </div>
     );
   }
@@ -57,7 +57,7 @@ export default function MaquinariaDetail() {
         <meta name="description" content={producto.seo.description} />
         <link rel="canonical"    href={producto.seo.canonical} />
 
-        <meta property="og:type"         content="website" />
+        <meta property="og:type"         content="product" />
         <meta property="og:url"          content={producto.seo.canonical} />
         <meta property="og:title"        content={producto.seo.title} />
         <meta property="og:description"  content={producto.seo.description} />
@@ -75,8 +75,8 @@ export default function MaquinariaDetail() {
 
       <ProductSchema producto={producto} />
       <BreadcrumbSchema items={[
-        { name: 'Inicio', url: 'https://TU_DOMINIO.ec/' },
-        { name: 'Maquinaria', url: 'https://TU_DOMINIO.ec/maquinaria' },
+        { name: 'Inicio', url: 'https://floorex.ec/' },
+        { name: 'Maquinaria', url: 'https://floorex.ec/maquinaria' },
         { name: producto.title, url: producto.seo.canonical },
       ]} />
 

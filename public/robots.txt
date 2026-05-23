@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /package.json
+Disallow: /vite.config.js
+Sitemap: https://floorex.ec/sitemap.xml

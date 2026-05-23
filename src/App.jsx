@@ -68,7 +68,7 @@ function HomePage() {
               <div className="container-card">
                 <h3 className="service-title">{servicio.title}</h3>
                 <div className="img-container">
-                  <img src={servicio.image} className="img" loading="lazy" />
+                  <img src={servicio.image} alt={servicio.title} className="img" loading="lazy" />
                 </div>
               </div>
             </PixelCard>

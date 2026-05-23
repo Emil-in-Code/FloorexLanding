@@ -20,7 +20,7 @@ const localBusinessData = {
   "priceRange": "$$",
   "currenciesAccepted": "USD",
   "paymentAccepted": "Cash",
-  "openingHoursSpecification":[
+  "OpeningHoursSpecification":[
     {
       "@type":"openingHoursSpecification",
       "dayOfWeek":["Monday","Tuesday","Wednesday", "Thursday", "Friday", "Saturday"],
@@ -42,7 +42,7 @@ const localBusinessData = {
   ],
   "address": {
     "@type": "PostalAddress",
-    "streetAdress": "Colinas de los Ceibos calle 8va y AV.3ra #203 Guayaquil, Ecuador",
+    "streetAddress": "Colinas de los Ceibos calle 8va y AV.3ra #203 Guayaquil, Ecuador",
     "addressLocality": "Guayaquil",
     "addressRegion": "Guayas",
     "PostalCode":"090902",
@@ -51,7 +51,7 @@ const localBusinessData = {
   "geo":{
   "@type":"GeoCoordinates",
   "latitude":-2.1643126,
-  "ongitude":-79.9114755,
+  "longitude":-79.9114755,
   },
   "hasMap": "https://maps.google.com/?q=FloorEx+Guayaquil",
 
@@ -60,7 +60,6 @@ const localBusinessData = {
     "telephone": "+593987844281",
     "contactType": "customer service",
     "availableLanguage": "Spanish",
-    "contactOption": "TollFree",
   },
   "sameAs": [
     "https://www.instagram.com/floorex.ec"

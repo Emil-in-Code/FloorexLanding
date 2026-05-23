@@ -1,6 +1,9 @@
 // src/Data/MaquinariaDetail.js
 import { productImg } from './ProductImg.js'
 
+const BASE_URL = "https://www.floorex.ec";
+const getCanonical = (slug) => `${BASE_URL}/producto/${slug}`;
+
 export const productos = [
   {
    id: 1,
@@ -37,7 +40,7 @@ export const productos = [
      description:
        "Pulidora portátil XINGYI GX250 de alto rendimiento. Motor de imanes permanentes, arranque suave bajo 10A y excelente estabilidad a bajo voltaje.",
      keywords: "pulidora de bordes, XINGYI GX250, pulidora portátil, maquinaria para pisos, FloorEx",
-     canonical: "https://www.floorex.ec/maquinaria/pulidora-portatil-xingyi-gx250",
+     canonical: getCanonical("pulidora-portatil-xingyi-gx250"),
      ogImage: "/img/maquinaria/pulidora-og.jpg",
    },
   },
@@ -98,7 +101,7 @@ export const productos = [
       title: "Aspiradora Industrial IVC-F65L | FloorEx",
       description: "Aspiradora industrial IVC-F65L de 65L con motor USA AMETEK de 3HP y filtro de fibra de vidrio (99.9% eficiencia). Ideal para pulidoras y control de polvo.",
       keywords: "aspiradora industrial, IVC F65L, extractor de polvo, maquinaria para pisos, XINGYI, FloorEx",
-      canonical: "https://www.floorex.ec/maquinaria/aspiradora-industrial",
+      canonical: getCanonical("aspiradora-industrial"),
       ogImage: "/img/maquinaria/aspiradora-og.jpg",
     },
   },
@@ -162,13 +165,13 @@ export const productos = [
       title: "Pulidora Xingyi GX858 a Control Remoto | FloorEx Ecuador",
       description: "Adquiere la pulidora industrial Xingyi GX858 en Ecuador. Alto rendimiento para desbaste, remoción de epoxi y pulido de hormigón con control remoto.",
       keywords: "pulidora industrial, xingyi gx858, pulidora control remoto, pulido de hormigón, desbaste de pisos, floorex",
-      canonical: "https://www.floorex.ec/producto/pulidora-control-remoto",
+      canonical: getCanonical("pulidora-control-remoto"),
       ogImage: "/img/maquinaria/pulidora-gx858-og.jpg",
     },
   },
   {
     id: 4,
-    slug: "aspiradora-industrial-IVC45L-manual",
+    slug: "aspiradora-industrial-ivcl45l",
     title: "Aspiradora industrial IVC45L (manual)",
     subtitle: "Extractor de polvo de alta capacidad con diseño de elevación y filtrado HEPA 13",
     badge: "Alto Rendimiento",
@@ -223,13 +226,13 @@ export const productos = [
       title: "Aspiradora Industrial IVC45L | FloorEx Ecuador",
       description: "Adquiere la aspiradora industrial IVC45L de 7.5 HP en Ecuador. Filtración HEPA 13 de dos etapas, diseño elevable compacto y embolsado continuo sin polvo.",
       keywords: "aspiradora industrial, IVC45L, extractor de polvo, filtrado HEPA 13, longopac, maquinaria para pisos, floorex",
-      canonical: "https://www.floorex.ec/producto/aspiradora-industrial-IVC45L-manual",
+      canonical: getCanonical("aspiradora-industrial-ivcl45l"),
       ogImage: "/img/maquinaria/aspiradora-ivc45l-og.jpg",
     },
   },
 {
     id: 5,
-    slug: "Rectificadora-de-suelo-GX550",
+    slug: "Rectificadora-de-suelo-gx550",
     title: "Rectificadora de suelo Xingyi GX550",
     subtitle: "Pulidora planetaria industrial de alta resistencia con caja de engranajes de aleación dual",
     badge: "Tecnología Avanzada",
@@ -284,7 +287,7 @@ export const productos = [
       title: "Rectificadora de suelo Xingyi GX550 | FloorEx Ecuador",
       description: "Descubre la pulidora planetaria industrial Xingyi GX550 de 5.5 HP en Ecuador. Caja de cambios de aleación dual, 3 cabezales y presión de desbaste regulable.",
       keywords: "rectificadora de suelo, Xingyi GX550, pulidora planetaria, desbaste de pisos, maquinaria industrial, pulido de hormigón, floorex",
-      canonical: "https://www.floorex.ec/producto/Rectificadora-de-suelo-GX550",
+      canonical: getCanonical("Rectificadora-de-suelo-gx550"),
       ogImage: "/img/maquinaria/rectificadora-gx550-og.jpg",
     },
   },
@@ -345,7 +348,7 @@ export const productos = [
       title: "Aspiradora Industrial Xingyi IVC-V3 | FloorEx Ecuador",
       description: "Compra la aspiradora comercial Xingyi IVC-V3 en Ecuador. Diseñada para pulidoras de hormigón, con filtro de alta eficiencia y recolector móvil.",
       keywords: "aspiradora industrial, xingyi ivc-v3, aspirador comercial, recolector de polvo, pulido de hormigón, floorex",
-      canonical: "https://www.floorex.ec/producto/aspiradora-industrial-xingyi-ivc-v3", // Corregido de 5 a 6 para coincidir con el id
+      canonical: getCanonical("aspiradora-industrial-xingyi-ivc-v3"),
       ogImage: "/img/maquinaria/aspiradora-ivc-v3-og.jpg",
     },
   },

@@ -23,7 +23,7 @@ export default function ServiceDetail() {
     return (
       <div className={styles.notFound}>
         <p>Servicio no encontrado.</p>
-        <Link to="/#services">← Volver a servicios</Link>
+        <Link to="/">← Volver al inicio</Link>
       </div>
     );
   }
@@ -41,7 +41,7 @@ export default function ServiceDetail() {
         <link rel="canonical"    href={service.seo.canonical} />
 
         {/* Open Graph — WhatsApp, Facebook, LinkedIn */}
-        <meta property="og:type"         content="website" />
+        <meta property="og:type"         content="article" />
         <meta property="og:url"          content={service.seo.canonical} />
         <meta property="og:title"        content={service.seo.title} />
         <meta property="og:description"  content={service.seo.description} />

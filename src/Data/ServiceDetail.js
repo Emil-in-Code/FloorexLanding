@@ -4,6 +4,8 @@ import { servicesImg } from '../Data/GalleryServices.js'
 const BASE_URL = 'https://floorex.ec';
 const OG_IMAGE_DEFAULT = '/seo/opengraph.webp';
 
+const getCanonical = (slug) => `${BASE_URL}/servicio/${slug}`;
+
 export const services = [
   {
     id: 1,
@@ -42,7 +44,7 @@ export const services = [
                     Acabado brillante de alta durabilidad, antideslizante y 100% ecológico.`,
       keywords: `pisos pulidos de cemento, pulido de hormigón, mejores empresas de pisos pulidos en Ecuador`,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/pulido`,
+      canonical: getCanonical("pisos-pulidos-abrillantados"),
     },
 
     // ── HTML libre para la sección de descripción ────────────
@@ -117,7 +119,7 @@ export const services = [
                     poliuretánicos para básquet, paddle, vóley y multiuso.`,
       keywords: `pisos deportivos, resinas acrilicas, poliuretano deportes, basquet, handball, paddle, voley, pintura canchas, recuperacion de pisos`,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/deportivos`,
+      canonical: getCanonical("pisos-deportivos"),
     },
     detail: `
       <h2>¿Qué pisos trabajamos?</h2>
@@ -180,7 +182,7 @@ export const services = [
                     talleres, parkings y laboratorios. Sistemas autonivelantes y de grado alimenticio.`,
       keywords:`pisos epoxicos, recubrimientos epoxicos, mortero autonivelante, pintura alto trafico, grado alimenticio, pisos industriales, reparacion pisos epoxicos`,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/epoxicos`,
+      canonical: getCanonical("pisos-epoxicos"),
     },
     detail: `
       <h2>¿Dónde se usan?</h2>
@@ -256,7 +258,7 @@ export const services = [
                     frigoríficos y alta exigencia térmica.`,
       keywords: `poliuretano cementicio, uqesh ecuador, pisos industriales, grado alimenticio, pisos para frigorificos, mortero cementicio, floorex`,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/poliuretano-cementicio-uqesh`,
+      canonical: getCanonical("poliretano-cementicio"),
     },
     detail: `
       <h2>¿Dónde lo instalamos?</h2>
@@ -311,7 +313,7 @@ export const services = [
                     y perfil de anclaje (CSP 1 al 9). Asegura la máxima adherencia de tus resinas.`,
        keywords: `preparacion de superficies, escarificacion concreto, pulido mecanico, perfil de anclaje, csp concreto, remover epoxico, lavado industrial`,
        ogImage: OG_IMAGE_DEFAULT,
-       canonical: `${BASE_URL}/servicio/preparacion-superficies`,
+      canonical: getCanonical("preparacion-superficies"),
      },
      detail: `
       <h2>¿Qué metodologías aplicamos?</h2>
@@ -371,7 +373,7 @@ export const services = [
       description: "Diseño y aplicación de señalización horizontal de alto tráfico para industrias, bodegas y estacionamientos. Cumplimiento de normas ISO e INEN.",
       keywords: "senaletica industrial, senalizacion vial, demarcacion de pisos, pintura de alto trafico, delimitar pasillos industriales, floorex",
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/senaletica-vial-industrial`,
+      canonical: getCanonical("señaletica-vial-industrial"),
     },
     detail: `
       <h2>¿Dónde la aplicamos?</h2>
@@ -423,7 +425,7 @@ export const services = [
       description: ``,
       keywords: ``,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/`,
+      canonical: `${BASE_URL}/servicio/${slug}`
     },
     detail: ``,
   },
