@@ -220,7 +220,7 @@ export const services = [
   },
   {
     id: 4,
-    slug:"poliretano-cementicio",
+    slug:"poliuretano-cementicio",
     title: "Poliuretano Cementicio (UQESH®)",
     text: "La tecnología que eligen los gigantes mundiales",
     image: servicesImg.cementicio.hero,
@@ -258,7 +258,7 @@ export const services = [
                     frigoríficos y alta exigencia térmica.`,
       keywords: `poliuretano cementicio, uqesh ecuador, pisos industriales, grado alimenticio, pisos para frigorificos, mortero cementicio, floorex`,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: getCanonical("poliretano-cementicio"),
+      canonical: getCanonical("poliuretano-cementicio"),
     },
     detail: `
       <h2>¿Dónde lo instalamos?</h2>
@@ -343,7 +343,7 @@ export const services = [
   },
   {
     id: 6,
-    slug:"señaletica-vial-industrial",
+    slug:"senaletica-vial-industrial",
     title: "Señalética vial e industrial",
     text: "Orden, seguridad y eficiencia en tu piso",
     image: servicesImg.señaletica.hero,
@@ -363,6 +363,9 @@ export const services = [
       { icon: '👁️', title: 'Alta visibilidad', desc: 'Colores de alto contraste (amarillo, rojo, verde, blanco, negro) bajo cualquier tipo de iluminación.' },
       { icon: '📋', title: 'Cumplimiento normativo', desc: 'Adaptamos la señalética a las normativas vigentes del país y estándares internacionales (ISO, INEN, NFPA).' },
     ],
+    faq: [
+      {question}
+    ]
     process: [
       { title: 'Relevamiento y Diseño', desc: 'Analizamos el flujo de tu operación para diseñar la distribución de pasillos, racks, zonas de carga o estacionamientos.' },
       { title: 'Selección del Sistema', desc: 'Elegimos la pintura de alta resistencia (epóxica, poliuretánica o vial) adecuada según el tipo de soporte y desgaste mecánico.' },
@@ -373,7 +376,7 @@ export const services = [
       description: "Diseño y aplicación de señalización horizontal de alto tráfico para industrias, bodegas y estacionamientos. Cumplimiento de normas ISO e INEN.",
       keywords: "senaletica industrial, senalizacion vial, demarcacion de pisos, pintura de alto trafico, delimitar pasillos industriales, floorex",
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: getCanonical("señaletica-vial-industrial"),
+      canonical: getCanonical("senaletica-vial-industrial"),
     },
     detail: `
       <h2>¿Dónde la aplicamos?</h2>

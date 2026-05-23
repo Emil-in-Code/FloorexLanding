@@ -1,11 +1,96 @@
 //-----Estructura de carpetas------// 
+.
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── public
+│   ├── favicon.svg
+│   ├── robots.txt
+│   ├── seo
+│   │   └── openGraph.webp
+│   └── sitemap.xml
+├── README.md
 ├── src
 │   ├── App.css
 │   ├── App.jsx
 │   ├── Assets
 │   │   ├── Images
+│   │   │   ├── antes1.webp
+│   │   │   ├── antes2.webp
+│   │   │   ├── antes3.webp
+│   │   │   ├── antes4.webp
+│   │   │   ├── antes5.webp
+│   │   │   ├── baño.webp
+│   │   │   ├── deportivo.webp
+│   │   │   ├── después1.webp
+│   │   │   ├── después2.webp
+│   │   │   ├── después3.webp
+│   │   │   ├── después4.webp
+│   │   │   ├── después5.webp
+│   │   │   ├── logo.webp
+│   │   │   ├── pinturaEpoxi.webp
+│   │   │   ├── poliuretanoCementicio_Página 5.webp
+│   │   │   ├── señalética-1.webp
+│   │   │   ├── superficie4.webp
+│   │   │   └── ventaMaquina.webp
 │   │   ├── products
+│   │   │   ├── aspira1.webp
+│   │   │   ├── aspira2.webp
+│   │   │   ├── aspira3.webp
+│   │   │   ├── aspira4.webp
+│   │   │   ├── aspiradora1.webp
+│   │   │   ├── aspiradora2.webp
+│   │   │   ├── aspiradora3.webp
+│   │   │   ├── aspiradora4.webp
+│   │   │   ├── aspiradoraivc451.webp
+│   │   │   ├── aspiradoraivc452.webp
+│   │   │   ├── aspiradoraivc453.webp
+│   │   │   ├── aspiradoraivc454.webp
+│   │   │   ├── pulidora1.webp
+│   │   │   ├── pulidora2.webp
+│   │   │   ├── pulidora3.webp
+│   │   │   ├── pulidora4.webp
+│   │   │   ├── pulidoraRemo1.webp
+│   │   │   ├── pulidoraRemo2.webp
+│   │   │   ├── pulidoraRemo3.webp
+│   │   │   ├── pulidoraRemo4.webp
+│   │   │   ├── rectificadora1.webp
+│   │   │   ├── rectificadora2.webp
+│   │   │   ├── rectificadora3.webp
+│   │   │   └── rectificadora4.webp
 │   │   └── ServiceDetail
+│   │       ├── cementicio1.webp
+│   │       ├── cementicio2.webp
+│   │       ├── cementicio3.webp
+│   │       ├── cementicio4.webp
+│   │       ├── deportivo1.webp
+│   │       ├── deportivo2.webp
+│   │       ├── deportivo3.webp
+│   │       ├── deportivo.webp
+│   │       ├── epoxi1.webp
+│   │       ├── epoxi2.webp
+│   │       ├── epoxi3.webp
+│   │       ├── epoxi4.webp
+│   │       ├── epoxi5.webp
+│   │       ├── heroCementicio.webp
+│   │       ├── heroEpo.webp
+│   │       ├── heroSeña.webp
+│   │       ├── hero.webp
+│   │       ├── pulido1.webp
+│   │       ├── pulido2.webp
+│   │       ├── pulido3.webp
+│   │       ├── pulido4.webp
+│   │       ├── seña1.webp
+│   │       ├── seña2.webp
+│   │       ├── seña3.webp
+│   │       ├── seña4.webp
+│   │       ├── seña5.webp
+│   │       ├── superficie1.webp
+│   │       ├── superficie2.webp
+│   │       ├── superficie3.webp
+│   │       ├── superficie4.webp
+│   │       └── superficie5.webp
 │   ├── Components
 │   │   ├── AboutUs
 │   │   │   ├── AboutUs.jsx
@@ -14,7 +99,7 @@
 │   │   │   └── cta.jsx
 │   │   ├── CuverdLoop
 │   │   │   ├── CurvedLoop.jsx
-│   │   │   ├── CurvedLoop.module.css
+│   │   │   └── CurvedLoop.module.css
 │   │   ├── GridScan
 │   │   │   └── GridScan.jsx
 │   │   ├── Hero
@@ -47,12 +132,12 @@
 │   │   ├── Cookies.js
 │   │   ├── GalleryServices.js
 │   │   ├── legalNotice.js
-│   │   ├── MaquinariaDetail.js //pertenece a la card "Venta de maquinaira" es un array de objetos donde cada objeto es un producto que está a la venta, se renderiza en MaquinariaDetail.jsx
+│   │   ├── MaquinariaDetail.js
 │   │   ├── Privacy.js
-│   │   ├── ProductImg.js //exporta las fotos de cada máquina
+│   │   ├── ProductImg.js
 │   │   ├── ProjectData.js
-│   │   ├── ServiceDetail.js //array de objetos, cada objeto es un servicio que se renderiza en ServiceDetail.jsx
-│   │   └── ServicesData.js //solo exporta título y fotos para las cards que se muestran en el PixelCard.jsx
+│   │   ├── ServiceDetail.js
+│   │   └── ServicesData.js
 │   ├── hook
 │   │   └── useGtmTracking.js
 │   ├── index.css
@@ -60,13 +145,14 @@
 │   ├── pages
 │   │   ├── CookiePage.jsx
 │   │   ├── LegalNoticePage.jsx
-│   │   ├── MaquinariaDetail.jsx //renderiza lo de MaquinariaDetail.js
+│   │   ├── MaquinariaDetail.jsx
 │   │   ├── MaquinariaDetail.module.css
 │   │   ├── privacyPage.jsx
-│   │   ├── ServiceDetail.jsx //renderiza lo de ServiceDetail.jsx
+│   │   ├── ServiceDetail.jsx
 │   │   └── ServiceDetail.module.css
 │   ├── styles
 │   │   └── gridScan.css
+│   ├── tree.jsx
 │   └── widgets
 │       ├── Footer
 │       │   ├── Footer.jsx
@@ -75,7 +161,139 @@
 │       └── Navbar
 │           ├── Navbar.jsx
 │           ├── Navbar.module.css
-└── vite.config.js 
+│           └── useNavbar.js
+└── vite.config.js
+//-----------sitemap-------------//
+import { writeFileSync } from 'fs';
+import path from 'path';
+import { services } from '../src/Data/ServiceDetail.js';
+import { productos } from '../src/Data/MaquinariaDetail.js';
+
+const BASE_URL = 'https://floorex.ec';
+const today = new Date().toISOString().split('T')[0];
+
+// Aseguramos la ruta correcta sin importar dónde se ejecute el comando
+const OUTPUT_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');
+
+const staticRoutes = [
+  { loc: '/',         priority: '1.0', changefreq: 'monthly', useToday: true },
+  { loc: '/privacidad', priority: '0.3', changefreq: 'yearly',  useToday: false },
+  { loc: '/cookies',    priority: '0.3', changefreq: 'yearly',  useToday: false },
+  { loc: '/legal',      priority: '0.3', changefreq: 'yearly',  useToday: false },
+];
+
+const serviceRoutes = services.map(s => ({
+  loc: `/servicio/${s.slug}`,
+  priority: '0.9',
+  changefreq: 'monthly',
+  useToday: true
+}));
+
+const productRoutes = productos.map(p => ({
+  loc: `/producto/${p.slug}`,
+  priority: '0.8',
+  changefreq: 'weekly',
+  useToday: true
+}));
+
+const allRoutes = [...staticRoutes, ...serviceRoutes, ...productRoutes];
+
+const xmlUrlNodes = allRoutes.map(r => {
+  // Solo metemos lastmod si realmente se justifica o es dinámico
+  const lastmodTag = r.useToday ? `\n    <lastmod>${today}</lastmod>` : '';
+  
+  return `  <url>
+    <loc>${BASE_URL}${r.loc}</loc>${lastmodTag}
+    <changefreq>${r.changefreq}</changefreq>
+    <priority>${r.priority}</priority>
+  </url>`;
+}).join('\n');
+
+const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${xmlUrlNodes}
+</urlset>`;
+
+try {
+  writeFileSync(OUTPUT_PATH, xml.trim());
+  console.log(`\x1b[32m%s\x1b[0m`, `✅ sitemap.xml generado con éxito en /public (${allRoutes.length} URLs)`);
+} catch (error) {
+  console.error(`❌ Error al escribir el sitemap:`, error);
+  process.exit(1);
+}
+//-------vite.config.-------------//
+ import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from "path"
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  resolve:{
+    alias:{
+      "@": path.resolve(__dirname,"./src"),
+    },
+  },
+
+});
+//--------INDEX.HTML----------//
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="FloorEx" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <!-- CAMBIO: og:image ahora tiene URL absoluta (era string vacío — bug activo) -->
+    <meta property="og:title" content="FloorEx | Pisos Industriales y comerciales en Ecuador" />
+    <meta property="og:description" content="Especialistas en pisos pulidos, epóxicos, deportivos y UQESH® en Ecuador. Cotizá sin compromiso." />
+    <meta property="og:image" content="https://TU_DOMINIO.ec/seo/opengraph.webp" /> <!--agregar el dominio final-->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <!-- CAMBIO: og:url ahora tiene valor real (era vacío) -->
+    <meta property="og:url" content="https://TU_DOMINIO.ec/" /> <!--agregar el dominio final-->
+    <meta property="og:locale" content="es_EC" />
+    <meta property="og:site_name" content="FloorEx" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FloorEx | Pisos Industriales en Ecuador" />
+    <meta name="twitter:description" content="Especialistas en pisos pulidos, epóxicos, deportivos y UQESH® en Ecuador." />
+    <!-- CAMBIO: twitter:image con URL absoluta (era vacío) -->
+    <meta name="twitter:image" content="https://TU_DOMINIO.ec/seo/opengraph.webp" /> <!--agregar el dominio final-->
+
+    <link rel="canonical" href="https://TU_DOMINIO.ec/" /><!--agregar el dominio final-->
+
+    <!-- ─── Google Tag Manager ─────────────────────────────────────────────
+         ACCIÓN: Reemplazá GTM-XXXXXXX con tu ID real de GTM.
+         Este snippet va en el <head>, lo antes posible.                     -->
+    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>FloorEx | Pisos industriales y comerciales en Ecuador</title>
+    <meta name="description" content="Expertos en pisos industriales, comerciales y epóxicos en Guayaquil y Cuenca. Aplicación de poliuretano cementicio con sistema UQESH. ¡Cotiza aquí!" />
+  </head>
+  <body>
+    <!-- ─── Google Tag Manager (noscript) ────────────────────────────────
+         ACCIÓN: Activar junto con el snippet del <head>. Va inmediatamente
+         después de la apertura del <body>.                                  -->
+    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
 //--------App.jsx-------------//
 import { lazy, Suspense } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
@@ -147,7 +365,7 @@ function HomePage() {
               <div className="container-card">
                 <h3 className="service-title">{servicio.title}</h3>
                 <div className="img-container">
-                  <img src={servicio.image} className="img" loading="lazy" />
+                  <img src={servicio.image} alt={servicio.title} className="img" loading="lazy" />
                 </div>
               </div>
             </PixelCard>
@@ -209,6 +427,8 @@ import { servicesImg } from '../Data/GalleryServices.js'
 const BASE_URL = 'https://floorex.ec';
 const OG_IMAGE_DEFAULT = '/seo/opengraph.webp';
 
+const getCanonical = (slug) => `${BASE_URL}/servicio/${slug}`;
+
 export const services = [
   {
     id: 1,
@@ -247,7 +467,7 @@ export const services = [
                     Acabado brillante de alta durabilidad, antideslizante y 100% ecológico.`,
       keywords: `pisos pulidos de cemento, pulido de hormigón, mejores empresas de pisos pulidos en Ecuador`,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/pulido`,
+      canonical: getCanonical("pisos-pulidos-abrillantados"),
     },
 
     // ── HTML libre para la sección de descripción ────────────
@@ -322,7 +542,7 @@ export const services = [
                     poliuretánicos para básquet, paddle, vóley y multiuso.`,
       keywords: `pisos deportivos, resinas acrilicas, poliuretano deportes, basquet, handball, paddle, voley, pintura canchas, recuperacion de pisos`,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/deportivos`,
+      canonical: getCanonical("pisos-deportivos"),
     },
     detail: `
       <h2>¿Qué pisos trabajamos?</h2>
@@ -385,7 +605,7 @@ export const services = [
                     talleres, parkings y laboratorios. Sistemas autonivelantes y de grado alimenticio.`,
       keywords:`pisos epoxicos, recubrimientos epoxicos, mortero autonivelante, pintura alto trafico, grado alimenticio, pisos industriales, reparacion pisos epoxicos`,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/epoxicos`,
+      canonical: getCanonical("pisos-epoxicos"),
     },
     detail: `
       <h2>¿Dónde se usan?</h2>
@@ -461,7 +681,7 @@ export const services = [
                     frigoríficos y alta exigencia térmica.`,
       keywords: `poliuretano cementicio, uqesh ecuador, pisos industriales, grado alimenticio, pisos para frigorificos, mortero cementicio, floorex`,
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/poliuretano-cementicio-uqesh`,
+      canonical: getCanonical("poliretano-cementicio"),
     },
     detail: `
       <h2>¿Dónde lo instalamos?</h2>
@@ -516,7 +736,7 @@ export const services = [
                     y perfil de anclaje (CSP 1 al 9). Asegura la máxima adherencia de tus resinas.`,
        keywords: `preparacion de superficies, escarificacion concreto, pulido mecanico, perfil de anclaje, csp concreto, remover epoxico, lavado industrial`,
        ogImage: OG_IMAGE_DEFAULT,
-       canonical: `${BASE_URL}/servicio/preparacion-superficies`,
+      canonical: getCanonical("preparacion-superficies"),
      },
      detail: `
       <h2>¿Qué metodologías aplicamos?</h2>
@@ -576,7 +796,7 @@ export const services = [
       description: "Diseño y aplicación de señalización horizontal de alto tráfico para industrias, bodegas y estacionamientos. Cumplimiento de normas ISO e INEN.",
       keywords: "senaletica industrial, senalizacion vial, demarcacion de pisos, pintura de alto trafico, delimitar pasillos industriales, floorex",
       ogImage: OG_IMAGE_DEFAULT,
-      canonical: `${BASE_URL}/servicio/senaletica-vial-industrial`,
+      canonical: getCanonical("señaletica-vial-industrial"),
     },
     detail: `
       <h2>¿Dónde la aplicamos?</h2>
@@ -605,7 +825,6 @@ export const services = [
     `,
   }
 ];
-
 //-------ServiceDetail.jsx-----//
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -632,7 +851,7 @@ export default function ServiceDetail() {
     return (
       <div className={styles.notFound}>
         <p>Servicio no encontrado.</p>
-        <Link to="/#services">← Volver a servicios</Link>
+        <Link to="/">← Volver al inicio</Link>
       </div>
     );
   }
@@ -650,7 +869,7 @@ export default function ServiceDetail() {
         <link rel="canonical"    href={service.seo.canonical} />
 
         {/* Open Graph — WhatsApp, Facebook, LinkedIn */}
-        <meta property="og:type"         content="website" />
+        <meta property="og:type"         content="article" />
         <meta property="og:url"          content={service.seo.canonical} />
         <meta property="og:title"        content={service.seo.title} />
         <meta property="og:description"  content={service.seo.description} />
@@ -889,6 +1108,9 @@ export const servicesPics = [
 //---------MaquinariaDetail.js----------------// 
 import { productImg } from './ProductImg.js'
 
+const BASE_URL = "https://www.floorex.ec";
+const getCanonical = (slug) => `${BASE_URL}/producto/${slug}`;
+
 export const productos = [
   {
    id: 1,
@@ -925,7 +1147,7 @@ export const productos = [
      description:
        "Pulidora portátil XINGYI GX250 de alto rendimiento. Motor de imanes permanentes, arranque suave bajo 10A y excelente estabilidad a bajo voltaje.",
      keywords: "pulidora de bordes, XINGYI GX250, pulidora portátil, maquinaria para pisos, FloorEx",
-     canonical: "https://www.floorex.ec/maquinaria/pulidora-portatil-xingyi-gx250",
+     canonical: getCanonical("pulidora-portatil-xingyi-gx250"),
      ogImage: "/img/maquinaria/pulidora-og.jpg",
    },
   },
@@ -986,7 +1208,7 @@ export const productos = [
       title: "Aspiradora Industrial IVC-F65L | FloorEx",
       description: "Aspiradora industrial IVC-F65L de 65L con motor USA AMETEK de 3HP y filtro de fibra de vidrio (99.9% eficiencia). Ideal para pulidoras y control de polvo.",
       keywords: "aspiradora industrial, IVC F65L, extractor de polvo, maquinaria para pisos, XINGYI, FloorEx",
-      canonical: "https://www.floorex.ec/maquinaria/aspiradora-industrial",
+      canonical: getCanonical("aspiradora-industrial"),
       ogImage: "/img/maquinaria/aspiradora-og.jpg",
     },
   },
@@ -1050,13 +1272,13 @@ export const productos = [
       title: "Pulidora Xingyi GX858 a Control Remoto | FloorEx Ecuador",
       description: "Adquiere la pulidora industrial Xingyi GX858 en Ecuador. Alto rendimiento para desbaste, remoción de epoxi y pulido de hormigón con control remoto.",
       keywords: "pulidora industrial, xingyi gx858, pulidora control remoto, pulido de hormigón, desbaste de pisos, floorex",
-      canonical: "https://www.floorex.ec/producto/pulidora-control-remoto",
+      canonical: getCanonical("pulidora-control-remoto"),
       ogImage: "/img/maquinaria/pulidora-gx858-og.jpg",
     },
   },
   {
     id: 4,
-    slug: "aspiradora-industrial-IVC45L-manual",
+    slug: "aspiradora-industrial-ivcl45l",
     title: "Aspiradora industrial IVC45L (manual)",
     subtitle: "Extractor de polvo de alta capacidad con diseño de elevación y filtrado HEPA 13",
     badge: "Alto Rendimiento",
@@ -1111,13 +1333,13 @@ export const productos = [
       title: "Aspiradora Industrial IVC45L | FloorEx Ecuador",
       description: "Adquiere la aspiradora industrial IVC45L de 7.5 HP en Ecuador. Filtración HEPA 13 de dos etapas, diseño elevable compacto y embolsado continuo sin polvo.",
       keywords: "aspiradora industrial, IVC45L, extractor de polvo, filtrado HEPA 13, longopac, maquinaria para pisos, floorex",
-      canonical: "https://www.floorex.ec/producto/aspiradora-industrial-IVC45L-manual",
+      canonical: getCanonical("aspiradora-industrial-ivcl45l"),
       ogImage: "/img/maquinaria/aspiradora-ivc45l-og.jpg",
     },
   },
 {
     id: 5,
-    slug: "Rectificadora-de-suelo-GX550",
+    slug: "Rectificadora-de-suelo-gx550",
     title: "Rectificadora de suelo Xingyi GX550",
     subtitle: "Pulidora planetaria industrial de alta resistencia con caja de engranajes de aleación dual",
     badge: "Tecnología Avanzada",
@@ -1172,7 +1394,7 @@ export const productos = [
       title: "Rectificadora de suelo Xingyi GX550 | FloorEx Ecuador",
       description: "Descubre la pulidora planetaria industrial Xingyi GX550 de 5.5 HP en Ecuador. Caja de cambios de aleación dual, 3 cabezales y presión de desbaste regulable.",
       keywords: "rectificadora de suelo, Xingyi GX550, pulidora planetaria, desbaste de pisos, maquinaria industrial, pulido de hormigón, floorex",
-      canonical: "https://www.floorex.ec/producto/Rectificadora-de-suelo-GX550",
+      canonical: getCanonical("Rectificadora-de-suelo-gx550"),
       ogImage: "/img/maquinaria/rectificadora-gx550-og.jpg",
     },
   },
@@ -1233,7 +1455,7 @@ export const productos = [
       title: "Aspiradora Industrial Xingyi IVC-V3 | FloorEx Ecuador",
       description: "Compra la aspiradora comercial Xingyi IVC-V3 en Ecuador. Diseñada para pulidoras de hormigón, con filtro de alta eficiencia y recolector móvil.",
       keywords: "aspiradora industrial, xingyi ivc-v3, aspirador comercial, recolector de polvo, pulido de hormigón, floorex",
-      canonical: "https://www.floorex.ec/producto/aspiradora-industrial-xingyi-ivc-v3", // Corregido de 5 a 6 para coincidir con el id
+      canonical: getCanonical("aspiradora-industrial-xingyi-ivc-v3"),
       ogImage: "/img/maquinaria/aspiradora-ivc-v3-og.jpg",
     },
   },
@@ -1279,7 +1501,7 @@ export default function MaquinariaDetail() {
     return (
       <div className={styles.notFound}>
         <p>Producto no encontrado.</p>
-        <Link to="/maquinaria">← Volver a maquinaria</Link>
+        <Link to="/">← Volver al inicio</Link>
       </div>
     );
   }
@@ -1298,7 +1520,7 @@ export default function MaquinariaDetail() {
         <meta name="description" content={producto.seo.description} />
         <link rel="canonical"    href={producto.seo.canonical} />
 
-        <meta property="og:type"         content="website" />
+        <meta property="og:type"         content="product" />
         <meta property="og:url"          content={producto.seo.canonical} />
         <meta property="og:title"        content={producto.seo.title} />
         <meta property="og:description"  content={producto.seo.description} />
@@ -1316,8 +1538,8 @@ export default function MaquinariaDetail() {
 
       <ProductSchema producto={producto} />
       <BreadcrumbSchema items={[
-        { name: 'Inicio', url: 'https://TU_DOMINIO.ec/' },
-        { name: 'Maquinaria', url: 'https://TU_DOMINIO.ec/maquinaria' },
+        { name: 'Inicio', url: 'https://floorex.ec/' },
+        { name: 'Maquinaria', url: 'https://floorex.ec/maquinaria' },
         { name: producto.title, url: producto.seo.canonical },
       ]} />
 
@@ -1548,7 +1770,7 @@ const localBusinessData = {
   "priceRange": "$$",
   "currenciesAccepted": "USD",
   "paymentAccepted": "Cash",
-  "openingHoursSpecification":[
+  "OpeningHoursSpecification":[
     {
       "@type":"openingHoursSpecification",
       "dayOfWeek":["Monday","Tuesday","Wednesday", "Thursday", "Friday", "Saturday"],
@@ -1570,7 +1792,7 @@ const localBusinessData = {
   ],
   "address": {
     "@type": "PostalAddress",
-    "streetAdress": "Colinas de los Ceibos calle 8va y AV.3ra #203 Guayaquil, Ecuador",
+    "streetAddress": "Colinas de los Ceibos calle 8va y AV.3ra #203 Guayaquil, Ecuador",
     "addressLocality": "Guayaquil",
     "addressRegion": "Guayas",
     "PostalCode":"090902",
@@ -1579,7 +1801,7 @@ const localBusinessData = {
   "geo":{
   "@type":"GeoCoordinates",
   "latitude":-2.1643126,
-  "ongitude":-79.9114755,
+  "longitude":-79.9114755,
   },
   "hasMap": "https://maps.google.com/?q=FloorEx+Guayaquil",
 
@@ -1588,7 +1810,6 @@ const localBusinessData = {
     "telephone": "+593987844281",
     "contactType": "customer service",
     "availableLanguage": "Spanish",
-    "contactOption": "TollFree",
   },
   "sameAs": [
     "https://www.instagram.com/floorex.ec"
@@ -1767,4 +1988,3 @@ export function ProductSchema({ producto }) {
     </Helmet>
   );
 }
-
