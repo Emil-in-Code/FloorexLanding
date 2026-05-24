@@ -65,9 +65,9 @@ export default function ServiceDetail() {
         { name: 'Servicios', url: 'https://TU_DOMINIO.ec/#services' },
         { name: service.title, url: service.seo.canonical },
       ]} />
-      <FAQSchema items={service.benefits.map(b => ({
-        question: b.title,
-        answer: b.desc,
+      <FAQSchema items={service.faq.map(f => ({
+        question: f.question,
+        answer: f.answer,
       }))} />
 
       {/* ── HERO ─────────────────────────────────────────── */}
@@ -117,6 +117,10 @@ export default function ServiceDetail() {
             src={service.image}
             alt={service.title}
             className={styles.heroImage}
+            width ="1200"
+            height ="800"
+            loading="eager"
+            fetchPriority="high"
           />
           <div className={styles.heroImageOverlay} />
         </div>
@@ -165,7 +169,13 @@ export default function ServiceDetail() {
                   key={i}
                   className={`${styles.galleryItem} ${i === 0 ? styles.galleryFeatured : ''}`}
                 >
-                  <img src={img} alt={`${service.title} — proyecto ${i + 1}`} />
+                  <img 
+                    src={img}
+                    alt={`${service.title} — proyecto ${i + 1}`} 
+                    width="1200"
+                    height="800"
+                    loading={i === 0 ? "eager" : "lazy"}
+                  />
                 </div>
               ))}
             </div>
@@ -190,6 +200,24 @@ export default function ServiceDetail() {
                 </li>
               ))}
             </ol>
+          </div>
+        </section>
+      )}
+      {/* ── PREGUNTAS FRECUENTES (Visual) ────────────────── */}
+      {service.faq && service.faq.length > 0 && (
+        <section className={styles.section}>
+          <div className={styles.sectionInner}>
+            <div className={styles.sectionLabel}>FAQ</div>
+            <h2 className={styles.sectionTitle}>Preguntas frecuentes</h2>
+            
+            <div className={styles.faqList}>
+              {service.faq.map((item, i) => (
+                <div key={i} className={styles.faqItem}>
+                  <h3 className={styles.faqQuestion}>{item.question}</h3>
+                  <p className={styles.faqAnswer}>{item.answer}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       )}

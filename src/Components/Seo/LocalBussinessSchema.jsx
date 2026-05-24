@@ -22,7 +22,7 @@ const localBusinessData = {
   "paymentAccepted": "Cash",
   "OpeningHoursSpecification":[
     {
-      "@type":"openingHoursSpecification",
+      "@type":"OpeningHoursSpecification",
       "dayOfWeek":["Monday","Tuesday","Wednesday", "Thursday", "Friday", "Saturday"],
       "opens": "08:00",
       "closes": "18:00",

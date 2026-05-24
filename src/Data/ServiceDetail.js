@@ -19,6 +19,10 @@ export const services = [
     description: `Solución 100% ecológica que garantiza larga durabilidad sin contaminar el medio ambiente,
                   ya que nuestro proceso no aplica capas superficiales que se desgastan con el uso;
                   pulimos el propio concreto con diamantes para lograr un brillo duradero, natural y sostenible.`,
+    faq:[
+      { question: "¿Cuánto dura un piso pulido de concreto?", answer: "Un piso pulido correctamente puede durar más de 20 años sin necesidad de renovar el acabado..." },
+      { question: "¿Se puede pulir cualquier tipo de hormigón?", answer: "En la mayoría de los casos sí. Evaluamos el estado del concreto antes..." },
+    ],
     benefits: [
       { icon: '🌿', title: '100% ecológico',       desc: 'Sin capas ni químicos superficiales. Cuidamos el medioambiente.' },
       { icon: '⏳', title: 'Larga durabilidad',    desc: 'El brillo es parte del concreto, no se desgasta con el uso.' },
@@ -363,9 +367,7 @@ export const services = [
       { icon: '👁️', title: 'Alta visibilidad', desc: 'Colores de alto contraste (amarillo, rojo, verde, blanco, negro) bajo cualquier tipo de iluminación.' },
       { icon: '📋', title: 'Cumplimiento normativo', desc: 'Adaptamos la señalética a las normativas vigentes del país y estándares internacionales (ISO, INEN, NFPA).' },
     ],
-    faq: [
-      {question}
-    ]
+
     process: [
       { title: 'Relevamiento y Diseño', desc: 'Analizamos el flujo de tu operación para diseñar la distribución de pasillos, racks, zonas de carga o estacionamientos.' },
       { title: 'Selección del Sistema', desc: 'Elegimos la pintura de alta resistencia (epóxica, poliuretánica o vial) adecuada según el tipo de soporte y desgaste mecánico.' },

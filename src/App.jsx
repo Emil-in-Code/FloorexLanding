@@ -6,7 +6,7 @@ import './App.css';
 import { CurvedLoop, GridScan, Hero, HorizontalGallery, PixelCard, IntroOverlay, AboutUs } from './Components';
 import { Navbar, Footer } from './widgets';
 import { services } from './Data/ServiceDetail.js'
-
+import NotFound from './pages/NotFound.jsx'
 import LocalBusinessSchema from './Components/Seo/LocalBussinessSchema.jsx'
 
 import { projectList } from './Data/ProjectData.js';
@@ -114,6 +114,8 @@ function App() {
         } />
         <Route path="/producto/:slug" element={
           <Suspense fallback={fallback}><MaquinariaDetailPage /></Suspense>
+        } />
+        <Route path="*" element={<NotFound />
         } />
       </Routes>
 

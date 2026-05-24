@@ -9,7 +9,7 @@ import ventaMaquina from '../Assets/Images/ventaMaquina.webp'
 
 export const servicesPics = [
   { id: 1, 
-    title: "Pisos pulidos",
+    title: "Pisos abrillantados",
     image: baño
   },
   { 
