@@ -50,7 +50,7 @@ function HomePage() {
               onClick={() => {
                 if (servicio.id === 7) {
                   // Redirección temporal basada en slug para la maquinaria
-                  navigate('/producto/pulidora-portatil');
+                  navigate('/producto/pulidora-portatil-xingyi-gx250');
                 } else {
                   // 🧠 Buscamos el servicio equivalente en el archivo de detalles usando el id de la card
                   const servicioEnDetalle = services.find(s => s.id === servicio.id);

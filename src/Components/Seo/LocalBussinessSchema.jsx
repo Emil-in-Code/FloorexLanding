@@ -6,7 +6,7 @@ const localBusinessData = {
   "@context": "https://schema.org",
   "@type": "HomeAndConstructionBusiness",
   "name": "FloorEx",
-  "description": "FloorEx es una empresa especializada en pisos industriales; nuestros servicios abarcan desde la venta de maquinaria especializada hasta la colocación del sistema industrial que mejor se adapte a la necesidad de tu piso.",
+  "description": "En FloorEx nos especializamos en la aplicación de sistemas y revestimientos de pisos industriales, comerciales y deportivos en Ecuador, además de la venta de maquinaria técnica y materias primas. Diseñamos soluciones de Alta Resistencia mecánica y química: desde pisos epóxicos de grado alimenticio y sistemas de poliuretano cementicio (tecnología UQESH®️) para entornos de máxima exigencia, hasta el pulido y abrillantado ecológico de concreto con densificadores y discos de diamantes. También realizamos preparación técnica de superficies y demarcación de señalética industrial para bodegas y naves. Garantizamos máxima adherencia, durabilidad y cumplimiento normativo.",
   "url": BASE_URL,
   "telephone": "+593987844281",
   "email": "floorex.ec@gmail.com",
@@ -20,6 +20,12 @@ const localBusinessData = {
   "priceRange": "$$",
   "currenciesAccepted": "USD",
   "paymentAccepted": "Cash",
+  "knowsAbout": [
+    "Industrial flooring",
+    "Epoxy flooring",
+    "Concrete polishing",
+    "Flooring contractor"
+  ],
   "OpeningHoursSpecification":[
     {
       "@type":"OpeningHoursSpecification",
@@ -42,18 +48,11 @@ const localBusinessData = {
   ],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Colinas de los Ceibos calle 8va y AV.3ra #203 Guayaquil, Ecuador",
     "addressLocality": "Guayaquil",
     "addressRegion": "Guayas",
-    "PostalCode":"090902",
     "addressCountry": "EC"
   },
-  "geo":{
-  "@type":"GeoCoordinates",
-  "latitude":-2.1643126,
-  "longitude":-79.9114755,
-  },
-  "hasMap": "https://maps.google.com/?q=FloorEx+Guayaquil",
+
 
   "contactPoint": {
     "@type": "ContactPoint",
