@@ -11,9 +11,7 @@ const OUTPUT_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');
 
 const staticRoutes = [
   { loc: '/',         priority: '1.0', changefreq: 'monthly', useToday: true },
-  { loc: '/privacidad', priority: '0.3', changefreq: 'yearly',  useToday: false },
-  { loc: '/cookies',    priority: '0.3', changefreq: 'yearly',  useToday: false },
-  { loc: '/legal',      priority: '0.3', changefreq: 'yearly',  useToday: false },
+
 ];
 
 const serviceRoutes = services.map(s => ({

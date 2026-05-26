@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import usePageTracking from "./hook/useGtmTracking.js";
+import { Helmet } from 'react-helmet-async';
 
 import './App.css';
 import { CurvedLoop, GridScan, Hero, HorizontalGallery, PixelCard, IntroOverlay, AboutUs } from './Components';
@@ -24,6 +25,26 @@ function HomePage() {
   const navigate = useNavigate();
   return (
     <>
+      <Helmet>
+          <title>FloorEx | Pisos Industriales, Epóxicos y Deportivos en Ecuador</title>
+          <meta name="description" content="Especialistas en pisos industriales y comerciales en Ecuador. Aplicación de pisos epóxicos, pulidos, deportivos y poliuretano cementicio UQESH®. Cotiza sin costo." />
+          <meta name="keywords" content="pisos industriales, pisos epóxicos, pisos pulidos, pisos deportivos, poliuretano cementicio, señalética industrial, Ecuador, Guayaquil, Cuenca" />
+          <link rel="canonical" href="https://floorex.ec/" />
+        
+          {/* Open Graph (Redes Sociales como WhatsApp, Facebook) */}
+          <meta property="og:title" content="FloorEx | Pisos Industriales y Comerciales en Ecuador" />
+          <meta property="og:description" content="Especialistas en pisos industriales, epóxicos, deportivos y poliuretano cementicio UQESH® en Ecuador. Cotiza sin compromiso." />
+          <meta property="og:url" content="https://floorex.ec/" />
+          <meta property="og:type" content="website" />
+          {/* Te sugiero agregar la imagen que ya tienes guardada en tu carpeta public/seo */}
+          <meta property="og:image" content="https://floorex.ec/seo/openGraph.webp" /> 
+
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="FloorEx | Pisos Industriales y Comerciales en Ecuador" />
+          <meta name="twitter:description" content="Especialistas en pisos industriales y comerciales en Ecuador." />
+          <meta name="twitter:image" content="https://floorex.ec/seo/openGraph.webp" />
+      </Helmet>
       <LocalBusinessSchema />
       <IntroOverlay />
       <main>

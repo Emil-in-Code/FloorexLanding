@@ -80,7 +80,7 @@ export default function HeroSection() {
 
           <div className={styles.content}>
             <div className={styles.textGroup}>
-              <h1 className={styles.title}>A Flooring Company</h1>
+              <h1 className={styles.title}>Pisos Industriales y <br/>Comerciales en Ecuador</h1>
               <p className={styles.parrafo}>Floors for life</p>
 
               <div className={styles.cta}>
