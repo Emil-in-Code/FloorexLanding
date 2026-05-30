@@ -20,8 +20,11 @@ export const services = [
                   ya que nuestro proceso no aplica capas superficiales que se desgastan con el uso;
                   pulimos el propio concreto con diamantes para lograr un brillo duradero, natural y sostenible.`,
     faq:[
-      { question: "¿Cuánto dura un piso pulido de concreto?", answer: "Un piso pulido correctamente puede durar más de 20 años sin necesidad de renovar el acabado..." },
-      { question: "¿Se puede pulir cualquier tipo de hormigón?", answer: "En la mayoría de los casos sí. Evaluamos el estado del concreto antes..." },
+      { question: "¿Cuánto dura un piso pulido de concreto?", answer: "..." },
+      { question: "¿Se puede pulir cualquier tipo de hormigón?", answer: "..." },
+      { question: "¿Qué necesito para empezar mi negocio de pulido de pisos??", answer: "..." },
+      { question: "¿Cuál es el precio promedio del metro cuadrado para pulir un piso en Ecuador?", answer: "..." },
+      { question: "¿Cómo limpiar pisos de cemento pulido sin dañarlos?", answer: "..." },
     ],
     benefits: [
       { icon: '🌿', title: '100% ecológico',       desc: 'Sin capas ni químicos superficiales. Cuidamos el medioambiente.' },
@@ -103,6 +106,10 @@ export const services = [
                     para la práctica deportiva?
                     Entonces recupera la superficie y conviertela en un piso deportivo profesional:
                     Liso, duradero y estéticamente impecable`,
+    faq:[
+      { question: "¿Qué tipos de pisos deportivos son recomendados para gimnasios?", answer: "..." },
+      { question: "¿Cuánto dura la pintura para un piso deportivo en exterior y en interior?", answer: "..." },
+    ],
     benefits: [
       { icon: '⚒️', title: 'Sin demolición',    desc: 'Recuperamos pisos deportivos viejos o en mal estado' },
       { icon: '💰', title: 'Costo-eficiente', desc: 'Adaptamos el sistema a tu presupuesto y nivel de exigencia (uso escolar, federado o recreativo)' },
@@ -170,6 +177,12 @@ export const services = [
     gallery: servicesImg.epoxico.gallery, 
     description: `¿Necesitas que tu piso aguante cargas pesadas, derrames químicos o tránsito constante? 
                     En FloorEx diseñamos la solución epóxica a la medida de tu industria.`,
+    faq:[
+      { question: "¿Cuánto dura un piso epóxico?", answer: "..." },
+      { question: "¿Se necesitan máquinas especiales para aplicar pisos epoxicos?", answer: "..." },
+      { question: "¿Qué Tipos de acabados hay para pisos epóxicos industriales?", answer: "..." },
+      { question: "¿Cómo aplicar pisos epóxicos en talleres mecánicos?", answer: "..." },
+    ],
     benefits: [
       { icon: '📏', title: 'Autonivelante', desc: 'Ideal para reparar y nivelar superficies irregulares, creando una base monolítica y de alta resistencia mecánica' },
       { icon: '🚛', title: 'Alto tráfico', desc: 'Para zonas sometidas a paso continuo de personas, carretillas o vehículos' },
@@ -243,6 +256,13 @@ export const services = [
                   agresivos y soporta tráfico pesado sin deteriorarse. Y con UQESH®️, la diferencia es aún mayor:
                   su fórmula a base de aceite de ricino vegetal (no derivados del petróleo) es completamente ecológica, 
                   con certificación LEED y apta para contacto directo con alimentos.`,
+
+    faq:[
+      { question: "¿Cuánto dura un piso con poliuretano cementicio?", answer: "..." },
+      { question: "¿Precio de aplicación por metro cuadrado del poliuretano cementicio?", answer: "..." },
+      { question: "¿Para qué sirve y dónde aplicar el poliuretano cementicio?", answer: "..." },
+      { question: "El poliuretano cementicio ¿Es de grado alimenticio?", answer: "..." },
+    ],
     benefits: [
       { icon: '🌡️', title: 'Resistencia térmica', desc: 'Soporta choques térmicos desde -40°C hasta +150°C, ideal para cámaras frigoríficas o lavado con vapor.' },
       { icon: '🧪', title: 'Química superior',    desc: 'Resiste ácidos, álcalis, grasas, aceites y limpiezas agresivas sin degradarse ni perder propiedades.' },
@@ -299,8 +319,13 @@ export const services = [
      waMessage: "Hola, estoy interesado en el servicio de preparación de superficies de concreto ¿me podría dar más información?",
      badge: "",          // ← dejar vacío si no tiene badge
      gallery: servicesImg.superficies.gallery,
-     description:`Un recubrimiento solo es tan bueno como la superficie sobre la que se aplica. En FloorEx preparamos el hormigón con maquinaria profesional, escarificación y pulido mecánico.`,
-
+     description:`Un recubrimiento solo es tan bueno como la superficie sobre la que se aplica.
+                  En FloorEx preparamos el hormigón con maquinaria profesional, escarificación y pulido mecánico.`,
+    faq:[
+      { question: "¿Qué selladores hay para superficies de concreto?", answer: "..." },
+      { question: "¿Se puede impermeabilizar una superficie de concreto?", answer: "..." },
+      { question: "¿Se puede curar una superficie de concreto?", answer: "..." },
+    ],
      benefits: [
        { icon: '🏗️', title: 'Adherencia absoluta', desc: 'Evita desprendimientos prematuros, grietas o pérdida de adherencia. Tu nuevo piso se agarra de verdad.' },
        { icon: '⚙️', title: 'Criterio técnico',     desc: 'Preparamos el hormigón sin atajos, utilizando maquinaria profesional y adaptándonos a cada necesidad.' },
@@ -360,6 +385,11 @@ export const services = [
                   y uno realmente seguro.En FloorEx diseñamos y aplicamos señalización 
                   horizontal y vertical sobre superficies de concreto, epóxico o poliuretano con pinturas
                   de alta resistencia que soportan el tránsito y la limpieza de tu operación.`,
+    faq:[
+      { question: "¿Qué pintura se usa para la señalización vial?", answer: "..." },
+      { question: "¿Qué duración tiene la pintura señalética?", answer: "..." },
+      { question: "¿Cuál es el precio promedio del metro cuadrado de la pintura vial en Ecuador?", answer: "..." },
+    ],
     benefits: [
       { icon: '🛡️', title: 'Seguridad total', desc: 'Delimitamos áreas de paso, zonas de carga, riesgos eléctricos, salidas de emergencia y extintores.' },
       { icon: '📊', title: 'Organización visual', desc: 'Pasillos, estacionamientos, líneas de producción y zonas de almacenamiento claramente identificados.' },

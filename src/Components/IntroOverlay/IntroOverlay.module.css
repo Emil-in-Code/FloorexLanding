@@ -41,11 +41,11 @@
   text-shadow: 0 1px 2px rgba(0,0,0,0.3);
   letter-spacing: 1px;
   animation: bounce 1.5s ease-in-out infinite;
+  display: none;
 }
 
 .autoScrollBadge {
   background: none;
-  border: 1px solid var(--primary);
   backdrop-filter: blur(4px);
   padding: 0.3rem 1rem;
   border-radius: 9px;
@@ -58,26 +58,6 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(8px); }
 }
-
-/* Para móviles: botón más grande */
-@media (max-width: 768px) {
-  .enterButton {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    width: 80%;
-    max-width: 250px;
-  }
-  
-  .scrollHint {
-    font-size: 0.8rem;
-  }
-}
-
-
-
-
-/*FINAL DE PRUEBA*/
-
 
 .overlay {
   position: fixed;
@@ -125,8 +105,44 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  .interactionArea {
+    position: absolute;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    top:5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    pointer-events: auto;
+    z-index: 101;
+  }
+
+  .enterButton {
+    width:28%;
+    padding:10px;
+    font-size:1em;
+  }
+
   .logoContainer {
-    width: 130px;
-    height: 130px;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    z-index: 102;
+    /* Necesario para que translate(-50%, -50%) del hook funcione */
+    top: 50%;
+    left: 50%;
+  }
+
+  .svg {
+    width: 100%;
+    height: 100%;
+    animation: girar 10s linear infinite;
+  }
+
+  @keyframes girar {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
   }
 }

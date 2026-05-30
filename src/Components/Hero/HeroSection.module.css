@@ -35,6 +35,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top:5rem;
 }
 
 .title {
@@ -113,7 +114,7 @@
   .containerGh {
     /* En mobile no necesitamos tanto margin-top:
        el hero ocupa toda la pantalla centrado */
-    margin-top: 0;
+    margin-top: 0rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,11 +127,13 @@
     bottom: unset;
     align-items: flex-start;
     padding: 0 1.5rem;
+    margin-top:14rem;
   }
 
   .title {
     font-size: clamp(2rem, 10vw, 3rem);
     padding: 0.5rem 0;
+    text-align:left;
   }
 
   .parrafo {

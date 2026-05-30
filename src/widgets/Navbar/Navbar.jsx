@@ -13,7 +13,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -51,7 +51,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className={styles.menuButton}
             onClick={toggleMenu}
             aria-label="Toggle menu"
