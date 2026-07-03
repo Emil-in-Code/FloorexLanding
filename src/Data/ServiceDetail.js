@@ -20,11 +20,18 @@ export const services = [
                   ya que nuestro proceso no aplica capas superficiales que se desgastan con el uso;
                   pulimos el propio concreto con diamantes para lograr un brillo duradero, natural y sostenible.`,
     faq:[
-      { question: "¿Cuánto dura un piso pulido de concreto?", answer: "..." },
-      { question: "¿Se puede pulir cualquier tipo de hormigón?", answer: "..." },
-      { question: "¿Qué necesito para empezar mi negocio de pulido de pisos??", answer: "..." },
-      { question: "¿Cuál es el precio promedio del metro cuadrado para pulir un piso en Ecuador?", answer: "..." },
-      { question: "¿Cómo limpiar pisos de cemento pulido sin dañarlos?", answer: "..." },
+      { question: "¿Cuánto dura un piso pulido de concreto?", 
+        answer: "La misma vida útil del concreto. El pulido no es un revestimiento, es un tratamiento que densifica y endurece el sustrato. El nivel de brillo puede disminuir con el uso, pero mediante un programa de mantenimiento preventivo el piso mantiene sus propiedades por décadas." },
+      { question: "¿Se puede pulir cualquier tipo de hormigón?", 
+        answer: "  Sí. Contamos con metodologías para concreto nuevo, antiguo, desgastado o con deterioro superficial. La evaluación previa define el proceso de desbaste, densificado y abrillantado aplicable."},
+      { question: "¿Qué necesito para empezar mi negocio de pulido de pisos?", 
+        answer: "Requiere: maquinaria especializada para pulido, consumibles y materias primas, y formación técnico-comercial. La capacitación es fundamental para comprender el comportamiento del concreto, los tipos de acabado y los requerimientos del mercado. Para mayor detalle, contáctenos." },
+      { question: "¿Cuál es el precio promedio del metro cuadrado para pulir un piso en Ecuador?",
+        answer: "El valor no es estándar. Varía en función de las condiciones de la obra, el estado del sustrato, los m² a intervenir y el tipo de acabado requerido. Trabajamos con precios que se ajustan a las condiciones del proyecto y a los presupuestos de cada cliente. Para definirlo, se requiere una evaluación técnica en sitio." },
+      { question: "¿Cómo limpiar pisos de cemento pulido sin dañarlos?", 
+        answer: "Mantenerlo libre de polvo e impurezas mediante barrido o aspirado periódico. Para lavado se recomienda el uso de máquinas autolimpiadoras, abrillantadores neutros y jabones inorgánicos formulados para concreto pulido. Evitar el uso de ácidos, cloro o desengrasantes agresivos." },
+      { question:"¿El piso pulido presenta problemas de deslizamiento en húmedo? ",
+        answer:"No. Un concreto pulido y densificado correctamente cumple con los coeficientes de fricción requeridos. Para áreas con mayor riesgo, se pueden especificar acabados mate o semimate para incrementar el antideslizamiento."},
     ],
     benefits: [
       { icon: '🌿', title: '100% ecológico',       desc: 'Sin capas ni químicos superficiales. Cuidamos el medioambiente.' },
@@ -107,8 +114,10 @@ export const services = [
                     Entonces recupera la superficie y conviertela en un piso deportivo profesional:
                     Liso, duradero y estéticamente impecable`,
     faq:[
-      { question: "¿Qué tipos de pisos deportivos son recomendados para gimnasios?", answer: "..." },
-      { question: "¿Cuánto dura la pintura para un piso deportivo en exterior y en interior?", answer: "..." },
+      { question: "¿Se puede aplicar pintura sobre un piso deportivo existente?",
+        answer: "Sí, previa preparación de la superficie. Esta incluye lavado, lijado mecánico y reparación de fisuras o despostillados para asegurar la adherencia del nuevo sistema." },
+      { question: "¿Cuánto dura la pintura para un piso deportivo en exterior y en interior?", 
+        answer: "La durabilidad depende del uso, mantenimiento, exposición UV y del sistema de pintura aplicado. Existen revestimientos acrílicos que garantizan desempeño por varios años en exterior, y sistemas de mayor vida útil para interior por la ausencia de radiación solar directa." },
     ],
     benefits: [
       { icon: '⚒️', title: 'Sin demolición',    desc: 'Recuperamos pisos deportivos viejos o en mal estado' },
@@ -178,10 +187,14 @@ export const services = [
     description: `¿Necesitas que tu piso aguante cargas pesadas, derrames químicos o tránsito constante? 
                     En FloorEx diseñamos la solución epóxica a la medida de tu industria.`,
     faq:[
-      { question: "¿Cuánto dura un piso epóxico?", answer: "..." },
-      { question: "¿Se necesitan máquinas especiales para aplicar pisos epoxicos?", answer: "..." },
-      { question: "¿Qué Tipos de acabados hay para pisos epóxicos industriales?", answer: "..." },
-      { question: "¿Cómo aplicar pisos epóxicos en talleres mecánicos?", answer: "..." },
+      { question: "¿Cuánto dura un piso epóxico?",
+        answer: "La vida útil de un sistema epóxico industrial es de varios años. Depende del espesor aplicado, el tipo de tráfico, la exposición a químicos y el mantenimiento realizado." },
+      { question: "¿Se requieren equipos especiales para la aplicación de pisos epóxicos?",
+        answer: "Sí. El proceso exige preparación mecánica del sustrato mediante diamantado o granallado, equipos de mezcla de baja velocidad, llana dentada y rodillo desaireador. La preparación y aplicación técnica es determinante para el desempeño final." },
+      { question: "¿Qué Tipos de acabados hay para pisos epóxicos industriales?",
+        answer: "Los sistemas más utilizados son: Liso brillante, Mate satinado, Antideslizante con carga de cuarzo, Multicolor tipo Flake/Chips y Autonivelante para zonas de alto tráfico de montacargas."},
+      { question: "¿Un piso epóxico resiste químicos y temperatura?",
+        answer: "Los epóxicos 100% sólidos presentan alta resistencia a aceites, combustibles y químicos de limpieza industrial. Para ambientes con ácidos concentrados o choque térmico severo, se recomienda evaluar sistemas de vinil éster o poliuretano cementicio." },
     ],
     benefits: [
       { icon: '📏', title: 'Autonivelante', desc: 'Ideal para reparar y nivelar superficies irregulares, creando una base monolítica y de alta resistencia mecánica' },
@@ -258,10 +271,12 @@ export const services = [
                   con certificación LEED y apta para contacto directo con alimentos.`,
 
     faq:[
-      { question: "¿Cuánto dura un piso con poliuretano cementicio?", answer: "..." },
-      { question: "¿Precio de aplicación por metro cuadrado del poliuretano cementicio?", answer: "..." },
-      { question: "¿Para qué sirve y dónde aplicar el poliuretano cementicio?", answer: "..." },
-      { question: "El poliuretano cementicio ¿Es de grado alimenticio?", answer: "..." },
+      { question: "¿Cuál es la vida útil de un piso de poliuretano cementicio? ",
+        answer: "Es un sistema de alta durabilidad, diseñado para condiciones extremas. Mantiene su integridad en ambientes con choque térmico, humedad constante y alta carga química." },
+      { question: "¿Cuál es su aplicación principal?",
+        answer: "Se especifica donde otros sistemas fallan: cuartos fríos, cámaras de congelación, plantas de procesamiento de alimentos y bebidas, cocinas industriales, farmacéuticas y áreas de lavado con agua a alta temperatura." },
+      { question: "¿El poliuretano cementicio es apto para la industria alimenticia?",
+        answer: "Sí. Existen formulaciones con certificación para contacto indirecto con alimentos. Su superficie continua, sin juntas, y su resistencia térmica y química lo hacen el estándar para este sector." },
     ],
     benefits: [
       { icon: '🌡️', title: 'Resistencia térmica', desc: 'Soporta choques térmicos desde -40°C hasta +150°C, ideal para cámaras frigoríficas o lavado con vapor.' },
@@ -322,9 +337,12 @@ export const services = [
      description:`Un recubrimiento solo es tan bueno como la superficie sobre la que se aplica.
                   En FloorEx preparamos el hormigón con maquinaria profesional, escarificación y pulido mecánico.`,
     faq:[
-      { question: "¿Qué selladores hay para superficies de concreto?", answer: "..." },
-      { question: "¿Se puede impermeabilizar una superficie de concreto?", answer: "..." },
-      { question: "¿Se puede curar una superficie de concreto?", answer: "..." },
+      { question: "¿Qué tipo de selladores se aplican en concreto?",
+        answer: "Las principales familias son: Densificadores de silicato/litio para pulido, Selladores acrílicos para protección superficial, Selladores epóxicos o poliuretánicos para resistencia química, e Hidrorrepelentes base silano-siloxano para fachadas y losas." },
+      { question: "¿Se puede impermeabilizar una superficie de concreto?",
+        answer: "Sí. Mediante membranas epóxicas, poliuretánicas o cementicias modificadas con polímeros. La selección del sistema depende de si la presión de agua es positiva, negativa o solo por exposición climática." },
+      { question: "¿Cómo se tratan las fisuras previo al pulido o recubrimiento?",
+        answer: "Se realiza un corte y limpieza de la fisura, para luego sellarla con resina epóxica de inyección o mortero de reparación de alta resistencia. Esto evita la reflexión de la fisura en el acabado final." },
     ],
      benefits: [
        { icon: '🏗️', title: 'Adherencia absoluta', desc: 'Evita desprendimientos prematuros, grietas o pérdida de adherencia. Tu nuevo piso se agarra de verdad.' },
@@ -386,9 +404,11 @@ export const services = [
                   horizontal y vertical sobre superficies de concreto, epóxico o poliuretano con pinturas
                   de alta resistencia que soportan el tránsito y la limpieza de tu operación.`,
     faq:[
-      { question: "¿Qué pintura se usa para la señalización vial?", answer: "..." },
-      { question: "¿Qué duración tiene la pintura señalética?", answer: "..." },
-      { question: "¿Cuál es el precio promedio del metro cuadrado de la pintura vial en Ecuador?", answer: "..." },
+      { question: "¿Qué pintura se utiliza para señalización vial y demarcación?",
+        answer: "Se emplea pintura acrílica base agua o base solvente tipo tráfico, y pintura termoplástica para alto tráfico. Ambas pueden incorporar microesferas de vidrio para obtener retrorreflectancia nocturna." },
+      { question: "¿Qué duración tiene la pintura señalética?",
+        answer: "En interiores y parqueaderos la durabilidad es de varios años. En exterior, la vida útil depende del volumen de tráfico. Los sistemas termoplásticos presentan mayor resistencia a la abrasión que los acrílicos." },
+
     ],
     benefits: [
       { icon: '🛡️', title: 'Seguridad total', desc: 'Delimitamos áreas de paso, zonas de carga, riesgos eléctricos, salidas de emergencia y extintores.' },
